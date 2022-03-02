@@ -1,0 +1,10 @@
+.nav {
+    width: 100vw;
+    min-height: 8vh;
+
+    background-color: var(--colorNav);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
