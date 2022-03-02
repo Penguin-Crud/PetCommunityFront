@@ -5,7 +5,7 @@ import Main from './Main';
 
 function Layout() {
   return (
-    <div className="App">
+    <div className="Layout">
       <Nav />
       <Main />
       {/* <Footer /> */}
