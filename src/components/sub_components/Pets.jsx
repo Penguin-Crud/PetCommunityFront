@@ -1,11 +1,11 @@
 import "../../styles/index.css"
 
-function Slider() {
+function Pets() {
     return (
         <section className="Slider">
-            <h2>Recent pets put up for adoptation</h2>
+            <h2>Pets for adoptation</h2>
 
-            <div>CardList</div>
+            <div>PetsList</div>
             
             <header className="App-header">
                 <p> Edit <code>src/App.js</code> and save to reload. </p>
@@ -17,4 +17,4 @@ function Slider() {
     )
 }
 
-export default Slider;
+export default Pets;
