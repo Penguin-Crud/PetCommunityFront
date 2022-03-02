@@ -1,0 +1,20 @@
+
+/* --- MAIN --- */
+
+@media (prefers-reduced-motion: no-preference) {
+    .Hero {
+      animation: App-logo-spin infinite 20s linear;
+
+      width: 100vw;
+    }
+}
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+/* --- SLIDER --- */

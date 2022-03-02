@@ -1,26 +1,13 @@
-import logo from '../assets/logo.svg';
-import '../styles/Layout.css';
+
+import '../styles/componets_styles/Layout.css';
 import Nav from "./Nav";
+import Main from './Main';
 
 function Layout() {
   return (
     <div className="App">
       <Nav />
-      {/* <Body /> */}
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main />
       {/* <Footer /> */}
     </div>
   );

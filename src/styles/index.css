@@ -1,8 +1,9 @@
 @import url("reset.css");
 @import url("variables.css");
 
-@import url("Layout.css");
-@import url("Nav.css");
+@import url("./componets_styles/Layout.css");
+@import url("./componets_styles/Nav.css");
+@import url("./componets_styles/Main.css");
 
 
 /* body {
