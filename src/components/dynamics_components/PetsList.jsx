@@ -1,9 +1,10 @@
 import "../../styles/index.css";
+import PetCard from "../cards/PetCard";
 
 function PetsList() {
     return (
         <div>
-            <div>PetsList</div>
+            <PetCard />
             
             <header className="App-header">
                 <p> Edit <code>src/App.js</code> and save to reload. </p>
