@@ -1,6 +1,7 @@
 :root {
     --colorLayout: #CDD4CA;
     --colorNav: #448030;
+    --colorFooter: #349F47;
     --fontSize: 500;
     --fontFamily:'Reggae One', cursive;
     --border: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;

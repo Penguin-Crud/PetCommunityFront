@@ -1,0 +1,10 @@
+.Footer {
+    height: 45vh;
+
+    background-color: var(--colorFooter);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
