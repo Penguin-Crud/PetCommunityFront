@@ -1,9 +1,16 @@
 import "../../styles/index.css";
 
-function PetCard() {
+function PetCard({name, years, date, imgURL}) {
     return (
-        <div>
-            name, age, specie ...
+        <div className="cardPet">
+            <img className="imgPet" src={imgURL} alt="joto" />
+            <div className="infoPet">    
+                <div>
+                    <p>{name}</p>
+                    <p>{years}</p>
+                </div>
+                <p className="datePet">{date}</p>
+            </div>
         </div>
     )
 }

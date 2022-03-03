@@ -18,15 +18,17 @@ function PetsList() {
     }, [] )
 
     return (
-        <div>
+        <div className="cardList">
             {
                 dataExist? dataPets.map(pet => {
-                    <PetCard 
-                        name={pet.name} 
-                        years={pet.years} 
-                        date={pet.date} 
-                        imgURL={pet.imgURL}
-                    />
+                    return <div  key={pet.id}>
+                                <PetCard 
+                                    name={pet.name} 
+                                    years={pet.years} 
+                                    date={pet.date} 
+                                    imgURL={pet.imgURL}
+                                />
+                            </div>
                 })
                 :
                 (<h2>Loading ...</h2>)
