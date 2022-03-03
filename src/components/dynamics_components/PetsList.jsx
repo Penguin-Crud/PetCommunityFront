@@ -1,7 +1,14 @@
 import "../../styles/index.css";
 import PetCard from "../cards/PetCard";
+import { useEffect } from "react";
+import { dataPetsService } from "../../services/PetCommunityServices";
 
 function PetsList() {
+    
+    useEffect( () =>{
+        console.log(dataPetsService())
+    }, [] )
+
     return (
         <div>
             <PetCard />
