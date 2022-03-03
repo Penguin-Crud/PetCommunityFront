@@ -31,6 +31,15 @@
   margin: auto;
 }
 
+.titleSlider {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--colorNav);
+
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
 /* --- PETS --- */
 
 .pets {
