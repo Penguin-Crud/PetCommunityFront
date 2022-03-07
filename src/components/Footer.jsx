@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="Footer">
             <AssociationsList />
-            <div>Information</div>
+            <div>Information, copyrihght y nuestros githubs</div>
         </footer>
     )
 }

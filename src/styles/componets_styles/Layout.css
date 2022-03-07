@@ -3,6 +3,10 @@
     width: 99.99%;
 
     overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 
     background-color: var(--colorLayout);
