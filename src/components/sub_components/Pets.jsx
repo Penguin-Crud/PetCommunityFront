@@ -4,7 +4,7 @@ import PetsList from "../dynamics_components/PetsList";
 function Pets() {
     return (
         <section className="Slider">
-            <h2>Pets for adoptation</h2>
+            <h1 className="titleSlider">Pets for adoptation</h1>
             <div className="pets">
                 <PetsList />
             </div>
