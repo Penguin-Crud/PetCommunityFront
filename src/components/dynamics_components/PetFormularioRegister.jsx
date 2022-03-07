@@ -1,7 +1,8 @@
-import react from "react";
-import "../../styles/componets_styles/PetFormulario.css"
+import React from "react";
+import "../../styles//componets_styles/PetFormulario.css"
 
-function Petformulario() {
+
+function PetFormularioRegister() {
     return (
         <div> 
             <h1></h1>
@@ -14,6 +15,14 @@ function Petformulario() {
                    <label> Pasword:</label>
                    <input value="Password" />
                  </div>
+                 <div>
+                    <label> name:</label> 
+                    <input value="" />
+                 </div>
+                 <div>
+                    <label> name:</label> 
+                    <input value="" />
+                 </div>
                  <button>Login</button>
                  
 
@@ -23,4 +32,4 @@ function Petformulario() {
     )
 }
 
-export default Petformulario;
+export default PetFormularioRegister;

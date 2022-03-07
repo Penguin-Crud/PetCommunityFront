@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from "./Nav";
 import Main from './Main';
 import Petformulario from './dynamics_components/Petformulario';
+import PetFormularioRegister from './dynamics_components/PetFormularioRegister';
 import Footer from './Footer';
 
 
@@ -21,7 +22,9 @@ function Layout() {
           <Route path='/' element={<Main />} />
             {/* <Route index element={<DetailAssociation />} />
             <Route path="dashboard" element={<Dashboard />} /> */}
-            <Route path="/createPost" element={<Petformulario />} /> 
+            <Route path="/createPost" element={<Petformulario />} />
+            <Route path='/register' element={<PetFormularioRegister />} />
+            
             {/* <Route path="*" element={<NoMatch />} /> */}
         </Routes>
 
@@ -29,7 +32,6 @@ function Layout() {
           <Route path='/' element={<Footer />} />
           <Route path='/createPost' element={<Footer />} />
         </Routes>
-
       </BrowserRouter >
     </div>
   );
