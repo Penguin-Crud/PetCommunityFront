@@ -19,6 +19,7 @@ function Layout() {
           <Route path='/' element={<Main />} />
             {/* <Route index element={<DetailAssociation />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="createPost" element={<PetFormulario />} /> 
             <Route path="*" element={<NoMatch />} /> */}
         </Routes>
 
