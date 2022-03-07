@@ -1,24 +1,38 @@
 import "../../styles/index.css";
 import PetCard from "../cards/PetCard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { dataPetsService } from "../../services/PetCommunityServices";
 
 function PetsList() {
     
+    const [dataExist, setDataExist] = useState(false);
+    const [dataPets, setDataPets] = useState()
+
     useEffect( () =>{
-        console.log(dataPetsService())
+
+        dataPetsService().then( data => {
+            setDataPets(data) 
+            setDataExist(true)
+        });
+        
     }, [] )
 
     return (
-        <div>
-            <PetCard />
-            
-            <header className="App-header">
-                <p> Edit <code>src/App.js</code> and save to reload. </p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-            </header>
+        <div className="cardList">
+            {
+                dataExist? dataPets.map(pet => {
+                    return <div  key={pet.id}>
+                                <PetCard 
+                                    name={pet.name} 
+                                    years={pet.years} 
+                                    date={pet.date} 
+                                    imgURL={pet.imgURL}
+                                />
+                            </div>
+                })
+                :
+                (<h2>Loading ...</h2>)
+            }
         </div>
     )
 }

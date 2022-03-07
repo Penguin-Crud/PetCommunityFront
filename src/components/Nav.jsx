@@ -6,6 +6,26 @@ function Nav() {
         <nav className="nav">
             <p>Logo</p>
             <Searcher />
+
+            <header className="navbar">
+                <div>
+                    <img className="menu" src="../../assets/img/burger2.svg" alt="profile" />
+                </div>
+                <div className="dropdown">
+                   
+                    <a href="#">name</a>
+                    <ul>
+                        <li>
+                            <a href="#">My Profile</a>
+                        </li>
+                        <li>
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                        
+                </div>
+            </header>
+        
         </nav>
     )
 }

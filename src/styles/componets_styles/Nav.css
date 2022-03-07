@@ -9,4 +9,23 @@
     justify-content: space-around;
 }
 
+/* .navbar div :hover {
+    background-color: #3b3c3fb7;
+} */
+
+.dropdown a, .dropdown ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+}
+
+.dropdown a:hover + ul,
+.dropdown ul:hover {
+    display: block;
+}
 /* --- Seacher --- */

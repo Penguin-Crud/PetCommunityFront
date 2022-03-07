@@ -5,9 +5,9 @@ function Pets() {
     return (
         <section className="Slider">
             <h2>Pets for adoptation</h2>
-
-            
-            <PetsList />
+            <div className="pets">
+                <PetsList />
+            </div>
         </section>
     )
 }
