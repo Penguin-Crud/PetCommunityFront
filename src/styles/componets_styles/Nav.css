@@ -9,22 +9,49 @@
     justify-content: space-around;
 }
 
-/* .navbar div :hover {
+/* .navbar div :hover {             mediaQuery in sizeWeb :hover in options
     background-color: #3b3c3fb7;
 } */
 
-.dropdown a, .dropdown ul li a{
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.burger {
+    width: 75%;
+}
+
+
+
+.dropdown ul {
+    display: none;
+
+    position: absolute;
+    right: 0;
+
+    z-index: 1;
+
+    background-color: var(--colorFooter);
+}
+.dropdown ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+    padding: 2%;
+}
+.dropdown ul li a{
     list-style: none;
     text-decoration: none;
     color: black;
 }
 
-.dropdown ul {
-    display: none;
-    position: absolute;
-}
 
-.dropdown a:hover + ul,
+.dropdown .burger:hover + ul,
 .dropdown ul:hover {
     display: block;
 }

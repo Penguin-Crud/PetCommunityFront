@@ -31,6 +31,15 @@
   margin: auto;
 }
 
+.titleSlider {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--colorNav);
+
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
 /* --- PETS --- */
 
 .pets {
@@ -69,6 +78,12 @@
 
   background: rgba(196, 196, 196, 0.51);
   border-radius: 0px 0px 12px 12px;
+}
+
+.infoPet div,p {
+  color: white;
+  font-size: 1rem;
+  text-shadow: var(--border);
 }
 
 .datePet {

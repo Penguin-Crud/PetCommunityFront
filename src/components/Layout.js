@@ -15,7 +15,6 @@ function Layout() {
         <Routes>
           <Route path='/' element={<Nav />} />
           <Route path='/createPost' element={<Nav />} />
-
         </Routes>
 
         <Routes>
