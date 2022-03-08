@@ -1,9 +1,9 @@
 import "../../styles/index.css";
 
-function AssociationCard() {
+function AssociationCard({imgURL}) {
     return (
-        <div>
-            name, web, location ...
+        <div className="cardAssociation">
+            <img className="imgAssociation" src={imgURL} alt="" />
         </div>
     )
 }

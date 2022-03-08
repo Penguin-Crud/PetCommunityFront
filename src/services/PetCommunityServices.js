@@ -12,3 +12,14 @@ export async function dataPetsService() {
     }
     return data;
 }
+
+export async function dataAssociationsService() {
+    let data;
+    try{ 
+        data = await axios.get("http://localhost:"+ port +"/associations")
+        .then(res => res.data)
+    } catch {
+        console.error("Fetch fallido in dataPetsService ")
+    }
+    return data;
+}
