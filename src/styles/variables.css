@@ -2,8 +2,11 @@
     --colorLayout: #CDD4CA;
     --colorNav: #448030;
     --colorFooter: #349F47;
+    --colorForm: #90B783;
     --fontSize: 500;
     --fontFamily:'Reggae One', cursive;
     --border: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
     --borderTitle: -5px -5px 1px #000, 5px 5px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+
 }
+

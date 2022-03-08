@@ -1,23 +1,32 @@
-import react from "react";
-import "../../styles/componets_styles/PetFormulario.css"
+import React from "react";
+import "../../styles/componets_styles/PetFormulario.css";
+import dogcat from "../../assets/img/dogcat.jpeg"; 
 
 function Petformulario() {
     return (
         <div> 
-            <h1></h1>
-             <form>
-                 <div>
-                    <label> name:</label> 
-                    <input value="Name" />
-                 </div>
-                 <div>
-                   <label> Pasword:</label>
-                   <input value="Password" />
-                 </div>
-                 <button>Login</button>
-                 
+           
+       
+            <form className="FormPet"> 
+               <h1> New Pet</h1>
+               <input placeholder="Name" />
+               <input placeholder="Age" />
+               <input placeholder="Gender" />
+               <input placeholder="Picture" />
+               <input placeholder="Location" />
+               <input placeholder="Size(Small,medium,tall)" />
+               <input placeholder="Especimen(Dog-Cat)" />
+               <input placeholder="Description" />
+               <input placeholder="Vaccines" />
+               <input placeholder="Dog Pound" />
+                
+               <div className="button">
+                 <button>Add Img.</button>
+                 <button>Give Love</button>
+               </div>
+            </form>
 
-             </form>
+            <img src={dogcat}/>
             
         </div>
     )
