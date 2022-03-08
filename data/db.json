@@ -9,8 +9,8 @@
             "race":"Chiguagua",
             "gender":"male",
             "size":"little",
-            "vaccines": true,
-            "chip":true,
+            "vaccines": "true",
+            "chip":"true",
             "imgURL":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         },
         {
@@ -22,8 +22,8 @@
             "race":"Chiguagua",
             "gender":"male",
             "size":"little",
-            "vaccines": true,
-            "chip":true,
+            "vaccines": "true",
+            "chip":"true",
             "imgURL":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         },
         {
@@ -35,8 +35,8 @@
             "race":"Chiguagua",
             "gender":"male",
             "size":"little",
-            "vaccines": true,
-            "chip":true,
+            "vaccines": "true",
+            "chip":"true",
             "imgURL":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         },
         {
@@ -48,8 +48,8 @@
             "race":"Chiguagua",
             "gender":"male",
             "size":"little",
-            "vaccines": true,
-            "chip":true,
+            "vaccines": "true",
+            "chip":"true",
             "imgURL":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         },
         {
@@ -61,8 +61,8 @@
             "race":"Chiguagua",
             "gender":"male",
             "size":"little",
-            "vaccines": true,
-            "chip":true,
+            "vaccines": "true",
+            "chip":"true",
             "imgURL":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         },
         {
@@ -74,8 +74,8 @@
             "race":"Chiguagua",
             "gender":"male",
             "size":"little",
-            "vaccines": true,
-            "chip":true,
+            "vaccines": "true",
+            "chip":"true",
             "imgURL":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
         }
     ]

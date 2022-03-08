@@ -1,9 +1,26 @@
 import "../../styles/index.css";
+import PetCardDashboard from "../cards/PetCardDashboard";
+import { useEffect, useState } from "react";
+import { dataPetsService } from "../../services/PetCommunityServices";
 
 function Dashboard() {
+
+    const [dataExist, setDataExist] = useState(false);
+    const [dataPets, setDataPets] = useState()
+
+    useEffect( () =>{
+
+        dataPetsService().then( data => {
+            setDataPets(data) 
+            setDataExist(true)
+        });
+        
+    }, [] )
+
     return (
     <div className="containerDashboard">
         <h1 className="titleSlider marginTitle">Dashboard</h1>
+        
         <div className="tableContainer">
             <table >
                 <thead>
@@ -22,24 +39,24 @@ function Dashboard() {
                     </tr>
                 </thead>
                 <tbody>
-
-                    <tr>
-                        <td>+info</td>
-                        <td>pepe</td>
-                        <td>3 years</td>
-                        <td>12/02/20</td>
-                        <td>Perro</td>
-                        <td>Bulldog</td>
-                        <td>male</td>
-                        <td>little</td>
-                        <td>True</td>
-                        <td>True</td>
-                        <td className="dashboardActions">
-                            <button className="actionEdit">E</button>
-                            <button className="actionDelete">D</button>
-                        </td>
-                    </tr>
-
+                {
+                    dataExist? dataPets.map(pet => {
+                        return <PetCardDashboard 
+                                    key={pet.id}
+                                    name={pet.name}
+                                    age={pet.age}
+                                    date={pet.date}
+                                    specie={pet.specie}
+                                    race={pet.race}
+                                    gender={pet.gender}
+                                    size={pet.size}
+                                    vaccines={pet.vaccines}
+                                    chip={pet.chip}
+                               />
+                    })
+                    :
+                    (<tr><td> Loading ...</td></tr>)
+                }
                 </tbody>
             </table>
         </div>
