@@ -43,6 +43,7 @@ function Dashboard() {
                     dataExist? dataPets.map(pet => {
                         return <PetCardDashboard 
                                     key={pet.id}
+                                    id={pet.id}
                                     name={pet.name}
                                     age={pet.age}
                                     date={pet.date}

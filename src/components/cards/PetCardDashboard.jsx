@@ -1,9 +1,9 @@
 import "../../styles/index.css";
 
-function PetCardDashboard({name, age, date, specie, race, gender, size, vaccines, chip}) {
+function PetCardDashboard({id, name, age, date, specie, race, gender, size, vaccines, chip}) {
     return (
         <tr>
-            <td>+</td>
+            <td>+ {id}</td>
             <td>{name}</td>
             <td>{age}</td>
             <td>{date}</td>
