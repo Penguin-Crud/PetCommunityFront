@@ -1,4 +1,48 @@
-.table {
+.containerDashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.marginTitle{
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+.tableContainer {
     overflow-x:scroll !important;
     width: 100vw;
+
+    box-sizing: border-box;
+    padding: 0.7em;
+}
+
+.tableContainer table thead tr th {
+    background-color: var(--colorFooter);
+    border:1px solid white;
+
+    box-sizing: border-box;
+    padding: 0.2rem 1rem;
+}
+.tableContainer table tbody tr td {
+    background-color: var(--colorCard);
+    border:1px solid white;
+
+    box-sizing: border-box;
+    padding: 0.2rem 1rem;
+}
+.tableContainer {
+    position: relative;
+}
+.dashboardActions {
+    position: sticky;
+    right: -5vw;
+}
+.dashboardActions button{
+    border: 1px solid black;
+}
+.actionEdit {
+    background-color: orange;
+}
+.actionDelete {
+    background-color: red;
 }

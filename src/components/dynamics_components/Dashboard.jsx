@@ -2,32 +2,45 @@ import "../../styles/index.css";
 
 function Dashboard() {
     return (
-    <div>
-        <h1>Dashboard</h1>
-        <div className="table">
+    <div className="containerDashboard">
+        <h1 className="titleSlider marginTitle">Dashboard</h1>
+        <div className="tableContainer">
             <table >
-                <colgroup class="columns"></colgroup>
-                <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Years</th>
-                    <th>Date</th>
-                    <th>Species</th>
-                    <th>Race</th>
-                    <th>Gender</th>
-                    <th>Size</th>
-                    <th>Vaccines</th>
-                    <th>Chip</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>+info</td>
-                    <td>USA</td>
-                    <td>Washington D.C.</td>
-                    <td>309 million</td>
-                    <td>English</td>
-                </tr>
-               
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Date</th>
+                        <th>Species</th>
+                        <th>Race</th>
+                        <th>Gender</th>
+                        <th>Size</th>
+                        <th>Vaccines</th>
+                        <th>Chip</th>
+                        <th className="dashboardActions">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>+info</td>
+                        <td>pepe</td>
+                        <td>3 years</td>
+                        <td>12/02/20</td>
+                        <td>Perro</td>
+                        <td>Bulldog</td>
+                        <td>male</td>
+                        <td>little</td>
+                        <td>True</td>
+                        <td>True</td>
+                        <td className="dashboardActions">
+                            <button className="actionEdit">E</button>
+                            <button className="actionDelete">D</button>
+                        </td>
+                    </tr>
+
+                </tbody>
             </table>
         </div>
 

@@ -24,7 +24,7 @@ function PetsList() {
                     return <div  key={pet.id}>
                                 <PetCard 
                                     name={pet.name} 
-                                    years={pet.years} 
+                                    years={pet.age} 
                                     date={pet.date} 
                                     imgURL={pet.imgURL}
                                 />
