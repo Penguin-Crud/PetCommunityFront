@@ -46,3 +46,17 @@
 .actionDelete {
     background-color: red;
 }
+
+.btnAddPet {
+    box-sizing: border-box;
+    margin: 1em 0;
+}
+.btnAddPet button {
+    background-color:var(--colorFooter);
+
+    border-radius: 12px;
+    border: none;
+
+    box-sizing: border-box;
+    padding: 0.8em 1.5em;
+}

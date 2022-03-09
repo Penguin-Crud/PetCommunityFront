@@ -56,12 +56,14 @@ function Dashboard() {
                                />
                     })
                     :
-                    (<tr><td> Loading ...</td></tr>)
+                    (<tr><td> Loading ... </td></tr>)
                 }
                 </tbody>
             </table>
         </div>
-
+        <div className="btnAddPet">
+            <button> <p>Add Pet</p> </button>
+        </div>
     </div>
     
     )

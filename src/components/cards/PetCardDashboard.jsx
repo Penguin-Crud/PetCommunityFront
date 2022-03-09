@@ -1,6 +1,9 @@
 import "../../styles/index.css";
 
 function PetCardDashboard({id, name, age, date, specie, race, gender, size, vaccines, chip}) {
+    
+    
+    
     return (
         <tr>
             <td>+ {id}</td>
@@ -14,10 +17,12 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
             <td>{vaccines}</td>
             <td>{chip}</td>
             <td className="dashboardActions">
-                <button className="actionEdit">E</button>
+                <button className="actionEdit"  >E</button>
                 <button className="actionDelete">D</button>
             </td>
         </tr>
     )
 }
 export default PetCardDashboard;
+
+//onClick={ () => props.deleteUser(user.id) }
