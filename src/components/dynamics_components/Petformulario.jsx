@@ -22,7 +22,7 @@ function Petformulario() {
                 
                <div className="button">
                  <button>Add Img.</button>
-                 <button> Submit</button>
+                 <button className="Submit"> Submit</button>
                </div>
             </form>
 
