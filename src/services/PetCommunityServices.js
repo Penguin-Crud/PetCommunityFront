@@ -19,4 +19,6 @@ export async function dataPetsService(endPoint) {
     return data;
 }
 
-axios.post()
+export function create(data, endPoint) {
+    axios.post(url + port + endPoint, data);
+}
