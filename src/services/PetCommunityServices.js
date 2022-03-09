@@ -12,18 +12,11 @@ export async function dataPetsService(endPoint) {
         console.error("Fetch fallido in dataPetsService o DB no levantada")
         data = [{
             "id": 0,
-            "name":"Juan",
-            "age":"4 semanas",
-            "date":"24/04/2020",
-            "specie":"Dog",
-            "race":"Chiguagua",
-            "gender":"male",
-            "size":"little",
-            "vaccines": "true",
-            "chip":"true",
-            "imgURL":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+            "imgURL":"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"
         }]
     }
     console.log(data)
     return data;
 }
+
+axios.post()
