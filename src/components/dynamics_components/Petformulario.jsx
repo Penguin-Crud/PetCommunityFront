@@ -8,7 +8,7 @@ function Petformulario() {
            
        
             <form className="FormPet"> 
-               <h1> New Pet</h1>
+               <h1 className="titleFormCreate"> New Pet</h1>
                <input placeholder="Name" />
                <input placeholder="Age" />
                <input placeholder="Gender" />
@@ -26,7 +26,7 @@ function Petformulario() {
                </div>
             </form>
 
-            <img src={dogcat}/>
+            <img className="imgDogAndCat" src={dogcat}/>
             
         </div>
     )
