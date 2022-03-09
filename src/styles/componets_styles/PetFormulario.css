@@ -12,7 +12,7 @@ text-align: center;
 }
 
 .FormPet{
-   background-color:var(--colorForm);
+   background-color:var(--colorCard);
    text-align: center;
    margin-top:10px;
    margin-bottom: 10%;
@@ -30,7 +30,7 @@ text-align: center;
 }
 
 ::placeholder { 
-   color: var(--colorForm) 
+   color: var(--colorCard) 
 }
 
 .FormPet input{
@@ -46,7 +46,7 @@ text-align: center;
    border-radius: 6px;
    border: none;
    font-family: Arial, Helvetica, sans-serif;
-   color: var(--colorForm);
+   color: var(--colorCard);
    margin-bottom: 20px;
   
 }
