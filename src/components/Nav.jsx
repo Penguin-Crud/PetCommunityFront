@@ -23,7 +23,7 @@ function Nav() {
                             <a href="#">My Profile</a>
                         </li>
                         <li>
-                            <a href="#">Dashboard</a>
+                            <Link to="/dashboard">Dashboard</Link>
                         </li>
                         <li>
                             <Link to="/createPost">Create new post</Link>

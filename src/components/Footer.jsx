@@ -8,7 +8,8 @@ function Footer() {
                 <AssociationsList />
             </div>
             <div>Information, copyrihght y nuestros githubs</div>
-        </footer>
+                   
+         </footer>
     )
 }
 

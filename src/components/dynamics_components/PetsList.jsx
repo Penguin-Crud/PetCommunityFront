@@ -10,7 +10,7 @@ function PetsList() {
 
     useEffect( () =>{
 
-        dataPetsService().then( data => {
+        dataPetsService("/pets").then( data => {
             setDataPets(data) 
             setDataExist(true)
         });
@@ -24,7 +24,7 @@ function PetsList() {
                     return <div  key={pet.id}>
                                 <PetCard 
                                     name={pet.name} 
-                                    years={pet.years} 
+                                    years={pet.age} 
                                     date={pet.date} 
                                     imgURL={pet.imgURL}
                                 />

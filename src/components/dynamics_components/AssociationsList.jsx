@@ -1,7 +1,7 @@
 import "../../styles/index.css";
 import AssociationCard from "../cards/AssociationCard";
 import { useEffect, useState } from "react";
-import { dataAssociationsService } from "../../services/PetCommunityServices";
+import { dataPetsService } from "../../services/PetCommunityServices";
 
 function AssociationsList() {
 
@@ -10,7 +10,7 @@ function AssociationsList() {
 
     useEffect( () =>{
 
-        dataAssociationsService().then( data => {
+        dataPetsService("/associations").then( data => {
             setDataAssociations(data)
             setDataExist(true)
         });
