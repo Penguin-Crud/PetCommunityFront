@@ -1,4 +1,64 @@
 .PetFormulario{
-   color : var()
+   border-radius: 10px;
+   margin-bottom: 50%;
+   text-align: center;
+   background-color:var();
+   color : var(); 
+} 
+
+
+.title{
+text-align: center;
+}
+
+.FormPet{
+   background-color:var(--colorForm);
+   text-align: center;
+   margin-top:10px;
+   margin-bottom: 10%;
+   margin: 5%;
+   border-radius: 5%;
+   padding-top: 10%;
+
+}
+
+h1{
+   color: white;
+   font-size: 200%;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-bottom: 5%;
+}
+
+::placeholder { 
+   color: var(--colorForm) 
+}
+
+.FormPet input{
+   margin-bottom:2%;
+   border-radius:3px ;
+   border:none;
+   font-family: Arial, Helvetica, sans-serif;
    
+}
+.button button{
+   justify-content: center;
+   padding: 5px;
+   border-radius: 6px;
+   border: none;
+   font-family: Arial, Helvetica, sans-serif;
+   color: var(--colorForm);
+   margin-bottom: 20px;
+  
+}
+.button {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+img{
+   margin: 2%;
+   display: inline-block;
+   width: 90%;
+   margin-left: 5%;
+   border-radius:20px;
 }

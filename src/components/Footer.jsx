@@ -6,7 +6,8 @@ function Footer() {
         <footer className="Footer">
             <AssociationsList />
             <div>Information, copyrihght y nuestros githubs</div>
-        </footer>
+                   
+         </footer>
     )
 }
 
