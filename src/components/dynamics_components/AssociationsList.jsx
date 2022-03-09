@@ -21,10 +21,12 @@ function AssociationsList() {
         <div className="cardListAssociation">
             {
                 dataExist ? dataAssociations.map(association => {
-                    return <div key={association.id}>
+                    return <div className="containerBars" key={association.id}>
+                                <div className="bars"></div>
                                 <AssociationCard 
                                     imgURL={association.imgURL}
                                 />
+                                <div className="bars"></div>
                            </div>
                 })
                 :
