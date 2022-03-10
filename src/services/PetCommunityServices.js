@@ -9,7 +9,7 @@ export async function dataPetsService(endPoint) {
         data = await axios.get(url + port + endPoint)
         .then(res => res.data)
     } catch {
-        console.error("Fetch fallido in dataPetsService o DB no levantada")
+        console.error("Fetch failed in dataPetsService or DB no Initialized")
         data = [{
             "id": 0,
             "imgURL":"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"
