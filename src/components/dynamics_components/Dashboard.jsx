@@ -11,7 +11,7 @@ function Dashboard() {
 
     useEffect( () =>{
 
-        dataPetsService("/pets").then( data => {
+        dataPetsService("/pets", "all").then( data => {
             setDataPets(data) 
             setDataExist(true)
         });

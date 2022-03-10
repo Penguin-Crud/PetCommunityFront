@@ -10,7 +10,7 @@ function AssociationsList() {
 
     useEffect( () =>{
 
-        dataPetsService("/associations").then( data => {
+        dataPetsService("/associations", "all").then( data => {
             setDataAssociations(data)
             setDataExist(true)
         });
