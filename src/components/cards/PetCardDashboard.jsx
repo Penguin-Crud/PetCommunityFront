@@ -1,8 +1,7 @@
 import "../../styles/index.css";
+import { Link } from "react-router-dom"
 
 function PetCardDashboard({id, name, age, date, specie, race, gender, size, vaccines, chip, deletePet}) {
-
-
 
     return (
         <tr>
@@ -17,7 +16,7 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
             <td>{vaccines}</td>
             <td>{chip}</td>
             <td className="dashboardActions">
-                <button className="actionEdit" >E</button>
+                <Link to={`/editPost/${id}`}> <button className="actionEdit" >E</button> </Link>
                 <button className="actionDelete" onClick={ () => deletePet( id )} >D</button>
             </td>
         </tr>
