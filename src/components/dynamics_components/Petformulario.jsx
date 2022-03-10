@@ -12,6 +12,7 @@ function Petformulario() {
     const [location, setLocation] = useState('');
     const [size, setSize] = useState('');
     const [specie, setSpecie] = useState('');
+    const [race, setRace] = useState('');
     const [description, setDescription] = useState('');
     const [vaccines, setVaccines] = useState('');
     const [chip, setChip] = useState('');
@@ -24,6 +25,7 @@ function Petformulario() {
         location: location, 
         size: size, 
         specie: specie, 
+        race: race,
         description: description, 
         vaccines: vaccines, 
         chip: chip
@@ -33,7 +35,7 @@ function Petformulario() {
         event.target.reset()
     }
 
-    const saveData = (e) => {
+    const addData = (e) => {
         e.preventDefault()
 
         console.log(newPet)
@@ -46,7 +48,7 @@ function Petformulario() {
 
     return (
         <div> 
-            <form className="FormPet" onSubmit={ saveData }> 
+            <form className="FormPet" onSubmit={ addData }> 
                <h1 className="titleFormCreate"> New Pet</h1>
                <input 
                     type="text"
@@ -103,6 +105,14 @@ function Petformulario() {
                     defaultValue=""
                     specie="specie"
                     onChange={ (e) => setSpecie(e.target.value) }
+               />
+               <input 
+                    type="text"
+                    required 
+                    placeholder="Race" 
+                    defaultValue=""
+                    race="race"
+                    onChange={ (e) => setRace(e.target.value) }
                />
                <input 
                     type="text"

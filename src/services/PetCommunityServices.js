@@ -19,6 +19,13 @@ export async function dataPetsService(endPoint) {
     return data;
 }
 
-export function create(data, endPoint) {
+
+//url + port + endPoint + "/create"
+export function create(endPoint, data) {
     axios.post(url + port + endPoint, data);
+}
+//url + port + endPoint + "/delete"
+export function deleteById(endPoint, id) {
+    id.toString();
+    axios.delete(url + port + endPoint + "/" + id);
 }
