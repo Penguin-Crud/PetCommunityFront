@@ -15,7 +15,7 @@ export async function dataPetsService(endPoint) {
             "imgURL":"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"
         }]
     }
-    console.log(data)
+    console.log(endPoint, data)
     return data;
 }
 

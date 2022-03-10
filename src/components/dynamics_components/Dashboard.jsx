@@ -1,6 +1,7 @@
 import "../../styles/index.css";
 import PetCardDashboard from "../cards/PetCardDashboard";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { dataPetsService, deleteById } from "../../services/PetCommunityServices";
 
 function Dashboard() {
@@ -71,7 +72,7 @@ function Dashboard() {
             </table>
         </div>
         <div className="btnAddPet">
-            <button> <p>Add Pet</p> </button>
+            <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
         </div>
     </div>
     
