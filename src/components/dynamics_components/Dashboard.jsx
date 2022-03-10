@@ -1,12 +1,12 @@
 import "../../styles/index.css";
 import PetCardDashboard from "../cards/PetCardDashboard";
 import { useEffect, useState } from "react";
-import { dataPetsService } from "../../services/PetCommunityServices";
+import { dataPetsService, deleteById } from "../../services/PetCommunityServices";
 
 function Dashboard() {
 
     const [dataExist, setDataExist] = useState(false);
-    const [dataPets, setDataPets] = useState()
+    const [dataPets, setDataPets] = useState([])
 
     useEffect( () =>{
 
@@ -17,6 +17,14 @@ function Dashboard() {
         
     }, [] )
 
+    const deletePet = (id) => {
+        const arrayFiltrado = dataPets.filter(pet => pet.id !== id )
+            
+        // console.log(arrayFiltrado)
+        setDataPets(arrayFiltrado)
+        deleteById("/pets", id);
+    }
+ 
     return (
     <div className="containerDashboard">
         <h1 className="titleSlider marginTitle">Dashboard</h1>
@@ -53,6 +61,7 @@ function Dashboard() {
                                     size={pet.size}
                                     vaccines={pet.vaccines}
                                     chip={pet.chip}
+                                    deletePet={deletePet}
                                />
                     })
                     :

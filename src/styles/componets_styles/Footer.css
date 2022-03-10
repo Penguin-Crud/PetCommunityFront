@@ -8,3 +8,30 @@
     align-items: center;
     justify-content: space-around;
 }
+
+/* --- ASSOCIATION --- */
+
+.associations {
+    overflow-x: scroll!important;
+    width:100vw ;
+  }
+
+.cardListAssociation {
+    display: flex;
+    flex-direction: row;
+  }
+
+.cardAssociation {
+    position: relative;
+  
+    box-sizing: border-box;
+    margin: 0.5rem;
+}
+
+.imgAssociation {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 12px;
+
+    width: 80px;
+    height: 80px;
+}

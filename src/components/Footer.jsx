@@ -4,9 +4,12 @@ import AssociationsList from "./dynamics_components/AssociationsList";
 function Footer() {
     return (
         <footer className="Footer">
-            <AssociationsList />
+            <div className="associations">
+                <AssociationsList />
+            </div>
             <div>Information, copyrihght y nuestros githubs</div>
-        </footer>
+                   
+         </footer>
     )
 }
 
