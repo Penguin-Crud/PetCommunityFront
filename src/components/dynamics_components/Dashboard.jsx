@@ -9,6 +9,7 @@ function Dashboard() {
     const [dataExist, setDataExist] = useState(false);
     const [dataPets, setDataPets] = useState([])
 
+
     useEffect( () =>{
 
         dataPetsService("/pets", "all").then( data => {
@@ -25,7 +26,7 @@ function Dashboard() {
         setDataPets(arrayFiltrado)
         deleteById("/pets", id);
     }
- 
+
     return (
     <div className="containerDashboard">
         <h1 className="titleSlider marginTitle">Dashboard</h1>

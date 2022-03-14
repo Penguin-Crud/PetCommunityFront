@@ -7,7 +7,7 @@ export async function dataPetsService(endPoint, id) {
     let data;
     
     // endPoint + "/all"
-    if (id == "all") {
+    if (id === "all") {
         try{ 
             data = await axios.get(url + port + endPoint)
             .then(res => res.data)
@@ -47,7 +47,6 @@ export function deleteById(endPoint, id) {
     id.toString();
     axios.delete(url + port + endPoint + "/" + id);
 }
-
-export function update(endPoint, data) {
-    axios.put(url + port + endPoint, data);
+export async function update(endPoint, data) {
+    await axios.patch(url + port + endPoint + '/' + data.id , data);
 }

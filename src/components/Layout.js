@@ -1,5 +1,5 @@
 import '../styles/componets_styles/Layout.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Nav from "./Nav";
 import Main from './Main';
 import Dashboard from "./dynamics_components/Dashboard";
@@ -13,7 +13,6 @@ function Layout() {
   return (
     <div className="Layout">
       <BrowserRouter>
-
         <Routes>
           <Route path='/' element={<Nav />} />
             <Route index element={<Nav />} />
