@@ -1,5 +1,5 @@
 import "../styles/index.css";
-import AssociationsList from "./dynamics_components/AssociationsList";
+import AssociationsList from "./dynamics_components/AssociationsList.jsx";
 
 function Footer() {
     return (
