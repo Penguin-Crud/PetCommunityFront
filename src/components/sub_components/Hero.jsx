@@ -1,9 +1,14 @@
-import logo from '../../assets/logo.svg';
 import "../../styles/index.css";
 
 function Hero() {
     
-    return <img src={logo} className="Hero" alt="logo" />
+    return (
+        <div className="hero">
+            <div className="hero-info">
+                <h1 className="hero-title">Don't buy, Adopt.</h1>
+            </div>
+        </div>
+    )
 }
 
 export default Hero;

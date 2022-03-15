@@ -1,13 +1,13 @@
 
 /* --- HEROE --- */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
     .Hero {
       animation: App-logo-spin infinite 20s linear;
 
       width: 100vw;
     }
-}
+} */
 @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
@@ -15,6 +15,37 @@
     to {
       transform: rotate(360deg);
     }
+}
+
+/* --- HERO ---*/
+
+.hero {
+  width: 99.9%;
+  height: 50vh;
+
+  background-image: url("https://www.mundoperros.es/wp-content/uploads/2017/11/perro-tristeza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-info {
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.hero-title {
+  line-height: 1;
+  font-size: 2em;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
 }
 
 /* --- SLIDER --- */
@@ -89,4 +120,46 @@
 .datePet {
   display: flex;
   align-items: flex-end;
+}
+
+@media (min-width:700px) {
+
+
+  .hero-title {
+    font-size: 3.5em;
+  }
+
+  .hero-info {
+    max-width: 300px;
+  }
+}
+
+@media (min-width:900px) {
+  
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-title {
+    font-size: 4.5em;
+  }
+
+  .hero-info {
+    max-width: 450px;
+  }
+}
+
+@media (min-width:1250px) {
+  .hero {
+    height: 85vh;
+    background-position: bottom;
+  }
+
+  .hero-title {
+    font-size: 6em;
+  }
+
+  .hero-info {
+    max-width: 550px;
+  }
 }
