@@ -11,34 +11,46 @@
 .tableContainer {
     overflow-x:scroll !important;
     width: 100vw;
-
+    position: relative;
     box-sizing: border-box;
-    padding: 0.7em;
+    text-align: center;
 }
 
 .tableContainer table thead tr th {
     background-color: var(--colorFooter);
     border:1px solid white;
-
     box-sizing: border-box;
     padding: 0.2rem 1rem;
 }
 .tableContainer table tbody tr td {
     background-color: var(--colorCard);
     border:1px solid white;
-
     box-sizing: border-box;
     padding: 0.2rem 1rem;
 }
-.tableContainer {
-    position: relative;
-}
 .dashboardActions {
     position: sticky;
-    right: -5vw;
+    
+    right: -1%;
+    padding: 0% !important;
+    border-left: 1.1px solid var(--colorCard) !important;
+    z-index: 100;
+}
+.actionsContent{
+    display: flex;
+    padding: 0 0.5rem;
+}
+.leftBorder{
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0;
 }
 .dashboardActions button{
     border: 1px solid black;
+    margin: 0 0.3rem;
 }
 .actionEdit {
     background-color: orange;
@@ -53,10 +65,30 @@
 }
 .btnAddPet button {
     background-color:var(--colorFooter);
-
     border-radius: 12px;
     border: none;
-
     box-sizing: border-box;
     padding: 0.8em 1.5em;
+}
+@media (max-width:699px) {
+    .tableContainer {
+        max-width: 80%;
+    }
+  }
+@media (min-width:700px) {
+    .tableContainer {
+        max-width: 90%;
+    }
+  } 
+@media (min-width:958px) {  
+.tableContainer {
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+}
+}
+@media (min-width:1250px) {
+.tableContainer {
+    max-width: 95%;
+}
 }
