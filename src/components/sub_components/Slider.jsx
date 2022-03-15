@@ -3,7 +3,7 @@ import RecentPetsList from "../dynamics_components/RecentPetsList";
 
 function Slider() {
     return (
-        <section className="Slider">
+        <section id="anchorHero" className="Slider">
             <h2>Recent pets put up for adoptation</h2>
             <RecentPetsList />
         </section>
