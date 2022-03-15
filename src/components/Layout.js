@@ -10,7 +10,7 @@ import Footer from './Footer';
 
 function Layout() {
   return (
-    <div className="Layout">
+    <div className="layout">
       <BrowserRouter>
 
         <Routes>

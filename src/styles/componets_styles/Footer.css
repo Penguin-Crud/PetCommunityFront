@@ -1,6 +1,5 @@
-.Footer {
-    height: 30vh;
-
+.footer {
+    height: 35vh;
     background-color: var(--colorFooter);
 
     display: flex;
@@ -8,6 +7,7 @@
     align-items: center;
     justify-content: space-around;
 }
+
 
 /* --- ASSOCIATION --- */
 
@@ -36,15 +36,19 @@
     height: 80px;
 }
 
-.github{
- width: 20%;
- padding-bottom: 0%;
- 
- 
+.copyright{
+  display:flex;
+  justify-content:space-around;
+  margin-left: 10%;
+}
+.copyrightText{
+  color: black;
+  text-shadow: none;
+  text-align:center;
 }
 
-.button-github {
-  background-color:  #349F47;
-  border: none;
-  
+.github{
+ width: 25%; 
+ margin-left: 75%;
+ margin-bottom: 15%;
 }

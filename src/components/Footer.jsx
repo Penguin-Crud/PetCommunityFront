@@ -4,16 +4,16 @@ import imgGithub from "../assets/img/GitHub.png";
 
 
 
+
 function Footer() {
     return (
-        <footer className="Footer">
+        <footer className="footer">
             <div className="associations">
                 <AssociationsList />
             </div>
-            <div className="Copyright">
-                <h1> © 2022</h1> 
-                <a target="_blank" href="https://github.com/Penguin-Crud"> <img  className="github"src={imgGithub} alt="" /></a>
-               {/*  <button type="reset" onClick="location " className="button-github"><img className="github" src={imgGithub} text="hello"/></button> */}
+            <div className="copyright"> 
+                <p className="copyrightText">© 2022</p>
+                <a target="_blank" href="https://github.com/Penguin-Crud"> <img  className="github" src={imgGithub} alt="" /></a>
             </div>                  
         </footer>
     )
