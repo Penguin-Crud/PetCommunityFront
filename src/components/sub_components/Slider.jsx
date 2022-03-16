@@ -40,7 +40,7 @@ prevImageHandler = () => {
   
 
     render(){
-      return <div className="Slider">
+      return <div className="Slider" id="anchorHero">
                 {this.state.images?
                 <div className="slider-container">
                         <a onClick={this.prevImageHandler}><img className="slider-prev" src={Prev} alt="back-arrow" /></a>
