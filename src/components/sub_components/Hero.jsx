@@ -1,5 +1,5 @@
 import "../../styles/index.css";
-import Flecha from "../../assets/img/flecha-_1_.svg"
+import Flecha from "../../assets/img/flecha-_1_.svg";
 
 function Hero() {
     

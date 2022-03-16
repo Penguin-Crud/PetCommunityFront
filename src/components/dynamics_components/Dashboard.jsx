@@ -45,7 +45,10 @@ function Dashboard() {
                         <th>Size</th>
                         <th>Vaccines</th>
                         <th>Chip</th>
-                        <th className="dashboardActions">Actions</th>
+                        <th className="dashboardActions">
+                            <div className="leftBorder"></div>
+                            Actions
+                        </th>
                     </tr>
                 </thead>
                 <tbody>

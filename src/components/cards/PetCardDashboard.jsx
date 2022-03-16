@@ -16,8 +16,11 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
             <td>{vaccines}</td>
             <td>{chip}</td>
             <td className="dashboardActions">
-                <Link to={`/editPost/${id}`}> <button className="actionEdit" >E</button> </Link>
-                <button className="actionDelete" onClick={ () => deletePet( id )} >D</button>
+                <div className="actionsContent">
+                    <div className="leftBorder"></div>
+                    <Link to={`/editPost/${id}`}> <button className="actionEdit" >E</button> </Link>
+                    <button className="actionDelete" onClick={ () => deletePet( id )} >D</button>
+                </div>
             </td>
         </tr>
     )
