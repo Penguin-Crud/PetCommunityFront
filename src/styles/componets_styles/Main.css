@@ -80,11 +80,28 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
   height: 50vh;
-  
   box-sizing: border-box;
   margin: auto;
+  /* margin-top: 60px; */
+}
+.slider-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; 
+}
+.slider-image{
+  width: 500px;
+  height:40vh;
+  object-fit: fill;
+  border-radius: 20px;
+}
+.slider-prev{
+  
+}
+.slider-next{
+  transform: scaleX(-1); 
 }
 
 .titleSlider {
