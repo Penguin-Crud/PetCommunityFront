@@ -35,20 +35,26 @@
     width: 80px;
     height: 80px;
 }
+a{
+  contain: none;
+  padding-left:  20px;
+  margin-left: 20px;
+
+}
 
 .copyright{
   display:flex;
-  justify-content:space-around;
-  margin-left: 10%;
+  justify-content:space-around
 }
 .copyrightText{
   color: black;
   text-shadow: none;
   text-align:center;
+
 }
 
 .github{
  width: 25%; 
  margin-left: 75%;
- margin-bottom: 15%;
+ margin-bottom: 0%;
 }
