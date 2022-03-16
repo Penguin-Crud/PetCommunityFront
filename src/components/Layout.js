@@ -7,7 +7,7 @@ import Petformulario from './dynamics_components/Petformulario';
 import PetFormularioRegister from './dynamics_components/PetFormularioRegister';
 import Footer from './Footer';
 import PetEditFormulario from './dynamics_components/PetEditFormulario';
-
+import NoMatch from './dynamics_components/NoMatch';
 
 function Layout() {
   return (
@@ -16,7 +16,7 @@ function Layout() {
         <Routes>
           <Route path='/' element={<Nav />} />
             <Route index element={<Nav />} />
-            {/* <Route path="*" element={<NoMatch />} /> */}
+            <Route path="*" element={<NoMatchNav />} />
 
           <Route path="/dashboard" element={<Nav />} />
           <Route path='/createPost' element={<Nav />} />
@@ -26,7 +26,7 @@ function Layout() {
         <Routes>
           <Route path='/' element={<Main />} />
             <Route index element={<Main />} />
-            {/* <Route path="*" element={<NoMatch />} /> */}
+            <Route path="*" element={<NoMatch />} />
             
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/createPost" element={<Petformulario />} />
@@ -40,7 +40,7 @@ function Layout() {
         <Routes>
           <Route path='/' element={<Footer />} />
             <Route index element={<Footer />} />
-            {/* <Route path="*" element={<NoMatch />} /> */}
+            {<Route path="*" element={<Footer />} />}
 
           <Route path="/dashboard" element={<Footer />} />
           <Route path='/createPost' element={<Footer />} />
