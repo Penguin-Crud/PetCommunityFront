@@ -10,7 +10,7 @@ function Nav() {
     return (
         <nav className="nav">
             <div className="logo-container">
-                <img className="logo" src={Logo} alt="" />
+                <img className="logo" src={Logo} alt="logo" />
             </div>
             <div className="container-searcher">
                 <Searcher />
@@ -23,7 +23,7 @@ function Nav() {
                     </div>
                     <ul>
                         <li>
-                            <a href="#">My Profile</a>
+                            <Link to="/associtionDetail">My Profile</Link>
                         </li>
                         <li>
                             <Link to="/dashboard">Dashboard</Link>
@@ -35,7 +35,7 @@ function Nav() {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <a href="#">Logout</a>
+                            <Link to="/exit">Logout</Link>
                         </li>
                     </ul>         
                 </div>

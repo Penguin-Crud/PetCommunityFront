@@ -145,7 +145,7 @@ function Petformulario() {
                </div>
             </form>
 
-            <img className="imgDogAndCat" src={dogcat}/>
+            <img className="imgDogAndCat" src={dogcat} alt="dogcat"/>
             
         </div>
     )
