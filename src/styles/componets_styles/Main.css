@@ -1,13 +1,12 @@
-
 /* --- HEROE --- */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
     .Hero {
       animation: App-logo-spin infinite 20s linear;
 
       width: 100vw;
     }
-}
+} 
 @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
@@ -15,7 +14,63 @@
     to {
       transform: rotate(360deg);
     }
+}*/
+
+/* --- HERO ---*/
+
+html {
+  scroll-behavior: smooth;
 }
+
+.hero {
+  width: 99.9%;
+  height: 50vh;
+
+  background-image: url("https://www.mundoperros.es/wp-content/uploads/2017/11/perro-tristeza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-info {
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.hero-title {
+  line-height: 1;
+  font-size: 2em;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+
+.hero-gradient {
+  width: 100%;
+  height: 20vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  background: linear-gradient(0deg, #CDD4CA 10%, rgba(196, 196, 196, 0.048) 77.19%);
+  box-sizing: border-box;
+}
+
+.hero-button {
+ display: none; 
+}
+
 
 /* --- SLIDER --- */
 
@@ -24,11 +79,25 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
   height: 50vh;
-  
   box-sizing: border-box;
-  margin: auto;
+  margin-top: 2rem;
+}
+.slider-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; 
+}
+.slider-image{
+  width: 500px;
+  height:40vh;
+  object-fit: fill;
+  border-radius: 20px;
+}
+
+.slider-next{
+  transform: scaleX(-1); 
 }
 
 .titleSlider {
@@ -36,8 +105,15 @@
   font-weight: 700;
   color: var(--colorNav);
 
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   box-sizing: border-box;
+}
+
+.titleSlider2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--colorNav);
 }
 
 /* --- PETS --- */
@@ -89,4 +165,77 @@
 .datePet {
   display: flex;
   align-items: flex-end;
+}
+
+@media (min-width:700px) {
+
+
+  .hero-title {
+    font-size: 3.5em;
+  }
+
+  .hero-info {
+    max-width: 300px;
+  }
+
+  .hero-button {
+    display: block;
+    width: 20%;
+    height: 7vh;
+
+    background-color: #ffffff00;
+    border: none;
+  }
+  
+  .hero-buttonImg {
+    width: 100%;
+    height: 100%;
+    filter: invert(35%) sepia(100%) saturate(322%) hue-rotate(60deg) brightness(99%) contrast(85%);
+  }
+}
+
+@media (min-width:900px) {
+  
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-title {
+    font-size: 4.5em;
+  }
+
+  .hero-info {
+    max-width: 450px;
+  }
+
+  .hero-button {
+    width: 20%;
+    height: 11vh;
+
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  .hero-gradient {
+    height: 30vh;
+  }
+}
+
+@media (min-width:1250px) {
+  .hero {
+    height: 85vh;
+    background-position: bottom;
+  }
+
+  .hero-title {
+    font-size: 6em;
+  }
+
+  .hero-info {
+    max-width: 550px;
+  }
+
+  .hero-gradient {
+    height: 40vh;
+  }
 }

@@ -1,21 +1,21 @@
 import "../styles/index.css";
-import AssociationsList from "./dynamics_components/AssociationsList";
-import imgGithub from "../assets/img/GitHub.png";
-
-
-
+import imgGit from "../assets/GitHub-Logo1 1.svg";
+import AssociationsList from "./dynamics_components/AssociationsList.jsx";
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="Footer">
             <div className="associations">
                 <AssociationsList />
             </div>
-            <div className="copyright"> 
-                <p className="copyrightText">© 2022</p>
-                <a target="_blank" href="https://github.com/Penguin-Crud"> <img  className="github" src={imgGithub} alt="" /></a>
-            </div>                  
-        </footer>
+
+            <div className="information">
+                <p>2022 Penguin-Crud ©️</p>
+                <a target="_blank" href="https://github.com/Penguin-Crud"> 
+                    <img src={imgGit} alt="github" />
+                </a>
+            </div>  
+         </footer>
     )
 }
 
