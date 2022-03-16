@@ -1,4 +1,3 @@
-
 /* --- HEROE --- */
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -82,8 +81,7 @@ html {
   flex-direction: column;
   height: 50vh;
   box-sizing: border-box;
-  margin: auto;
-  /* margin-top: 60px; */
+  margin-top: 2rem;
 }
 .slider-container{
   display: flex;
@@ -97,9 +95,7 @@ html {
   object-fit: fill;
   border-radius: 20px;
 }
-.slider-prev{
-  
-}
+
 .slider-next{
   transform: scaleX(-1); 
 }
@@ -109,8 +105,15 @@ html {
   font-weight: 700;
   color: var(--colorNav);
 
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   box-sizing: border-box;
+}
+
+.titleSlider2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--colorNav);
 }
 
 /* --- PETS --- */
