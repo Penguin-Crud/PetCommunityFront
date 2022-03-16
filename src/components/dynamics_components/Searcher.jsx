@@ -1,9 +1,11 @@
-import "../../styles/index.css"
+import "../../styles/index.css";
+import Lupa from "../../assets/Lupa.svg";
 
 function Searcher() {
     return (
-        <div>
-             <p>Searcher with icon</p>
+        <div className="searcher">
+            <input className="input-searcher" type="text" placeholder="Search..." />
+            <img className="lupa-searcher" src={Lupa} alt="" />
         </div>
     )
 }

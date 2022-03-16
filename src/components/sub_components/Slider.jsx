@@ -27,7 +27,7 @@ class Slider extends React.Component {
   } 
 
   prevImageHandler = () => {
-    if (this.state.index == 0) {
+    if (this.state.index === 0) {
       return this.setState({index: this.state.data.length -1})
     } 
     this.setState({index: this.state.index - 1})

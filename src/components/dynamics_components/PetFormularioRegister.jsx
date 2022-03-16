@@ -5,7 +5,7 @@ import "../../styles//componets_styles/PetFormulario.css"
 function PetFormularioRegister() {
     return (
         <div> 
-            <h1></h1>
+            
              <form>
                  <div>
                     <label> name:</label> 

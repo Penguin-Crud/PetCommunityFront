@@ -1,6 +1,7 @@
 import "../styles/index.css";
-import burger from "../assets/burger.svg";
 import Searcher from "./dynamics_components/Searcher";
+import Usuario from "../assets/usuario.png";
+import Logo from "../assets/logo2.svg";
 
 import React from "react";
 import {Link} from "react-router-dom";
@@ -8,19 +9,21 @@ import {Link} from "react-router-dom";
 function Nav() {
     return (
         <nav className="nav">
-            <p>Logo</p>
-            <Searcher />
+            <div className="logo-container">
+                <img className="logo" src={Logo} alt="logo" />
+            </div>
+            <div className="container-searcher">
+                <Searcher />
+            </div>
 
             <header className="navbar">
-                <div>
-                    <img className="menu" src="../../assets/img/burger2.svg" alt="logoAssoc." />
-                </div>
-                <div className="dropdown">
-                   
-                    <img src={burger} className="burger" alt="burger" />
+                <div className="dropdown"> 
+                    <div className="container-usuario">
+                        <img src={Usuario} className="burger" alt="burger" />
+                    </div>
                     <ul>
                         <li>
-                            <a href="#">My Profile</a>
+                            <Link to="/associtionDetail">My Profile</Link>
                         </li>
                         <li>
                             <Link to="/dashboard">Dashboard</Link>
@@ -32,10 +35,9 @@ function Nav() {
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <a href="#">Logout</a>
+                            <Link to="/exit">Logout</Link>
                         </li>
-                    </ul>
-                        
+                    </ul>         
                 </div>
             </header>
         
