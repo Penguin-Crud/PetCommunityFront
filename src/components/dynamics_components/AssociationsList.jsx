@@ -2,6 +2,7 @@ import "../../styles/index.css";
 import AssociationCard from "../cards/AssociationCard";
 import { useEffect, useState } from "react";
 import { dataPetsService } from "../../services/PetCommunityServices";
+import Loading from "./Loading";
 
 function AssociationsList() {
 
@@ -30,7 +31,7 @@ function AssociationsList() {
                            </div>
                 })
                 :
-                (<h2>Loading ...</h2>)
+                <Loading/>
             }
         </div>
     )

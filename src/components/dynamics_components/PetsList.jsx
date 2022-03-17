@@ -2,6 +2,7 @@ import "../../styles/index.css";
 import PetCard from "../cards/PetCard";
 import { useEffect, useState } from "react";
 import { dataPetsService } from "../../services/PetCommunityServices";
+import Loading from "./Loading";
 
 function PetsList() {
     
@@ -31,7 +32,7 @@ function PetsList() {
                             </div>
                 })
                 :
-                (<h2>Loading ...</h2>)
+                <Loading/>
             }
         </div>
     )

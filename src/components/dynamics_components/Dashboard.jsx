@@ -3,6 +3,7 @@ import PetCardDashboard from "../cards/PetCardDashboard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { dataPetsService, deleteById } from "../../services/PetCommunityServices";
+import Loading from "./Loading";
 
 function Dashboard() {
 
@@ -11,11 +12,11 @@ function Dashboard() {
 
 
     useEffect( () =>{
-
+       /*  setInterval( */
         dataPetsService("/pets", "all").then( data => {
             setDataPets(data) 
             setDataExist(true)
-        });
+        })/* ,5000) */;
         
     }, [] )
 
@@ -68,9 +69,10 @@ function Dashboard() {
                                     chip={pet.chip}
                                     deletePet={deletePet}
                                />
+                               
                     })
-                    :
-                    (<tr><td> Loading ... </td></tr>)
+                    :<Loading/>
+                    
                 }
                 </tbody>
             </table>
@@ -79,6 +81,7 @@ function Dashboard() {
             <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
         </div>
     </div>
+    
     
     )
 }
