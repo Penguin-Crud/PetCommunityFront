@@ -27,6 +27,7 @@ function PetsList() {
                                     years={pet.age} 
                                     date={pet.date} 
                                     imgURL={pet.imgURL}
+                                    id={pet.id}
                                 />
                             </div>
                 })
