@@ -80,20 +80,27 @@ html {
   justify-content: center;
   flex-direction: column;
   height: 50vh;
+  width:100%;
   box-sizing: border-box;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
 .slider-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px; 
+  width: 100%; 
 }
-.slider-image{
-  width: 500px;
-  height:40vh;
-  object-fit: fill;
-  border-radius: 20px;
+.slider-container .slider-img-container{
+  width: 370px;
+}
+.slider-container .imgPet{
+  margin: 0 auto;
+   height: 350px; 
+  width: 100%;
+  border: none;
+  display: block;
+  padding: 5px 0;
+  object-fit: cover; 
 }
 
 .slider-next{
@@ -115,7 +122,18 @@ html {
   font-weight: 700;
   color: var(--colorNav);
 }
+ @media screen and (max-width:497px) {
 
+  .slider-container .slider-img-container{
+    width: 200px;
+    
+  }
+  .slider-container .imgPet{
+    height: 230px;
+  }
+}
+
+  
 /* --- PETS --- */
 
 .pets {
