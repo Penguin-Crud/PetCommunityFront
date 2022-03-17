@@ -1,11 +1,11 @@
 import "../../styles/index.css";
+import { Link } from "react-router-dom";
 
-function PetCard({name, years, date, imgURL}) {
+function PetCard({name, years, date, imgURL, id}) {
     return (
         <div className="cardPet">
-            <div className="slider-img-container">
-               <img className="imgPet" src={imgURL} alt="joto" />
-            </div>
+            <Link to={`/detailPet/${id}`} >
+            <img className="imgPet" src={imgURL} alt="joto" />
             <div className="infoPet">    
                 <div>
                     <p>{name}</p>
@@ -13,6 +13,7 @@ function PetCard({name, years, date, imgURL}) {
                 </div>
                 <p className="datePet">{date}</p>
             </div>
+            </Link>
         </div>
     )
 }
