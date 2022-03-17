@@ -3,7 +3,9 @@
     background:#fff; 
     font-family: 'Arvo', serif;
 }
-
+.col-sm-10{
+    width: 100% !important;
+}
 .page_404  img{ 
     width:100%;
 }
