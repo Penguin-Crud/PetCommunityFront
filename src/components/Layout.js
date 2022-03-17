@@ -2,11 +2,11 @@ import '../styles/componets_styles/Layout.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Nav from "./Nav";
 import Main from './Main';
-import Dashboard from "./dynamics_components/Dashboard";
-import Petformulario from './dynamics_components/Petformulario';
-import PetFormularioRegister from './dynamics_components/PetFormularioRegister';
+import Dashboard from "./dynamics_components/lists/Dashboard";
+import Petformulario from './dynamics_components/forms/Petformulario';
+import PetEditFormulario from './dynamics_components/forms/PetEditFormulario';
+import PetFormularioRegister from './dynamics_components/forms/PetFormularioRegister';
 import Footer from './Footer';
-import PetEditFormulario from './dynamics_components/PetEditFormulario';
 import NoMatch from './dynamics_components/NoMatch';
 
 function Layout() {

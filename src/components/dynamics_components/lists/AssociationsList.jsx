@@ -1,7 +1,7 @@
-import "../../styles/index.css";
-import AssociationCard from "../cards/AssociationCard";
+import "../../../styles/index.css";
+import AssociationCard from "../../cards/AssociationCard";
 import { useEffect, useState } from "react";
-import { dataPetsService } from "../../services/PetCommunityServices";
+import { dataPetsService } from "../../../services/PetCommunityServices";
 
 function AssociationsList() {
 
