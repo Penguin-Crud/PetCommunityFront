@@ -1,8 +1,8 @@
-import "../../styles/index.css";
-import AssociationCard from "../cards/AssociationCard";
+import "../../../styles/index.css";
+import AssociationCard from "../../cards/AssociationCard";
 import { useEffect, useState } from "react";
-import { dataPetsService } from "../../services/PetCommunityServices";
-import Loading from "./Loading";
+import { dataPetsService } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 function AssociationsList() {
 
@@ -26,6 +26,7 @@ function AssociationsList() {
                                 <div className="bars"></div>
                                 <AssociationCard 
                                     imgURL={association.imgURL}
+                                    id={association.id}
                                 />
                                 <div className="bars"></div>
                            </div>

@@ -1,9 +1,9 @@
-import "../../styles/index.css";
-import PetCardDashboard from "../cards/PetCardDashboard";
+import "../../../styles/index.css";
+import PetCardDashboard from "../../cards/PetCardDashboard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { dataPetsService, deleteById } from "../../services/PetCommunityServices";
-import Loading from "./Loading";
+import { dataPetsService, deleteById } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 function Dashboard() {
 

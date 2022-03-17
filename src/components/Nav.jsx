@@ -7,10 +7,13 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 function Nav() {
+
+    let id = 0;
+
     return (
         <nav className="nav">
             <div className="logo-container">
-                <img className="logo" src={Logo} alt="logo" />
+                <Link to="/"> <img className="logo" src={Logo} alt="logo" /> </Link>
             </div>
             <div className="container-searcher">
                 <Searcher />
@@ -23,7 +26,7 @@ function Nav() {
                     </div>
                     <ul>
                         <li>
-                            <Link to="/associtionDetail">My Profile</Link>
+                            <Link to={`/detailAssociation/${id}`}>My Profile</Link>
                         </li>
                         <li>
                             <Link to="/dashboard">Dashboard</Link>

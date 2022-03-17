@@ -1,8 +1,8 @@
-import "../../styles/index.css";
+import "../../../styles/index.css";
 import { useParams, useNavigate} from "react-router-dom";
 import { useEffect, useState} from "react";
-import { dataPetsService, update } from "../../services/PetCommunityServices";
-import Loading from "./Loading";
+import { dataPetsService, update } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 function PetEditFormulario() {
     let { id } = useParams();

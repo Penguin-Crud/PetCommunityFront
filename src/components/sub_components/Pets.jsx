@@ -1,5 +1,5 @@
 import "../../styles/index.css";
-import PetsList from "../dynamics_components/PetsList";
+import PetsList from "../dynamics_components/lists/PetsList";
 
 function Pets() {
     return (

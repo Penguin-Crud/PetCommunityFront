@@ -1,8 +1,8 @@
-import "../../styles/index.css";
-import PetCard from "../cards/PetCard";
+import "../../../styles/index.css";
+import PetCard from "../../cards/PetCard";
 import { useEffect, useState } from "react";
-import { dataPetsService } from "../../services/PetCommunityServices";
-import Loading from "./Loading";
+import { dataPetsService } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 function PetsList() {
     
@@ -28,6 +28,7 @@ function PetsList() {
                                     years={pet.age} 
                                     date={pet.date} 
                                     imgURL={pet.imgURL}
+                                    id={pet.id}
                                 />
                             </div>
                 })

@@ -1,5 +1,5 @@
 import "../../styles/componets_styles/Main.css";
-import Load from "../../assets/logo.svg"; 
+import Load from "../../assets/img/logo.svg"; 
 
 function Loading() {
     
