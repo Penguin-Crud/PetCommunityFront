@@ -19,7 +19,8 @@ text-align: center;
    margin: 5%;
    border-radius: 5%;
    padding-top: 10%;
-
+   
+   
 }
 
 .titleFormCreate {
@@ -38,7 +39,7 @@ text-align: center;
    border-radius:3px ;
    border:none;
    font-family: Arial, Helvetica, sans-serif;
-   
+   margin: 1%;
 }
 .button button{
    justify-content: center;
