@@ -1,11 +1,11 @@
 import "../../styles/index.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function PetCardDashboard({id, name, age, date, specie, race, gender, size, vaccines, chip, deletePet}) {
 
     return (
         <tr>
-            <td>+ {id}</td>
+            <td> <Link to={`/detailPet/${id}`} > + </Link> </td>
             <td>{name}</td>
             <td>{age}</td>
             <td>{date}</td>
@@ -26,5 +26,3 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
     )
 }
 export default PetCardDashboard;
-
-//onClick={ () => props.deleteUser(user.id) }

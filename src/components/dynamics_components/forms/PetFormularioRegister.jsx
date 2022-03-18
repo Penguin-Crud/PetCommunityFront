@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles//componets_styles/PetFormulario.css"
+import "../../../styles//componets_styles/PetFormulario.css"
 
 
 function PetFormularioRegister() {

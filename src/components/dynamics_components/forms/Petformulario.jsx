@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import "../../styles/componets_styles/PetFormulario.css";
-import dogcat from "../../assets/img/dogcat.jpeg"; 
-import { create } from '../../services/PetCommunityServices';
+import "../../../styles/componets_styles/PetFormulario.css";
+import dogcat from "../../../assets/img/dogcat.jpeg"; 
+import { create } from '../../../services/PetCommunityServices';
 
 function Petformulario() {
 

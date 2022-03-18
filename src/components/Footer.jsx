@@ -1,6 +1,6 @@
 import "../styles/index.css";
 import imgGit from "../assets/GitHub-Logo1 1.svg";
-import AssociationsList from "./dynamics_components/AssociationsList.jsx";
+import AssociationsList from "./dynamics_components/lists/AssociationsList.jsx";
 
 function Footer() {
     return (
