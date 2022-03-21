@@ -1,5 +1,7 @@
 import '../styles/componets_styles/Layout.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { useEffect } from 'react';
+import { isOnline } from '../services/PetCommunityServices';
 import Nav from "./Nav";
 import Main from './Main';
 import Dashboard from "./dynamics_components/lists/Dashboard";
@@ -13,6 +15,11 @@ import DetailPet from './dynamics_components/details/DetailPet';
 import DetailAssociation from './dynamics_components/details/DetailAssociation';
 
 function Layout() {
+
+  useEffect( () =>{
+    isOnline()
+  }, [] )
+
   return (
     <div className="layout">
       <BrowserRouter>

@@ -1,27 +1,42 @@
 import axios from "axios";
 
 const url = "http://localhost:";
-//const port = "3000";  // json-server
-const port = "8080";
+//let port = "3000";  // json-server
+let port = "8080";
 const config = {     
     headers: { 'content-type': 'multipart/form-data' }
 }
 
 
+export async function isOnline() {
+    try {
+        return await axios.get(url + port + "/pets", config)
+        .then(res => { console.warn("Status Back-End: ",res.status)})
+    } catch {
+        return console.warn("#Back-End is offline \n or port != 8080. \n #Actual port for Back-End => ",port ,"\n\n Also can you run json-server putting this command: \n\n\t json-server --watch ./data/db.json \n PD: Remember change port in PetCommunityServices.js" )
+    }
+}
+
+
 export async function dataPetsService(endPoint, id) {
     let data;
-    
-    // endPoint + "/all"
+
     if (id === "all") {
         try{ 
             data = await axios.get(url + port + endPoint)
             .then(res => res.data)
         } catch {
-            console.error("Fetch failed in dataPetsService or DB no Initialized")
-            data = [{
-                "id": 0,
-                "imgURL":"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"
-            }]
+            console.warn("Fetch failed in dataPetsService, deployment auxiliar data.")
+            endPoint == "/pets" ? 
+                data = [{
+                    "id": 0,
+                    "imgURL":[{url: "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
+                }]
+                :
+                data = [{
+                    "id": 0,
+                    "logo": "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"
+                }]
         }
         console.log(endPoint, data)
         return data;
@@ -32,18 +47,23 @@ export async function dataPetsService(endPoint, id) {
         data = await axios.get(url + port + endPoint + "/" + id)
         .then(res => res.data)
     } catch {
-        console.error("Fetch failed in dataPetsService or DB no Initialized")
-        data = [{
-            "id": 0,
-            "imgURL":"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"
-        }]
+        console.warn("Fetch failed in dataPetsService, deployment auxiliar data.")
+        endPoint == "/pets" ? 
+            data = [{
+                "id": 0,
+                "imgURL":[{url: "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
+            }]
+            :
+            data = [{
+                "id": 0,
+                "logo": "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"
+            }]
     }
     console.log(endPoint, data)
     return data;
 }
 
 
-//url + port + endPoint + "/create"
 export async function create(endPoint, formData) {
     return await axios.post(url + port + endPoint, formData, config)
     .then(response => {
@@ -52,9 +72,8 @@ export async function create(endPoint, formData) {
     .catch(error => {
         console.log(error);
     });
-    
 }
-//url + port + endPoint + "/delete"
+
 export function deleteById(endPoint, id) {
     id.toString();
     axios.delete(url + port + endPoint + "/" + id);
