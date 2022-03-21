@@ -2,7 +2,11 @@ import axios from "axios";
 
 const url = "http://localhost:";
 //const port = "3000";  // json-server
-const port = "3000";
+const port = "8080";
+const config = {     
+    headers: { 'content-type': 'multipart/form-data' }
+}
+
 
 export async function dataPetsService(endPoint, id) {
     let data;
@@ -40,8 +44,15 @@ export async function dataPetsService(endPoint, id) {
 
 
 //url + port + endPoint + "/create"
-export function create(endPoint, data) {
-    axios.post(url + port + endPoint, data);
+export async function create(endPoint, formData) {
+    return await axios.post(url + port + endPoint, formData, config)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+    
 }
 //url + port + endPoint + "/delete"
 export function deleteById(endPoint, id) {
