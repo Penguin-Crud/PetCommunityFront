@@ -115,7 +115,7 @@ function PetEditFormulario() {
                 <input 
                     type="text"
                     required 
-                    defaultValue={dataPet.imgURL}
+                    defaultValue={dataPet.imgURL[0].url}
                     picture="picture"
                     onChange={ (e) => setPicture(e.target.value) }
                 />
