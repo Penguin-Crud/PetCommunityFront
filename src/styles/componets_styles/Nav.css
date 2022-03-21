@@ -2,7 +2,11 @@
     width: 100%;
     min-height: 8vh;
 
-    background-color: var(--colorNav);
+    background: linear-gradient(180deg, rgba(205, 212, 202, 0.3) 72.77%, rgba(196, 196, 196, 0.05) 100%);
+    position: absolute;
+    top: 0;
+
+
 
     display: flex;
     align-items: center;
@@ -43,6 +47,7 @@
 
 .burger {
     width: 100%;
+    border-radius: 0.5rem;
 }
 
 .dropdown ul {
@@ -95,21 +100,22 @@
 .input-searcher {
     width: 70%;
     
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.089);
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #ffffff;
 
     display: flex;
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .input-searcher::placeholder { 
-    color: black; 
+    color: rgb(255, 255, 255); 
 }
 
 .lupa-searcher {
     width: 20%;
+    filter: invert(96%) sepia(4%) saturate(0%) hue-rotate(360deg) brightness(104%) contrast(107%);
 }
 
 /* --- Medias --- */
