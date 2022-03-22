@@ -29,7 +29,7 @@ import PetCard from "../../cards/PetCard";
                                 name={petDetail.name} 
                                 years={petDetail.age} 
                                 date={petDetail.date} 
-                                imgURL={petDetail.imgURL}
+                                imgURL={petDetail.imgURL[0].url}
                                 id={petDetail.id}
                             />
                         </div>
