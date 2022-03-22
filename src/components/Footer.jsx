@@ -10,7 +10,7 @@ function Footer() {
             </div>
 
             <div className="information">
-                <p>2022 Penguin-Crud ©️</p>
+                <p>©️ 2022 Penguin-Crud </p>
                 <a target="_blank" href="https://github.com/Penguin-Crud"> 
                     <img src={imgGit} alt="github" />
                 </a>

@@ -55,7 +55,7 @@ html {
   line-height: 1;
   font-size: 2em;
   font-weight: 700;
-  text-shadow: 0 0 2px rgb(0, 0, 0);
+  text-shadow:none;
 }
 
 
@@ -107,8 +107,14 @@ html {
   object-fit: cover; 
 }
 
+.slider-prev{
+  transform: scaleX(+1);
+  filter: invert(93%) sepia(16%) saturate(4724%) hue-rotate(334deg) brightness(105%) contrast(102%); 
+}
+
 .slider-next{
   transform: scaleX(-1); 
+  filter: invert(93%) sepia(16%) saturate(4724%) hue-rotate(334deg) brightness(105%) contrast(102%); 
 }
 
 .titleSlider {
@@ -179,10 +185,11 @@ html {
 }
 
 .infoPet div,p {
-  color: white;
+  color: var(--colorLetra);
   font-size: 1rem;
-  text-shadow: var(--border);
+  text-shadow:none;
 }
+
 
 .datePet {
   display: flex;

@@ -2,8 +2,6 @@
    border-radius: 10px;
    margin-bottom: 50%;
    text-align: center;
-   background-color:var();
-   color : var(); 
 } 
 
 
@@ -12,14 +10,13 @@ text-align: center;
 }
 
 .FormPet{
-   background-color:var(--colorCard);
+   background-color:var(--colorFondo);
    text-align: center;
    margin-top:10px;
    margin-bottom: 10%;
    margin: 5%;
    border-radius: 5%;
    padding-top: 10%;
-   
    
 }
 
@@ -47,9 +44,9 @@ text-align: center;
    border-radius: 6px;
    border: none;
    font-family: Arial, Helvetica, sans-serif;
-   color: var(--colorCard);
+   color: var(--colorLetra);
    margin-bottom: 20px;
-  
+  background-color: var(--colorBotones);
 }
 .Submit{
    background-color: var(--colorNav);

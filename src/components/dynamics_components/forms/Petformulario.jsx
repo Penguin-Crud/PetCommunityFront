@@ -93,7 +93,7 @@ function Petformulario() {
                <input 
                     type="text"
                     required 
-                    placeholder="Size(mall,medium,tall)" 
+                    placeholder="Size(small,medium,tall)" 
                     defaultValue=""
                     size="size"
                     onChange={ (e) => setSize(e.target.value) }
@@ -117,7 +117,7 @@ function Petformulario() {
                <input 
                     type="text"
                     required 
-                    placeholder="Descrption" 
+                    placeholder="Description" 
                     defaultValue=""
                     description="description"
                     onChange={ (e) => setDescription(e.target.value) }
@@ -125,7 +125,7 @@ function Petformulario() {
                <input 
                     type="text"
                     required 
-                    placeholder="Vaccies"
+                    placeholder="Vaccines"
                     defaultValue=""
                     vaccines="vaccines"
                     onChange={ (e) => setVaccines(e.target.value) }
