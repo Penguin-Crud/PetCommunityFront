@@ -217,6 +217,14 @@ html {
     filter: invert(35%) sepia(100%) saturate(322%) hue-rotate(60deg) brightness(99%) contrast(85%);
   }
 
+  .hero-buttonImg:hover {
+    filter: invert(61%) sepia(65%) saturate(2490%) hue-rotate(41deg) brightness(101%) contrast(84%);
+  }
+
+  .hero-buttonImg {
+    transition: filter 0.4s ease-out 0.2s;
+  }
+
   .hero-title {
     margin-top: 10%;
   }

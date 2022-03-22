@@ -38,7 +38,7 @@ function Nav() {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        <li className="logout">
                             <Link to="/exit">Logout</Link>
                         </li>
                     </ul>         
