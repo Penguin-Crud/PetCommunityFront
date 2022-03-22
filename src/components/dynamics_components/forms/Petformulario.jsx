@@ -9,46 +9,74 @@ function Petformulario() {
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
     const [picture, setPicture] = useState('');
-    const [location, setLocation] = useState('');
+//     const [location, setLocation] = useState('');
     const [size, setSize] = useState('');
     const [specie, setSpecie] = useState('');
     const [race, setRace] = useState('');
     const [description, setDescription] = useState('');
-    const [vaccines, setVaccines] = useState('');
-    const [chip, setChip] = useState('');
-
-    let newPet = {
-        name: name, 
-        age: age, 
-        gender: gender,
-        picture: picture,
-        location: location, 
-        size: size, 
-        specie: specie, 
-        race: race,
-        description: description, 
-        vaccines: vaccines, 
-        chip: chip
-    };
-
+    const [vaccines, setVaccines] = useState(false);
+    const [chip, setChip] = useState(false);
+    const [date, setDate] = useState('');
+    
+    let list = [name, age, gender, /*location,*/ size, specie, race, description, vaccines, chip, date]
+    let formData = new FormData();
+    
     const cleanInputs = (event) => {
         event.target.reset()
     }
 
     const addData = (e) => {
-        e.preventDefault()
+     e.preventDefault()
+     
+     // let data = [
+     //      '{\n    "name": "jorge"',
+     //      ',\n    "age": "1 años"',
+     //      ',\n    "gender": "male"',
+     //      ',\n    "size": "mediano"',
+     //      ',\n    "specie": "canino"',
+     //      ',\n    "race": "pastor aleman"',
+     //      ',\n    "description": "muy cariñoso y bueno"',
+     //      ',\n    "vaccines": true',
+     //      ',\n    "chip": true',
+     //      ',\n    "date": "15/02/2020"',
+     //      '\n   }\n'
+     // ]
+     let datas = [
+          '{\n    "name": ',
+          ',\n    "age": ',
+          ',\n    "gender": ',
+          ',\n    "size": ',
+          ',\n    "specie": ',
+          ',\n    "race": ',
+          ',\n    "description": ',
+          ',\n    "vaccines": ',
+          ',\n    "chip": ',
+          ',\n    "date": ',
+          '\n   }\n'
+     ]
+    
+     for (let i = 0; i < list.length; i++) {
 
-        console.log(newPet)
+          typeof list[i] === "boolean" ? 
+               datas[i] += `${list[i]}` 
+               :
+               datas[i] += `"${list[i]}"` 
+     }
+     // console.log(data)
+     console.log(datas)
 
-        create("/pets", newPet)
-        //props.addUser({name: name, username: username});
-        
-        cleanInputs(e)
+
+     formData.append('pet', new Blob(datas, {type : 'application/json'}));
+     formData.append('image', picture);
+
+     create("/pets", formData)
+     
+     // cleanInputs(e)
     }
 
     return (
         <div> 
-            <form className="FormPet" onSubmit={ addData }> 
+            <form name='formCreate' className="FormPet" onSubmit={ addData }> 
                <h1 className="titleFormCreate"> New Pet</h1>
                <input 
                     type="text"
@@ -69,27 +97,27 @@ function Petformulario() {
                <input 
                     type="text"
                     required 
+                    placeholder="Date" 
+                    defaultValue=""
+                    date="date"
+                    onChange={ (e) => setDate(e.target.value) }
+               />
+               <input 
+                    type="text"
+                    required 
                     placeholder="Gender" 
                     defaultValue=""
                     gender="gender"
                     onChange={ (e) => setGender(e.target.value) }
                />
-               <input 
-                    type="text"
-                    required 
-                    placeholder="Picture" 
-                    defaultValue=""
-                    picture="picture"
-                    onChange={ (e) => setPicture(e.target.value) }
-               />
-               <input 
+               {/* <input 
                     type="text"
                     required 
                     placeholder="Location" 
                     defaultValue=""
                     location="location"
                     onChange={ (e) => setLocation(e.target.value) }
-               />
+               /> */}
                <input 
                     type="text"
                     required 
@@ -122,27 +150,46 @@ function Petformulario() {
                     description="description"
                     onChange={ (e) => setDescription(e.target.value) }
                />
+               
+               <div className='checkbox'>
+                    <label htmlFor="vaccines">Vaccined ? </label>
+                    <input 
+                         type="checkbox" 
+                         defaultChecked={vaccines} 
+                         id='vaccines'
+                         name="vaccines"
+                         vaccines="vaccines"
+                         onClick={ vaccines? () => setVaccines(false) : () => setVaccines(true) }
+                    />
+                    {/* {console.log(vaccines)} */}
+               </div>
+               <div className='checkbox'>
+                    <label htmlFor="chip">Chip ? </label>
+                    <input 
+                         type="checkbox" 
+                         defaultChecked={chip} 
+                         id='chip'
+                         name="chip"
+                         chip="chip"
+                         onClick={ chip? () => setChip(false) : () => setChip(true) }
+                    />
+                    {/* {console.log(chip)} */}
+               </div>
+
                <input 
-                    type="text"
-                    required 
-                    placeholder="Vaccies"
+                    type="file"
+                    accept="image/*"
+                    // required 
+                    placeholder="Picture" 
                     defaultValue=""
-                    vaccines="vaccines"
-                    onChange={ (e) => setVaccines(e.target.value) }
+                    picture="picture"
+                    onChange={ (e) => setPicture(e.target.files[0]) }
                />
-               <input 
-                    type="text"
-                    required 
-                    placeholder="Chip"
-                    defaultValue=""
-                    chip="chip"
-                    onChange={ (e) => setChip(e.target.value) }
-               />
-                
                <div className="button">
                  <button>Add Img</button>
                  <button type="sumbit">Submit</button>
                </div>
+               
             </form>
 
             <img className="imgDogAndCat" src={dogcat} alt="dogcat"/>

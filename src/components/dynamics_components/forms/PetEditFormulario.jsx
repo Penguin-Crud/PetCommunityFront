@@ -2,6 +2,7 @@ import "../../../styles/index.css";
 import { useParams, useNavigate} from "react-router-dom";
 import { useEffect, useState} from "react";
 import { dataPetsService, update } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 function PetEditFormulario() {
     let { id } = useParams();
@@ -114,7 +115,7 @@ function PetEditFormulario() {
                 <input 
                     type="text"
                     required 
-                    defaultValue={dataPet.imgURL}
+                    defaultValue={dataPet.imgURL[0].url}
                     picture="picture"
                     onChange={ (e) => setPicture(e.target.value) }
                 />
@@ -174,7 +175,7 @@ function PetEditFormulario() {
                 </div>
             </form>
             :
-            <p>Loading ...</p>
+             <Loading/>
         }        
         </div>
     )

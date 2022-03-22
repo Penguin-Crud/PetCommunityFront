@@ -2,6 +2,7 @@ import "../../../styles/index.css";
 import AssociationCard from "../../cards/AssociationCard";
 import { useEffect, useState } from "react";
 import { dataPetsService } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 function AssociationsList() {
 
@@ -24,13 +25,14 @@ function AssociationsList() {
                     return <div className="containerBars" key={association.id}>
                                 <div className="bars"></div>
                                 <AssociationCard 
-                                    imgURL={association.imgURL}
+                                    imgURL={association.logo}
+                                    id={association.id}
                                 />
                                 <div className="bars"></div>
                            </div>
                 })
                 :
-                (<h2>Loading ...</h2>)
+                <Loading/>
             }
         </div>
     )

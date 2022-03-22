@@ -2,6 +2,7 @@ import "../../../styles/index.css";
 import PetCard from "../../cards/PetCard";
 import { useEffect, useState } from "react";
 import { dataPetsService } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 function PetsList() {
     
@@ -26,13 +27,13 @@ function PetsList() {
                                     name={pet.name} 
                                     years={pet.age} 
                                     date={pet.date} 
-                                    imgURL={pet.imgURL}
+                                    imgURL={pet.imgURL[0].url}
                                     id={pet.id}
                                 />
                             </div>
                 })
                 :
-                (<h2>Loading ...</h2>)
+                <Loading/>
             }
         </div>
     )

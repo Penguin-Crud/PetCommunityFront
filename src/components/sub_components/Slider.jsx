@@ -4,6 +4,7 @@ import PetCard from "../cards/PetCard";
 import Next from "../../assets/img/next.png";
 import Prev from "../../assets/img/prev.png";
 import { dataPetsService } from "../../services/PetCommunityServices";
+import Loading from "../dynamics_components/Loading";
 
 
 class Slider extends React.Component {
@@ -45,13 +46,13 @@ class Slider extends React.Component {
                           name={this.state.data[this.state.index].name} 
                           years={this.state.data[this.state.index].age} 
                           date={this.state.data[this.state.index].date} 
-                          imgURL={this.state.data[this.state.index].imgURL}
+                          imgURL={this.state.data[this.state.index].imgURL[0].url}
                           id={this.state.data[this.state.index].id}
                       />
                       <a onClick={this.nextImageHandler}><img className="slider-next" src={Next} alt="next-arrow" /></a>
               </div>
               :
-              <p>Loading...</p>
+              <Loading/>
               }   
             </div>
   }

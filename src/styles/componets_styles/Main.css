@@ -1,10 +1,14 @@
 /* --- HEROE --- */
 
-/* @media (prefers-reduced-motion: no-preference) {
-    .Hero {
-      animation: App-logo-spin infinite 20s linear;
+ @media (prefers-reduced-motion: no-preference) {
+    .loading {
+      animation: App-logo-spin infinite 7s linear;
 
       width: 100vw;
+      height: 17vh;
+      
+      
+
     }
 } 
 @keyframes App-logo-spin {
@@ -14,7 +18,7 @@
     to {
       transform: rotate(360deg);
     }
-}*/
+}
 
 /* --- HERO ---*/
 
