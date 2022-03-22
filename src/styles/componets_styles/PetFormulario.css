@@ -17,6 +17,10 @@ text-align: center;
    margin: 5%;
    border-radius: 5%;
    padding-top: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
    
 }
 
@@ -37,6 +41,13 @@ text-align: center;
    border:none;
    font-family: Arial, Helvetica, sans-serif;
    margin: 1%;
+   width: 10rem;
+}
+.checkbox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 5rem;
 }
 .button button {
    justify-content: center;

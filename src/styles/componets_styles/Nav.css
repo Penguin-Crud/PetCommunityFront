@@ -2,7 +2,11 @@
     width: 100%;
     min-height: 8vh;
 
-    background-color: var(--colorNav);
+    background: var(--colorGradient);
+    position: absolute;
+    top: 0;
+
+
 
     display: flex;
     align-items: center;
@@ -24,6 +28,10 @@
     width: 100%;
 }
 
+.logo:hover {
+    box-shadow: 0px 4px 2rem 2rem rgba(0, 0, 0, 0.15);
+}
+
 /* .navbar div :hover {             mediaQuery in sizeWeb :hover in options
     background-color: #3b3c3fb7;
 } */
@@ -43,18 +51,25 @@
 
 .burger {
     width: 100%;
+    border-radius: 0.5rem;
+}
+
+.burger:hover {
+    width: 115%;
 }
 
 .dropdown ul {
     display: none;
+    width: 35%;
 
     position: absolute;
     right: 0;
 
     z-index: 1;
-
-    background-color: var(--colorNav);
-}
+  
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 4px 5px 5px rgb(0 0 0 / 15%);
+} 
 
 .dropdown ul li{
     display: flex;
@@ -64,13 +79,25 @@
     text-align: center;
 
     box-sizing: border-box;
-    padding: 2%;
+    padding: 5%;
+}
+
+.logout:hover {
+    background-color: #b2141444 !important;
+    transition: height 0.6s ease-in-out, background-color 0.6s;
+}
+
+.dropdown li:hover {
+    background-color: #80b21444;
+    transition: height 0.6s ease-in-out, background-color 0.6s;
 }
 
 .dropdown ul li a{
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: #206a5d;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 
@@ -95,21 +122,22 @@
 .input-searcher {
     width: 70%;
     
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.089);
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #000000;
 
     display: flex;
     text-align: center;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .input-searcher::placeholder { 
-    color: black; 
+    color: rgb(0, 0, 0); 
 }
 
 .lupa-searcher {
     width: 20%;
+    
 }
 
 /* --- Medias --- */
@@ -126,6 +154,10 @@
     .container-searcher {
         width: 25%;
     }
+
+    .dropdown ul li{
+        padding: 8%;
+    }
 }
 
 @media (min-width:768px) {
@@ -139,6 +171,18 @@
 
     .container-searcher {
         width: 20%;
+    }
+
+    .dropdown ul li{
+        padding: 7%;
+    }
+
+    .dropdown ul {
+        width: 25%;
+    }
+
+    .dropdown ul li a{
+        font-size: 1.2rem;
     }
 }
 
@@ -154,9 +198,26 @@
     .container-searcher {
         width: 15%;
     }
+
+    .dropdown ul li{
+        padding: 8%;
+    }
+
+    .dropdown ul {
+        width: 22%;
+    }
+
+    .dropdown ul li a{
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width:1200px) {
+    .nav{
+        min-height: 10vh;
+        padding-bottom: 0.5rem;
+    }
+
     .logo-container {
         width: 15%;
     }
@@ -167,6 +228,18 @@
 
     .container-searcher {
         width: 14%;
+    }
+
+    .dropdown ul li{
+        padding: 5%;
+    }
+
+    .dropdown ul {
+        width: 20%;
+    }
+
+    .dropdown ul li a{
+        font-size: 1.5rem;
     }
 }
 
