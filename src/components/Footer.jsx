@@ -8,7 +8,6 @@ function Footer() {
             <div className="associations">
                 <AssociationsList />
             </div>
-
             <div className="information">
                 <p>2022 Penguin-Crud ©️</p>
                 <a target="_blank" href="https://github.com/Penguin-Crud"> 

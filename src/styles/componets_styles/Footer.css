@@ -14,7 +14,10 @@
 
 .associations {
     overflow-x: scroll!important;
+    overflow-y: hidden!important;
     width:100vw ;
+    background-color: var(--colorLayout);
+    height: 100%;
 }
 
 .cardListAssociation {
@@ -34,13 +37,6 @@
   height: 90%;
 }
 
-.bars {
-  background-color:#3ac00096;
-  position: relative;
-  width: 2.5px;
-  height: 90%;
-}
-
 .cardAssociation {
     position: relative;
   
@@ -57,7 +53,6 @@
 .imgAssociation {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 12px;
-
     width: 100%;
 }
 
@@ -80,4 +75,46 @@
 
 .information a img {
   width: 100%;
+}
+
+@media (min-width: 576px){
+  .associations {
+    display: flex;
+    justify-content: center;
+}
+}
+@media (max-height: 750px){
+  .Footer {
+    height: 22vh;
+}
+}
+@media (min-width: 768px){
+  .associations {
+    display: flex;
+    justify-content: center;
+}
+}
+@media (max-height: 700px){
+  .associations {
+    padding-bottom: 5rem;
+
+}
+}
+@media (min-width: 992px){
+  .associations {
+    display: flex;
+    justify-content: center;
+}
+}
+@media (min-width: 1200px){
+  .associations {
+    display: flex;
+    justify-content: center;
+}
+}
+@media (min-width: 1400px){
+  .associations {
+    display: flex;
+    justify-content: center;
+}
 }

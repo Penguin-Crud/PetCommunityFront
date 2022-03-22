@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar:vertical {
-    width:10px;
+    display: none;
 }
 
 ::-webkit-scrollbar-button {
@@ -25,11 +25,26 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--colorCard);
+    background-color: var(--colorLayout);
     border-radius: 20px;
-   
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px;  
+    display: none;  
+}
+.associations::-webkit-scrollbar-thumb{
+   display: none;
+}
+.associations{
+    height: 100px;
+}
+.containerBars{
+    height: 70px;
+}
+.imgAssociation{
+    display: flex;
+    justify-content: center;
+}
+.cardListAssociation{
+   margin-top: 15px;
 }
