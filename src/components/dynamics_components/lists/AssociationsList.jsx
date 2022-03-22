@@ -25,7 +25,7 @@ function AssociationsList() {
                     return <div className="containerBars" key={association.id}>
                                 <div className="bars"></div>
                                 <AssociationCard 
-                                    imgURL={association.imgURL}
+                                    imgURL={association.logo}
                                     id={association.id}
                                 />
                                 <div className="bars"></div>

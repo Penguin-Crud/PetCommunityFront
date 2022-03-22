@@ -1,4 +1,4 @@
-.containerDashboard {
+ .containerDashboard {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,10 +35,12 @@
     padding: 0% !important;
     border-left: 1.1px solid var(--colorCard) !important;
     z-index: 100;
+    
 }
 .actionsContent{
     display: flex;
     padding: 0 0.5rem;
+    
 }
 .leftBorder{
     width: 1px;
@@ -54,6 +56,7 @@
 }
 .actionEdit {
     background-color: orange;
+    
 }
 .actionDelete {
     background-color: red;
@@ -62,6 +65,7 @@
 .btnAddPet {
     box-sizing: border-box;
     margin: 1em 0;
+
 }
 .btnAddPet button {
     background-color:var(--colorFooter);
@@ -70,6 +74,26 @@
     box-sizing: border-box;
     padding: 0.8em 1.5em;
 }
+
+.dashboard-container{
+    display: flex;
+    flex-direction:column;
+    
+
+}
+
+.dashboard-container img {
+    width: 20px;
+   
+    
+    
+
+}
+.dashboard-img-container{
+    display: flex;
+
+}
+
 @media (max-width:699px) {
     .tableContainer {
         max-width: 80%;
@@ -92,3 +116,8 @@
     max-width: 95%;
 }
 }
+ 
+
+
+
+

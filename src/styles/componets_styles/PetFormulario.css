@@ -2,8 +2,6 @@
    border-radius: 10px;
    margin-bottom: 50%;
    text-align: center;
-   background-color:var();
-   color : var(); 
 } 
 
 .title{
@@ -11,13 +9,18 @@ text-align: center;
 }
 
 .FormPet{
-   background-color:var(--colorCard);
+   background-color:var(--colorFondo);
    text-align: center;
    margin-top: 10px;
    margin-bottom: 10%;
    margin: 5%;
    border-radius: 5%;
-   padding-top: 3%;   
+   padding-top: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
 }
 
 .titleFormCreate {
@@ -37,6 +40,13 @@ text-align: center;
    border:none;
    font-family: Arial, Helvetica, sans-serif;
    margin: 1%;
+   width: 10rem;
+}
+.checkbox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 5rem;
 }
 
 .button button {
@@ -45,9 +55,9 @@ text-align: center;
    border-radius: 6px;
    border: none;
    font-family: Arial, Helvetica, sans-serif;
-   color: var(--colorCard);
-   margin-bottom: 30px;
-   margin-top: 15px;
+   color: var(--colorLetra);
+   margin-bottom: 20px;
+  background-color: var(--colorBotones);
 }
 
 .Submit{

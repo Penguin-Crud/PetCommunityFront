@@ -28,7 +28,7 @@ function Dashboard() {
         deleteById("/pets", id);
     }
 
-    return (
+    /* return (
     <div className="containerDashboard">
         <h1 className="titleSlider marginTitle">Dashboard</h1>
         
@@ -86,4 +86,49 @@ function Dashboard() {
     )
 }
 
-export default Dashboard;
+export default Dashboard; 
+ */
+
+
+ return (
+    <div className="containerDashboard">
+        <h1 className="titleSlider marginTitle">Dashboard</h1>
+        
+        <div className="tableContainer">
+            
+                
+                <main>
+                {
+                    dataExist ? dataPets.map(pet => {
+                        return <PetCardDashboard 
+                                    key={pet.id}
+                                    id={pet.id}
+                                    name={pet.name}
+                                    age={pet.age}
+                                    date={pet.date}
+                                    specie={pet.specie}
+                                    race={pet.race}
+                                    gender={pet.gender}
+                                    size={pet.size}
+                                    vaccines={pet.vaccines}
+                                    chip={pet.chip}
+                                    deletePet={deletePet}
+                               />
+                               
+                    })
+                    :<Loading/>
+                    
+                }
+                </main>
+           
+        </div>
+        <div className="btnAddPet">
+            <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
+        </div>
+    </div>
+    
+    
+    )
+}
+
+export default Dashboard; 

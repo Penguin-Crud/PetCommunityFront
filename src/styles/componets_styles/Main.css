@@ -55,7 +55,7 @@ html {
   line-height: 1;
   font-size: 2em;
   font-weight: 700;
-  text-shadow: 0 0 2px rgb(0, 0, 0);
+  text-shadow:none;
 }
 
 
@@ -107,8 +107,14 @@ html {
   object-fit: cover; 
 }
 
+.slider-prev{
+  transform: scaleX(+1);
+  filter: invert(93%) sepia(16%) saturate(4724%) hue-rotate(334deg) brightness(105%) contrast(102%); 
+}
+
 .slider-next{
   transform: scaleX(-1); 
+  filter: invert(93%) sepia(16%) saturate(4724%) hue-rotate(334deg) brightness(105%) contrast(102%); 
 }
 
 .titleSlider {
@@ -179,14 +185,21 @@ html {
 }
 
 .infoPet div,p {
-  color: white;
+  color: var(--colorLetra);
   font-size: 1rem;
-  text-shadow: var(--border);
+  text-shadow:none;
 }
+
 
 .datePet {
   display: flex;
   align-items: flex-end;
+}
+
+@media (max-width:500px) {
+  .hero-title {
+    margin-top: 15%;
+  }
 }
 
 @media (min-width:700px) {
@@ -213,6 +226,18 @@ html {
     width: 100%;
     height: 100%;
     filter: invert(35%) sepia(100%) saturate(322%) hue-rotate(60deg) brightness(99%) contrast(85%);
+  }
+
+  .hero-buttonImg:hover {
+    filter: invert(61%) sepia(65%) saturate(2490%) hue-rotate(41deg) brightness(101%) contrast(84%);
+  }
+
+  .hero-buttonImg {
+    transition: filter 0.4s ease-out 0.2s;
+  }
+
+  .hero-title {
+    margin-top: 10%;
   }
 }
 

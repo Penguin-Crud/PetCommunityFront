@@ -1,6 +1,7 @@
 import "../styles/index.css";
 import Searcher from "./dynamics_components/Searcher";
-import Usuario from "../assets/usuario.png";
+//import Usuario from "../assets/usuario.png";
+
 import Logo from "../assets/logo2.svg";
 
 import React from "react";
@@ -22,7 +23,7 @@ function Nav() {
             <header className="navbar">
                 <div className="dropdown"> 
                     <div className="container-usuario">
-                        <img src={Usuario} className="burger" alt="burger" />
+                        <img src="https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/3/6/3/2/1/53fzpnfuwu.jpg" className="burger" alt="burger" />
                     </div>
                     <ul>
                         <li>
@@ -37,7 +38,7 @@ function Nav() {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        <li className="logout">
                             <Link to="/exit">Logout</Link>
                         </li>
                     </ul>         

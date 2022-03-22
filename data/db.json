@@ -1,32 +1,6 @@
 {
   "pets": [
     {
-      "id": 2,
-      "name": "Lolo",
-      "age": "4 semanas",
-      "date": "24/04/2020",
-      "specie": "Dog",
-      "race": "Chiguagua",
-      "gender": "male",
-      "size": "little",
-      "vaccines": "true",
-      "chip": "true",
-      "imgURL": "https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-    },
-    {
-      "id": 3,
-      "name": "Mani",
-      "age": "4 semanas",
-      "date": "24/04/2020",
-      "specie": "Dog",
-      "race": "Chiguagua",
-      "gender": "male",
-      "size": "little",
-      "vaccines": "true",
-      "chip": "true",
-      "imgURL": "https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-    },
-    {
       "id": 4,
       "name": "Chori",
       "age": "4 semanas",
@@ -35,8 +9,8 @@
       "race": "Chiguagua",
       "gender": "male",
       "size": "little",
-      "vaccines": "true",
-      "chip": "true",
+      "vaccines": "false",
+      "chip": "false",
       "imgURL": "https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
     },
     {
@@ -49,8 +23,36 @@
       "gender": "male",
       "size": "little",
       "vaccines": "true",
-      "chip": "true",
+      "chip": "false",
       "imgURL": "https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+    },
+    {
+      "name": "Dino",
+      "age": "1",
+      "gender": "macho",
+      "picture": "hihi",
+      "location": "las bahamas",
+      "size": "medium",
+      "specie": "dog",
+      "race": "hehe",
+      "description": "jiu",
+      "vaccines": "ss",
+      "chip": "aa",
+      "id": 6
+    },
+    {
+      "name": "Ruble",
+      "age": "10",
+      "gender": "macho",
+      "picture": "ifi",
+      "location": "bcn",
+      "size": "small",
+      "specie": "dog",
+      "race": "chango",
+      "description": "lindo",
+      "vaccines": "si",
+      "chip": "si",
+      "id": 7
     }
   ],
   "associations": [
