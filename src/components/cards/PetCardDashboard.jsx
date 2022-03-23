@@ -22,34 +22,27 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
                     Size:  <p className="value">{size}</p>
                 </div>
                 <div className="img-genero">
-                    <p>Gender:{gender == "male" ? <img src={masculino} alt="Male" />:<img src={femenino} alt="Female" />}</p>
-                    <p>Chip?:{chip == "true" ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
-                    <p>Vaccinated?:{vaccines == "true" ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                    <p>Gender:{gender === "male" ? <img src={masculino} alt="Male" />:<img src={femenino} alt="Female" />}</p>
+                    <p>Chip?:{chip ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                    <p>Vaccinated?:{vaccines ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
                 </div>     
             </div>
 
             <div className="animal-description">
-
                 <div className="button-container">
-
                     <Link to={`/detailPet/${id}`}><button className="info">+ Info</button></Link>
 
                     <div className="actionsContent">
-
                         <Link to={`/editPost/${id}`}> <button className="actionEdit"><img src={edit} alt="edit"/></button> </Link>                    
                         <button className="actionDelete" onClick={ () => deletePet( id )} ><img src={basurero} alt="delette"/></button>
-
                     </div>
-
                 </div>
 
                 <div className="description-container" >
                     <h3> Description:</h3>
                     <textarea defaultValue={description} disabled></textarea >
                 </div>
-
             </div>
-
         </div>
     )
 }

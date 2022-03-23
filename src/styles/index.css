@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 @import url("reset.css");
 @import url("variables.css");
+
 @import url("./componets_styles/Layout.css");
+@import url("./componets_styles/Loading.css");
+
 @import url("./componets_styles/Nav.css");
+
 @import url("./componets_styles/Main.css");
 @import url("./componets_styles/PetFormulario.css");
 @import url("./componets_styles/Dashboard.css");
 @import url("./componets_styles/DetailPet.css");
-
 @import url("./componets_styles/NoMatch.css");
+@import url("./componets_styles/SignUp.css");
+
 @import url("./componets_styles/Footer.css");
-@import url("./componets_styles/Loading.css");
 
 *{
  font-family: var(--fontFamily);
