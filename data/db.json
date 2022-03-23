@@ -7,11 +7,12 @@
       "date": "24/04/2020",
       "specie": "Dog",
       "race": "Chiguagua",
+      "description":"El perro le gusta jugar con jaume y el gato leon ,No toques las pelotas ",
       "gender": "male",
       "size": "little",
       "vaccines": "false",
       "chip": "false",
-      "petImg": [{"url" :"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "id": 5,
@@ -20,15 +21,17 @@
       "date": "24/04/2020",
       "specie": "Dog",
       "race": "Chiguagua",
+      "description":"mordelon",
       "gender": "male",
       "size": "little",
       "vaccines": "true",
       "chip": "false",
-      "petImg": [{"url" :"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]    },
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+    },
     {
       "name": "Dino",
       "age": "1",
-      "gender": "macho",
+      "gender": "female",
       "picture": "hihi",
       "location": "las bahamas",
       "size": "medium",
@@ -38,12 +41,12 @@
       "vaccines": "ss",
       "chip": "aa",
       "id": 6,
-      "petImg": [{"url" :"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "name": "Ruble",
       "age": "10",
-      "gender": "macho",
+      "gender": "female",
       "picture": "ifi",
       "location": "bcn",
       "size": "small",
@@ -53,7 +56,7 @@
       "vaccines": "si",
       "chip": "si",
       "id": 7,
-      "petImg": [{"url" :"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     }
   ],
   "associations": [
