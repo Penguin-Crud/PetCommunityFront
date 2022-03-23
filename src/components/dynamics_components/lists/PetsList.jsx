@@ -27,7 +27,7 @@ function PetsList() {
                                     name={pet.name} 
                                     years={pet.age} 
                                     date={pet.date} 
-                                    imgURL={pet.imgURL[0].url}
+                                    imgURL={pet.petImg[0].url}
                                     id={pet.id}
                                 />
                             </div>

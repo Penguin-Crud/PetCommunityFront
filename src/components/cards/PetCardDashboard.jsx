@@ -51,9 +51,9 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
             </div>
 
             <div className="dashboard-img-container">
-                <p>{vaccines == "true" ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                <p>{vaccines ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
 
-                <p>{chip == "true" ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                <p>{chip ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
             </div>
 
              
