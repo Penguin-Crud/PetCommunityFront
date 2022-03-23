@@ -15,8 +15,8 @@ axios.interceptors.request.use(function (config) {
 
 
 const url = "http://localhost:";
-let port = "3000";  // json-server
-//let port = "8080";
+//let port = "3000";  // json-server
+let port = "8080";
 
 let token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc28xIiwiaWF0IjoxNjQ4MDI3NzA0LCJleHAiOjE2NDgxMTQxMDR9.hFoXDee9oPHgf0EsUFRixSnTpCJ9lYaGsI2VmJjn_NBcDgudSTQhfopf8BMUePCV9p2yA8KtRh4Dq4thBsZidA';
 const config = { headers: { 'content-type': 'multipart/form-data' } }
@@ -50,7 +50,7 @@ export async function dataPetsService(endPoint, id) {
             endPoint === "/pets" ? 
                 data = [{
                     "id": 0,
-                    "imgURL":[{url:"../assets/logo3.png"}]
+                    "petImg":[{url:"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
                 }]
                 :
                 data = [{
@@ -71,7 +71,7 @@ export async function dataPetsService(endPoint, id) {
         endPoint === "/pets" ? 
             data = [{
                 "id": 0,
-                "imgURL":[{url: "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
+                "petImg":[{url: "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
             }]
             :
             data = [{
