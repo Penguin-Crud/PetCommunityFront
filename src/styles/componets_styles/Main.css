@@ -154,8 +154,6 @@ html {
 .pets {
   overflow-x: scroll!important;
   width:100vw ;
-  display: flex;
-  align-content: center;
 }
 
 .cardList {
@@ -273,6 +271,18 @@ html {
   .hero-gradient {
     height: 30vh;
   }
+
+  .pets{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width:900px){
+  .pets {
+    display: flex;
+    align-content: center;
+  }
 }
 
 @media (min-width:1250px) {
@@ -291,5 +301,9 @@ html {
 
   .hero-gradient {
     height: 40vh;
+  }
+  .pets {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -11,7 +11,7 @@
       "size": "little",
       "vaccines": "false",
       "chip": "false",
-      "imgURL": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "id": 5,
@@ -24,7 +24,7 @@
       "size": "little",
       "vaccines": "true",
       "chip": "false",
-      "imgURL": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "name": "Dino",
@@ -39,7 +39,7 @@
       "vaccines": "ss",
       "chip": "aa",
       "id": 6,
-      "imgURL": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "name": "Ruble",
@@ -54,7 +54,7 @@
       "vaccines": "si",
       "chip": "si",
       "id": 7,
-      "imgURL": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     }
   ],
   "associations": [
