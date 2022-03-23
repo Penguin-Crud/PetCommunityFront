@@ -14,9 +14,9 @@ function PetEditFormulario() {
 
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
-    const [date, setDate] = useState('');
-    const [gender, setGender] = useState('');
-    const [picture, setPicture] = useState('');
+    // const [date, setDate] = useState('');
+    // const [gender, setGender] = useState('');
+    const [petImg, setPetImg] = useState('');
     // const [location, setLocation] = useState('');
     const [size, setSize] = useState('');
     const [specie, setSpecie] = useState('');
@@ -44,9 +44,9 @@ function PetEditFormulario() {
             id:id, 
             name:name, 
             age:age, 
-            date:date,
-            gender:gender, 
-            picture:picture, 
+            // date:date,
+            // gender:gender, 
+            petImg:[{ url: petImg }], 
             /*location:location, */
             size:size, 
             specie:specie, 
@@ -59,9 +59,9 @@ function PetEditFormulario() {
         
         if (!name.trim()) updatedPet.name = dataPet.name
         if (!age.trim()) updatedPet.age = dataPet.age
-        if (!gender.trim()) updatedPet.gender = dataPet.gender
-        if (!date.trim()) updatedPet.date = dataPet.date
-        if (!picture.trim()) updatedPet.picture = dataPet.imgURL
+        // if (!gender.trim()) updatedPet.gender = dataPet.gender
+        // if (!date.trim()) updatedPet.date = dataPet.date
+        if (!petImg.trim()) updatedPet.petImg = dataPet.petImg[0].url
         // if (!location.trim()) updatedPet.location = dataPet.location
         if (!size.trim()) updatedPet.size = dataPet.size
         if (!specie.trim()) updatedPet.specie = dataPet.specie
@@ -98,7 +98,7 @@ function PetEditFormulario() {
                     age="age"
                     onChange={ (e) => setAge(e.target.value) }
                 />
-                <input 
+                {/* <input 
                     type="text"
                     required 
                     defaultValue={dataPet.date}
@@ -111,13 +111,13 @@ function PetEditFormulario() {
                     defaultValue={dataPet.gender}
                     gender="gender"
                     onChange={ (e) => setGender(e.target.value) }
-                />
+                /> */}
                 <input 
                     type="text"
                     required 
-                    defaultValue={dataPet.imgURL[0].url}
-                    picture="picture"
-                    onChange={ (e) => setPicture(e.target.value) }
+                    defaultValue={dataPet.petImg[0].url}
+                    petImg="petImg"
+                    onChange={ (e) => setPetImg(e.target.value) }
                 />
                 {/* <input 
                     type="text"
