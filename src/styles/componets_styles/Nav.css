@@ -88,6 +88,14 @@
     border: 1px solid #b2141454 !important;
 }
 
+.logout p{
+    list-style: none;
+    text-decoration: none;
+    color: #ffcc29;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 .logout:hover::before {
     content: '';
     width: 0;
@@ -338,6 +346,10 @@
         font-size: 1.5rem;
         color: var(--colorLetra);
     }
+    .logout p{
+        font-size: 1.5rem;
+        color: var(--colorLetra);
+    }
 }
 
 @media (min-width:1400px) {
@@ -351,5 +363,9 @@
 
     .container-searcher {
         width: 12%;
+    }
+    .logout p{
+        font-size: 1.5rem;
+        color: var(--colorLetra);
     }
 }
