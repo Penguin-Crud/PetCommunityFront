@@ -6,7 +6,7 @@
     position: absolute;
     top: 0;
 
-
+    font-family: var(--fontFamily);
 
     display: flex;
     align-items: center;
@@ -63,7 +63,7 @@
     width: 35%;
 
     position: absolute;
-    right: 0;
+    right: 20px;
 
     z-index: 1;
   
@@ -80,24 +80,80 @@
 
     box-sizing: border-box;
     padding: 5%;
+    margin-top: 5%;
 }
 
 .logout:hover {
-    background-color: #b2141444 !important;
-    transition: height 0.6s ease-in-out, background-color 0.6s;
+    background-color: #b2141454 !important;
+    border: 1px solid #b2141454 !important;
 }
 
-.dropdown li:hover {
-    background-color: #80b21444;
+.logout:hover::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -1.5px;
+    top: -12.5px;
+    border-style: solid;
+    border-width: 0 0 11.5px 11.5px;
+    border-color: transparent transparent #b2141454 transparent !important;
+}
+
+.logout:hover::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -1.5px;
+    top: -12.5px;
+    border-style: solid;
+    border-width:  11.5px 0 0 11.5px;
+    border-color: transparent transparent transparent #b2141454 !important;
+}
+
+/*.dropdown li:hover {
+    background-color: #80b21454;
     transition: height 0.6s ease-in-out, background-color 0.6s;
+} */
+
+.dropdown ul li:hover {
+    transform: scale(1.1);
+    background: #80b21454;
+    border: 1px solid #80b21454;
+    border-radius: 0px 5px;
+}
+
+.dropdown ul li:hover::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -1.5px;
+    top: -12.5px;
+    border-style: solid;
+    border-width: 0 0 11.5px 11.5px;
+    border-color: transparent transparent #80b21454 transparent;
+}
+
+.dropdown ul li:hover::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -1.5px;
+    top: -12.5px;
+    border-style: solid;
+    border-width:  11.5px 0 0 11.5px;
+    border-color: transparent transparent transparent #80b21454;
 }
 
 .dropdown ul li a{
     list-style: none;
     text-decoration: none;
-    color: #206a5d;
+    color: #ffcc29;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 
@@ -220,6 +276,7 @@
 
     .logo-container {
         width: 15%;
+        padding-top: 0.5rem;
     }
 
     .navbar {
@@ -228,6 +285,7 @@
 
     .container-searcher {
         width: 14%;
+        padding-right: 8rem;
     }
 
     .dropdown ul li{
@@ -235,11 +293,12 @@
     }
 
     .dropdown ul {
-        width: 20%;
+        width: 18%;
     }
 
     .dropdown ul li a{
         font-size: 1.5rem;
+        color: var(--colorLetra);
     }
 }
 

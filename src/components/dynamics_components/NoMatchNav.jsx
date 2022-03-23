@@ -1,5 +1,5 @@
 import "../../styles/index.css";
-import Logo from "../../assets/logo2.svg";
+import Logo from "../../assets/logo3.png";
 import React from "react";
 
 
