@@ -13,6 +13,7 @@ import NoMatch from './dynamics_components/NoMatch';
 import NoMatchNav from './dynamics_components/NoMatchNav';
 import DetailPet from './dynamics_components/details/DetailPet';
 import DetailAssociation from './dynamics_components/details/DetailAssociation';
+import SignUpForm from './dynamics_components/forms/SignUpForm';
 
 function Layout() {
 
@@ -33,6 +34,7 @@ function Layout() {
           <Route path='/editPost/:id' element={<Nav />} />
           <Route path='/detailPet/:id' element={<Nav />} />
           <Route path='/detailAssociation/:id' element={<Nav />} />
+          <Route path='/signUp' element={<Nav />} />
         </Routes>
 
         <Routes>
@@ -45,6 +47,7 @@ function Layout() {
             <Route path='/editPost/:id' element={<PetEditFormulario />} />
             <Route path='/detailPet/:id' element={<DetailPet />} />
             <Route path='/detailAssociation/:id' element={<DetailAssociation />} />
+            <Route path='/signUp' element={<SignUpForm />} />
 
 
             <Route path='/register' element={<PetFormularioRegister />} />
@@ -61,6 +64,7 @@ function Layout() {
           <Route path='/editPost/:id' element={<Footer />} />
           <Route path='/detailPet/:id' element={<Footer />} />
           <Route path='/detailAssociation/:id' element={<Footer />} />
+          <Route path='/signUp' element={<Footer />} />
         </Routes>
       </BrowserRouter >
     </div>

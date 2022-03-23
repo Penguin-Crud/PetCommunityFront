@@ -4,16 +4,10 @@ const url = "http://localhost:";
 //let port = "3000";  // json-server
 let port = "8080";
 let token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc28xIiwiaWF0IjoxNjQ4MDI3NzA0LCJleHAiOjE2NDgxMTQxMDR9.hFoXDee9oPHgf0EsUFRixSnTpCJ9lYaGsI2VmJjn_NBcDgudSTQhfopf8BMUePCV9p2yA8KtRh4Dq4thBsZidA';
-const config = {     
-    headers: { 'content-type': 'multipart/form-data' }
-}
-const config2 = {
-    headers: {'Authorization': 'Bearer ' + token}
-}
-const config3 = {
-    headers: {'content-type': 'multipart/form-data', 'Authorization': 'Bearer ' + token}
-}
-
+const config = { headers: { 'content-type': 'multipart/form-data' } }
+const config2 = { headers: {'Authorization': 'Bearer ' + token} }
+const config3 = { headers: {'content-type': 'multipart/form-data', 'Authorization': 'Bearer ' + token} }
+const config4 = { headers: {'Content-Type': 'application/json'} }
 
 export async function isOnline() {
     try {
@@ -80,11 +74,26 @@ export async function create(endPoint, formData) {
         console.log(error);
     });
 }
-
 export function deleteById(endPoint, id) {
     id.toString();
     axios.delete(url + port + endPoint + "/" + id, config2);
 }
 export async function update(endPoint, data) {
     await axios.put(url + port + endPoint, data, config2);
+}
+
+// let data1 = {
+//     username: "aso2",
+//     email: "usuario1@usuario1.com",
+//     password: "qwer4321"
+// }
+
+export async function signUp(endPoint, data) {
+    return await axios.post(url + port + "/auth" + endPoint, data, config4)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data.message));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 }
