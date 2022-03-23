@@ -13,13 +13,13 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
         <div className="animal-container">
 
             <div className="animal-info">
-                <div>
-                    <p>Name:  <p className="value">{name}</p></p>
-                    <p>Age:   <p className="value">{age}</p></p>
-                    <p>Date:  <p className="value">{date}</p></p>
-                    <p>Specie:<p className="value">{specie}</p></p>
-                    <p>Race:  <p className="value">{race}</p></p>
-                    <p>Size:  <p className="value">{size}</p></p>
+                <div className="titleValue">
+                    Name:  <p className="value">{name}</p>
+                    Age:   <p className="value">{age}</p>
+                    Date:  <p className="value">{date}</p>
+                    Specie:<p className="value">{specie}</p>
+                    Race:  <p className="value">{race}</p>
+                    Size:  <p className="value">{size}</p>
                 </div>
                 <div className="img-genero">
                     <p>Gender:{gender == "male" ? <img src={masculino} alt="Male" />:<img src={femenino} alt="Female" />}</p>
@@ -45,7 +45,7 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
 
                 <div className="description-container" >
                     <h3> Description:</h3>
-                    <textarea disabled>{description}</textarea >
+                    <textarea defaultValue={description} disabled></textarea >
                 </div>
 
             </div>

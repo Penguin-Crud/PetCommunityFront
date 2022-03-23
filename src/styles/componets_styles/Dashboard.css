@@ -40,6 +40,10 @@
     box-sizing: border-box;
 } 
 
+.titleValue {
+    color : var(--colorLetra)
+}
+
 .value{
     color: black;
 }
