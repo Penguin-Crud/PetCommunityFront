@@ -91,10 +91,10 @@ export default Dashboard;
 
 
  return (
-    <div className="containerDashboard">
-        <h1 className="titleSlider marginTitle">Dashboard</h1>
+    <div className="container-dashboard">
+        <h1 className="title-dashboard">Dashboard</h1>
         
-        <div className="tableContainer">
+        <div className="table-dashboard">
             
                 
                 <main>
@@ -112,6 +112,7 @@ export default Dashboard;
                                     size={pet.size}
                                     vaccines={pet.vaccines}
                                     chip={pet.chip}
+                                    description={pet.description}
                                     deletePet={deletePet}
                                />
                                

@@ -7,11 +7,12 @@
       "date": "24/04/2020",
       "specie": "Dog",
       "race": "Chiguagua",
+      "description":"El perro le gusta jugar con jaume y el gato leon ,No toques las pelotas ",
       "gender": "male",
       "size": "little",
       "vaccines": "false",
-      "chip": "false",
-      "imgURL": "https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+      "chip": "true",
+      "imgURL":[{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "id": 5,
@@ -20,16 +21,17 @@
       "date": "24/04/2020",
       "specie": "Dog",
       "race": "Chiguagua",
+      "description":"mordelon",
       "gender": "male",
       "size": "little",
       "vaccines": "true",
       "chip": "false",
-      "imgURL": "https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+      "imgURL": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "name": "Dino",
       "age": "1",
-      "gender": "macho",
+      "gender": "female",
       "picture": "hihi",
       "location": "las bahamas",
       "size": "medium",
@@ -38,12 +40,13 @@
       "description": "jiu",
       "vaccines": "ss",
       "chip": "aa",
-      "id": 6
+      "id": 6, 
+      "imgURL":[{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
     },
     {
       "name": "Ruble",
       "age": "10",
-      "gender": "macho",
+      "gender": "female",
       "picture": "ifi",
       "location": "bcn",
       "size": "small",
@@ -52,29 +55,31 @@
       "description": "lindo",
       "vaccines": "si",
       "chip": "si",
-      "id": 7
+      "id": 7,
+      "imgURL":[{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+
     }
   ],
   "associations": [
     {
       "id": 0,
-      "imgURL": "https://i.pinimg.com/originals/47/49/f5/4749f51b811e8f133c50bf0bae225b32.png"
+      "logo": "https://i.pinimg.com/originals/47/49/f5/4749f51b811e8f133c50bf0bae225b32.png"
     },
     {
       "id": 1,
-      "imgURL": "https://palevlasprotectora.es/wp-content/uploads/2018/03/cropped-logo-palevlas-01.png"
+      "logo": "https://palevlasprotectora.es/wp-content/uploads/2018/03/cropped-logo-palevlas-01.png"
     },
     {
       "id": 2,
-      "imgURL": "https://www.sosbilbao.org/wp-content/uploads/2019/11/apasos-logo.png"
+      "logo": "https://www.sosbilbao.org/wp-content/uploads/2019/11/apasos-logo.png"
     },
     {
       "id": 3,
-      "imgURL": "https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/3/6/3/2/1/53fzpnfuwu.jpg"
+      "logo": "https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/3/6/3/2/1/53fzpnfuwu.jpg"
     },
     {
       "id": 4,
-      "imgURL": "https://ibichos.com/images/logo_cuadrado.png"
+      "logo": "https://ibichos.com/images/logo_cuadrado.png"
     }
   ]
 }
