@@ -46,7 +46,7 @@ class Slider extends React.Component {
                           name={this.state.data[this.state.index].name} 
                           years={this.state.data[this.state.index].age} 
                           date={this.state.data[this.state.index].date} 
-                          imgURL={this.state.data[this.state.index].imgURL[0].url}
+                          imgURL={this.state.data[this.state.index].petImg[0].url}
                           id={this.state.data[this.state.index].id}
                       />
                       <a onClick={this.nextImageHandler}><img className="slider-next" src={Next} alt="next-arrow" /></a>
