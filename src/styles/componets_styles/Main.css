@@ -142,6 +142,11 @@ html {
     height: 230px;
   }
 }
+@media screen and (max-width:300px) {
+  .titleSlider{
+    font-size: 1.75em;
+  }
+}
 
   
 /* --- PETS --- */
@@ -149,6 +154,8 @@ html {
 .pets {
   overflow-x: scroll!important;
   width:100vw ;
+  display: flex;
+  align-content: center;
 }
 
 .cardList {

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const url = "http://localhost:";
-//let port = "3000";  // json-server
-let port = "8080";
+let port = "3000";  // json-server
+//let port = "8080";
 const config = {     
     headers: { 'content-type': 'multipart/form-data' }
 }
@@ -27,7 +27,7 @@ export async function dataPetsService(endPoint, id) {
             .then(res => res.data)
         } catch {
             console.warn("Fetch failed in dataPetsService, deployment auxiliar data.")
-            endPoint == "/pets" ? 
+            endPoint === "/pets" ? 
                 data = [{
                     "id": 0,
                     "imgURL":[{url: "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
@@ -48,7 +48,7 @@ export async function dataPetsService(endPoint, id) {
         .then(res => res.data)
     } catch {
         console.warn("Fetch failed in dataPetsService, deployment auxiliar data.")
-        endPoint == "/pets" ? 
+        endPoint === "/pets" ? 
             data = [{
                 "id": 0,
                 "imgURL":[{url: "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
