@@ -1,4 +1,5 @@
 import axios from "axios";
+import Logo from "../assets/logo3.png";
 
 const url = "http://localhost:";
 //let port = "3000";  // json-server
@@ -30,7 +31,7 @@ export async function dataPetsService(endPoint, id) {
             endPoint == "/pets" ? 
                 data = [{
                     "id": 0,
-                    "imgURL":[{url: "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
+                    "imgURL":[{url:"../assets/logo3.png"}]
                 }]
                 :
                 data = [{

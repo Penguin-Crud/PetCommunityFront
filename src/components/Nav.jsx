@@ -2,7 +2,7 @@ import "../styles/index.css";
 import Searcher from "./dynamics_components/Searcher";
 //import Usuario from "../assets/usuario.png";
 
-import Logo from "../assets/logo2.svg";
+import Logo from "../assets/logo3.png";
 
 import React from "react";
 import {Link} from "react-router-dom";
