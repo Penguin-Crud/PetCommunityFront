@@ -11,6 +11,11 @@ function Nav() {
 
     let id = 0;
 
+    const logOut = () => {
+        localStorage.clear()
+        console.log(localStorage.getItem("authToken"))
+    }
+
     return (
         <nav className="nav">
             <div className="logo-container">
@@ -39,7 +44,7 @@ function Nav() {
                             <Link to="/">Home</Link>
                         </li>
                         <li className="logout">
-                            <Link to="/exit">Logout</Link>
+                            <p onClick={() => { logOut() }} >Logout</p>
                         </li>
                     </ul>         
                 </div>

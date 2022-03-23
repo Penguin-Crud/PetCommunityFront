@@ -71,7 +71,7 @@ function Petformulario() {
 
      create("/pets", formData)
      
-     // cleanInputs(e)
+     cleanInputs(e)
     }
 
     return (

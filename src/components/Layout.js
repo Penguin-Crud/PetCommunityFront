@@ -7,13 +7,13 @@ import Main from './Main';
 import Dashboard from "./dynamics_components/lists/Dashboard";
 import Petformulario from './dynamics_components/forms/Petformulario';
 import PetEditFormulario from './dynamics_components/forms/PetEditFormulario';
-import PetFormularioRegister from './dynamics_components/forms/PetFormularioRegister';
 import Footer from './Footer';
 import NoMatch from './dynamics_components/NoMatch';
 import NoMatchNav from './dynamics_components/NoMatchNav';
 import DetailPet from './dynamics_components/details/DetailPet';
 import DetailAssociation from './dynamics_components/details/DetailAssociation';
 import SignUpForm from './dynamics_components/forms/SignUpForm';
+import SignInForm from './dynamics_components/forms/SignInForm';
 
 function Layout() {
 
@@ -29,12 +29,13 @@ function Layout() {
             <Route index element={<Nav />} />
             <Route path="*" element={<NoMatchNav />} />
 
-          <Route path="/dashboard" element={<Nav />} />
+           <Route path="/dashboard" element={<Nav />} />   {/* AUTH */}
           <Route path='/createPost' element={<Nav />} />
           <Route path='/editPost/:id' element={<Nav />} />
           <Route path='/detailPet/:id' element={<Nav />} />
           <Route path='/detailAssociation/:id' element={<Nav />} />
           <Route path='/signUp' element={<Nav />} />
+          <Route path='/signIn' element={<Nav />} />
         </Routes>
 
         <Routes>
@@ -47,11 +48,8 @@ function Layout() {
             <Route path='/editPost/:id' element={<PetEditFormulario />} />
             <Route path='/detailPet/:id' element={<DetailPet />} />
             <Route path='/detailAssociation/:id' element={<DetailAssociation />} />
-            <Route path='/signUp' element={<SignUpForm />} />
-
-
-            <Route path='/register' element={<PetFormularioRegister />} />
-            
+            <Route path='/signUp' element={<SignUpForm />} />            
+            <Route path='/signIn' element={<SignInForm />} />            
         </Routes>
 
         <Routes>
@@ -65,6 +63,7 @@ function Layout() {
           <Route path='/detailPet/:id' element={<Footer />} />
           <Route path='/detailAssociation/:id' element={<Footer />} />
           <Route path='/signUp' element={<Footer />} />
+          <Route path='/signIn' element={<Footer />} />
         </Routes>
       </BrowserRouter >
     </div>

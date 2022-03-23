@@ -35,7 +35,10 @@ function PetEditFormulario() {
         
     }, [] )
     
-    
+    const cleanInputs = (event) => {
+        event.target.reset()
+    }
+
     const editData = (e) => {
         e.preventDefault()
     
@@ -75,7 +78,7 @@ function PetEditFormulario() {
         update("/pets", updatedPet).then(res => navigate("/dashboard") )
         
 
-        // cleanInputs(e)
+        cleanInputs(e)
     }
 
     return (

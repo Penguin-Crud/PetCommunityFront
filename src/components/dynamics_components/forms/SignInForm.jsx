@@ -1,33 +1,36 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { signUp } from "../../../services/PetCommunityServices";
+// import { useNavigate } from "react-router-dom";
+import { signIn } from "../../../services/PetCommunityServices";
 import { Link } from "react-router-dom";
 import "../../../styles/index.css";
 
-function SignUpForm() {
-    let navigate = useNavigate();
+function SignInForm() {
+    // let navigate = useNavigate();
 
     const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
 
-    const register = (e) => {
+    const login = (e) => {
         e.preventDefault()
 
         let data = {
             username: username,
-            email: email,
             password: password
         }
         console.log(data)
-        signUp("/signup", data).then(res => navigate("/signin") )
+        signIn("/signin", data).then(res => {
+            console.log(res.data)
+            localStorage.setItem('authToken', res.data.accessToken)
+            localStorage.setItem('authUsername', res.data.username)
+            // navigate("/")
+        })
     }
 
     return (
         <div className="containerSignUp">
-            <p>Register</p>
-            <form onSubmit={register}>
+            <p>Log in</p>
+            <form onSubmit={login}>
                 <input
                     required
                     type="text" 
@@ -38,14 +41,6 @@ function SignUpForm() {
                     />
                 <input
                     required
-                    type="email" 
-                    name="email" 
-                    id="email" 
-                    placeholder="Email"
-                    onChange={ (e) => setEmail(e.target.value) }
-                    />
-                <input
-                    required
                     type="password" 
                     name="password" 
                     id="password" 
@@ -53,10 +48,10 @@ function SignUpForm() {
                     onChange={ (e) => setPassword(e.target.value) }
                     />   
             
-                <button type="submit" > SignUp </button>
+                <button type="submit" > SignIn </button>
             </form>
-            <Link to="/signin"><p>Login</p></Link>
+            <Link to="/signup"><p>Register!</p></Link>
         </div>
     )
 }
-export default SignUpForm;
+export default SignInForm;
