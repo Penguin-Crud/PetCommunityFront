@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const url = "http://localhost:";
-let port = "3000";  // json-server
-//let port = "8080";
+//let port = "3000";  // json-server
+let port = "8080";
 const config = {     
     headers: { 'content-type': 'multipart/form-data' }
 }
