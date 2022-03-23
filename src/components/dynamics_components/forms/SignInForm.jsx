@@ -1,11 +1,11 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { signIn } from "../../../services/PetCommunityServices";
 import { Link } from "react-router-dom";
 import "../../../styles/index.css";
 
 function SignInForm() {
-    // let navigate = useNavigate();
+    let navigate = useNavigate();
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -23,7 +23,7 @@ function SignInForm() {
             console.log(res.data)
             localStorage.setItem('authToken', res.data.accessToken)
             localStorage.setItem('authUsername', res.data.username)
-            // navigate("/")
+            navigate("/")
         })
     }
 

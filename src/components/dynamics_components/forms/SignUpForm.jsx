@@ -22,6 +22,7 @@ function SignUpForm() {
         }
         console.log(data)
         signUp("/signup", data).then(res => navigate("/signin") )
+        navigate("/signin")
     }
 
     return (
