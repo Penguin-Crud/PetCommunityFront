@@ -37,8 +37,8 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
                 </div>
                 <div className="img-genero">
                     <p>Gender:{gender === "male" ? <img src={masculino} alt="Male" />:<img src={femenino} alt="Female" />}</p>
-                    <p>Chip?:{chip ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
-                    <p>Vaccinated?:{vaccines ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                    <p>Chip:{chip ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                    <p>Vaccinated:{vaccines ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
                 </div>     
             </div>
 

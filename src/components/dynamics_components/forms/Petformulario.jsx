@@ -150,43 +150,45 @@ function Petformulario() {
                     description="description"
                     onChange={ (e) => setDescription(e.target.value) }
                />
-               
-               <div className='checkbox'>
-                    <label htmlFor="vaccines">Vaccined ? </label>
-                    <input 
-                         type="checkbox" 
-                         defaultChecked={vaccines} 
-                         id='vaccines'
-                         name="vaccines"
-                         vaccines="vaccines"
-                         onClick={ vaccines? () => setVaccines(false) : () => setVaccines(true) }
-                    />
-                    {/* {console.log(vaccines)} */}
+               <div>
+                    <div>
+                         <label htmlFor="vaccines">Vaccined</label>
+                         <input 
+                              type="checkbox" 
+                              defaultChecked={vaccines} 
+                              id='vaccines'
+                              name="vaccines"
+                              vaccines="vaccines"
+                              onClick={ vaccines? () => setVaccines(false) : () => setVaccines(true) }
+                         />
+                         {/* {console.log(vaccines)} */}
+                    </div>
+                    <div>
+                         <label htmlFor="chip">Chip</label>
+                         <input 
+                              type="checkbox" 
+                              defaultChecked={chip} 
+                              id='chip'
+                              name="chip"
+                              chip="chip"
+                              onClick={ chip? () => setChip(false) : () => setChip(true) }
+                         />
+                         {/* {console.log(chip)} */}
+                    </div>
                </div>
-               <div className='checkbox'>
-                    <label htmlFor="chip">Chip ? </label>
-                    <input 
-                         type="checkbox" 
-                         defaultChecked={chip} 
-                         id='chip'
-                         name="chip"
-                         chip="chip"
-                         onClick={ chip? () => setChip(false) : () => setChip(true) }
-                    />
-                    {/* {console.log(chip)} */}
-               </div>
-
                <input 
+                    id='input-fileImg'
                     type="file"
+                    conte
                     accept="image/*"
                     // required 
                     placeholder="Picture" 
                     defaultValue=""
                     picture="picture"
                     onChange={ (e) => setPicture(e.target.files[0]) }
-               />
-               <div className="button">
-                 <button>Add Img</button>
+               /><label htmlFor='input-fileImg' className='button-file'></label>
+               <div>
+                 <button className='AddImg'>Add Img</button>
                  <button type="sumbit">Submit</button>
                </div>
                
