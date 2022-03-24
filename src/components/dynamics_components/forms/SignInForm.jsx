@@ -23,6 +23,7 @@ function SignInForm() {
             console.log(res.data)
             localStorage.setItem('authToken', res.data.accessToken)
             localStorage.setItem('authUsername', res.data.username)
+            localStorage.setItem('authUserID',res.data.id)
             navigate("/")
         })
     }
