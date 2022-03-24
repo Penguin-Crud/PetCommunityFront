@@ -37,6 +37,8 @@
     width: 55%;
     text-align: left;
     text-align-last:left;
+    font-size: 1.2rem;
+    font-weight: bold;
     box-sizing: border-box;
 } 
 
@@ -88,8 +90,12 @@
 }
 
 .img-genero{
-    align-items: center;
-    
+    align-items: center;  
+}
+
+.img-genero p{
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .animal-container img {
@@ -100,6 +106,11 @@
     background-color: var(--colorBotones);
     border-radius:5px;
     border: 2px solid var(--colorLetra);
+    transition: all .5s ease;
+}
+
+.info:hover {
+    transform: scale(1.1);
 }
  
 .actionsContent{
@@ -112,11 +123,16 @@
    background-color: orange;
    border: 2px solid var(--colorLetra);
    padding: 5px;
-   border-radius: 6px;
+   border-radius: 5px;
    font-family: Arial, Helvetica, sans-serif;
    color: var(--colorLetra);
-      
+   transition: all .5s ease; 
 }
+
+.actionEdit:hover {
+    transform: scale(1.1);
+}
+
 .actionDelete {
     background-color: red;
     border: 2px solid var(--colorLetra);
@@ -124,8 +140,11 @@
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--colorLetra);
-    
-   
+    transition: all .5s ease;
+}
+
+.actionDelete:hover {
+    transform: scale(1.1);
 }
 
 .btnAddPet {
@@ -139,6 +158,17 @@
     border: none;
     box-sizing: border-box;
     padding: 0.8em 1.5em;
+    transition: all .5s ease;
+}
+
+.btnAddPet button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 3px #ffcd2980;
+}
+
+.btnAddPet p {
+    font-size: 1.2rem;
+   font-weight: bold;
 }
 
 

@@ -1,25 +1,3 @@
-/* --- HEROE --- */
-
- @media (prefers-reduced-motion: no-preference) {
-    .loading {
-      animation: App-logo-spin infinite 7s linear;
-
-      width: 100vw;
-      height: 17vh;
-      
-      
-
-    }
-} 
-@keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-}
-
 /* --- HERO ---*/
 
 html {
@@ -27,7 +5,7 @@ html {
 }
 
 .hero {
-  width: 99.9%;
+  width: 100%;
   height: 50vh;
 
   background-image: url("https://www.mundoperros.es/wp-content/uploads/2017/11/perro-tristeza.jpg");
@@ -86,8 +64,20 @@ html {
   height: 50vh;
   width:100%;
   box-sizing: border-box;
-  margin-top: 3.5rem;
+  margin-top: 6rem;
 }
+
+.infoSlider {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.infoSlider p{
+  box-sizing: border-box;
+  padding: 2% 33% 0%;
+}
+
 .slider-container{
   display: flex;
   justify-content: center;
@@ -99,7 +89,7 @@ html {
 }
 .slider-container .imgPet{
   margin: 0 auto;
-   height: 350px; 
+  height: 350px; 
   width: 100%;
   border: none;
   display: block;
@@ -120,7 +110,7 @@ html {
 .titleSlider {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--colorNav);
+  color: var(--colorLetra);
 
   margin-bottom: 0.5rem;
   box-sizing: border-box;
@@ -130,7 +120,7 @@ html {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--colorNav);
+  color: var(--colorLetra);
 }
  @media screen and (max-width:497px) {
 
@@ -164,14 +154,18 @@ html {
 
 .cardPet {
   position: relative;
-
   box-sizing: border-box;
   margin: 1rem;
+  transition:all .5s ease;
+}
+
+.cardPet:hover {
+  transform:scale(1.05);
 }
 
 .imgPet {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 12px;
+  border-radius: 10px;
   height: 15em;
 }
 
@@ -187,7 +181,7 @@ html {
   padding: 0.5em;
 
   background: rgba(196, 196, 196, 0.51);
-  border-radius: 0px 0px 12px 12px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .infoPet div,p {
@@ -202,9 +196,18 @@ html {
   align-items: flex-end;
 }
 
-@media (max-width:500px) {
+@media (max-width:549px) {
   .hero-title {
-    margin-top: 15%;
+    margin-top: 10%;
+  }
+  .infoSlider p{
+    padding: 2% 10% 0%;
+  }
+}
+
+@media (min-width:550px) {
+  .infoSlider p{
+    padding: 2% 13% 0%;
   }
 }
 
@@ -232,6 +235,7 @@ html {
     width: 100%;
     height: 100%;
     filter: invert(35%) sepia(36%) saturate(698%) hue-rotate(120deg) brightness(89%) contrast(92%);
+    transition: filter 0.5s ease;
   }
 
   .hero-buttonImg:hover {
@@ -244,6 +248,9 @@ html {
 
   .hero-title {
     margin-top: 10%;
+  }
+  .infoSlider p{
+    padding: 2% 18% 0%;
   }
 }
 
@@ -263,7 +270,7 @@ html {
 
   .hero-button {
     width: 20%;
-    height: 11vh;
+    height: 10vh;
 
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -276,6 +283,9 @@ html {
   .pets{
     display: flex;
     justify-content: center;
+  }
+  .infoSlider p{
+    padding: 2% 23% 0%;
   }
 }
 
@@ -306,5 +316,8 @@ html {
   .pets {
     display: flex;
     justify-content: center;
+  }
+  .infoSlider p{
+    padding: 2% 33% 0%;
   }
 }

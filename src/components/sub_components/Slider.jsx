@@ -36,8 +36,11 @@ class Slider extends React.Component {
   
 
   render(){
-    return  <div className="Slider" id="anchorHero">
-              <h2 className="titleSlider2">¡Mascotas que requieren una adopción urgente!</h2>
+    return  <div className="Slider">
+              <h2 className="titleSlider2" id="anchorHero">¡Mascotas que requieren una adopción urgente!</h2>
+              <div className="infoSlider">
+                <p>Éstos animales recientemente se han quedado sin hogar y buscan al menos un hueco en alguna perrera,lo ideal seria que alguna familia los adoptasen.Sinó encuentran un nuevo rincón en este mundo, possiblemente los sacrifiquen.</p>
+              </div>
               {
               this.state.data ?
               <div className="slider-container">

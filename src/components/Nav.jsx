@@ -14,6 +14,7 @@ function Nav() {
     const logOut = () => {
         localStorage.clear()
         console.log(localStorage.getItem("authToken"))
+        console.log("GoodBye")
     }
 
     return (

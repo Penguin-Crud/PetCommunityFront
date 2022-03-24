@@ -33,7 +33,9 @@ function PetsList() {
                             </div>
                 })
                 :
-                <Loading/>
+                <div className="loading-petlist">
+                    <Loading/>
+                </div>
             }
         </div>
     )
