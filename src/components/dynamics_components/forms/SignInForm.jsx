@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { signIn } from "../../../services/PetCommunityServices";
 import { Link } from "react-router-dom";
 import "../../../styles/index.css";
+import Nav from "../../Nav";
 
 function SignInForm() {
     let navigate = useNavigate();
@@ -24,6 +25,7 @@ function SignInForm() {
             localStorage.setItem('authToken', res.data.accessToken)
             localStorage.setItem('authUsername', res.data.username)
             localStorage.setItem('authUserID',res.data.id)
+            
             navigate("/")
         })
     }

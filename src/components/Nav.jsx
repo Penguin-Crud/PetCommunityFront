@@ -5,35 +5,38 @@ import Searcher from "./dynamics_components/Searcher";
 import Logo from "../assets/logo3.png";
 
 import React, { useEffect } from "react";
-import {Link} from "react-router-dom";
+import {Link, Navigate, useNavigate} from "react-router-dom";
 import { useState} from "react";
 import { dataPetsService } from "../services/PetCommunityServices";
 
 function Nav() {
 
-    const [id,setId] = useState(localStorage.getItem("authUserID"))
+    let id= localStorage.getItem("authUserID")
     const [userLogo,setUserLogo] = useState(null)
+    const navigate = useNavigate()
 
     
     useEffect(()=>{
         if(id!=null){dataPetsService('/associations', id).then(data=>{
-            localStorage.setItem("logo",data.logo)
-            localStorage.setItem("adress".data.adress)
-            localStorage.setItem("capacity",data.capacity)
+            localStorage.setItem("authLogo",data.logo)
+            localStorage.setItem("authAdress",data.adress)
+            localStorage.setItem("authCapacity",data.capacity)
             
             setUserLogo(localStorage.getItem("logo"))
         })}
-    },[])
+    },[id])
     
     const logOut = () => {
         localStorage.clear()
-        console.log(localStorage.getItem("authToken"))
-        console.log("GoodBye")
+        console.log(localStorage.getItem("authUserID"))
+        id = null;
+        navigate("/")
     }
 
 
 
     return (
+        
         <nav className="nav">
             <div className="logo-container">
                 <Link to="/"> <img className="logo" src={Logo} alt="logo" /> </Link>
@@ -43,21 +46,25 @@ function Nav() {
             </div>
 
             <header className="navbar">
-
-                
-                    {
-                    id==null? <div>
-                            <div className="btnAddPet">
-                                <Link to="/signIn"> <button> <p>Sign In</p> </button> </Link>
+                {  
+                    id==null? 
+                        <div className="dropdown"> 
+                            <div className="container-usuario">
+                                <img src={"https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/3/6/3/2/1/53fzpnfuwu.jpg"} className="burger" alt="burger" />
                             </div>
-                            <div className="btnAddPet">
-                                <Link to="/signUp"> <button> <p>Sign Up</p> </button> </Link>
-                            </div>
-                        </div>
+                            <ul>
+                                <li>
+                                    <Link to="/signIn"> <button> <p>Sign In</p> </button> </Link>
+                                </li>
+                                <li>
+                                    <Link to="/signUp"> <button> <p>Sign Up</p> </button> </Link>
+                                </li>
+                            </ul>
+                        </div>         
                         :
                         <div className="dropdown"> 
                             <div className="container-usuario">
-                                <img src={id?userLogo:"https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/3/6/3/2/1/53fzpnfuwu.jpg"} className="burger" alt="burger" />
+                                <img src={userLogo} className="burger" alt="burger" />
                             </div>
                             <ul>
                                 <li>
@@ -77,7 +84,7 @@ function Nav() {
                                 </li>
                             </ul>
                         </div>         
-                    }
+                }
                 
             </header>
         
