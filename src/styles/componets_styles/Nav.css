@@ -22,11 +22,11 @@
     width: 35%;
     display: flex;
     justify-content: center;
+    transition: all .5s ease;
 }
 
 .logo-container:hover {
-    background-color: #706e6e59;
-    border-radius: 5px;
+    transform: scale(1.1);
 }
 
 .logo {
