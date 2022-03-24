@@ -36,8 +36,8 @@ class Slider extends React.Component {
   
 
   render(){
-    return  <div className="Slider" id="anchorHero">
-              <h2 className="titleSlider2">¡Mascotas que requieren una adopción urgente!</h2>
+    return  <div className="Slider">
+              <h2 className="titleSlider2" id="anchorHero">¡Mascotas que requieren una adopción urgente!</h2>
               {
               this.state.data ?
               <div className="slider-container">
