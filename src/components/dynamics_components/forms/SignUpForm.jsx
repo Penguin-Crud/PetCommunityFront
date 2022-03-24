@@ -27,36 +27,38 @@ function SignUpForm() {
 
     return (
         <div className="containerSignUp">
-            <p>Register</p>
-            <form onSubmit={register}>
-                <input
-                    required
-                    type="text" 
-                    name="username" 
-                    id="username" 
-                    placeholder="UserName" 
-                    onChange={ (e) => setUsername(e.target.value) }
-                    />
-                <input
-                    required
-                    type="email" 
-                    name="email" 
-                    id="email" 
-                    placeholder="Email"
-                    onChange={ (e) => setEmail(e.target.value) }
-                    />
-                <input
-                    required
-                    type="password" 
-                    name="password" 
-                    id="password" 
-                    placeholder="Password"
-                    onChange={ (e) => setPassword(e.target.value) }
-                    />   
-            
-                <button type="submit" > SignUp </button>
-            </form>
-            <Link to="/signin"><p>Login</p></Link>
+                <p className="title-register" >Register</p>
+            <div>
+                <form onSubmit={register}>
+                    <input
+                        required
+                        type="text" 
+                        name="username" 
+                        id="username" 
+                        placeholder="UserName" 
+                        onChange={ (e) => setUsername(e.target.value) }
+                        />
+                    <input
+                        required
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Email"
+                        onChange={ (e) => setEmail(e.target.value) }
+                        />
+                    <input
+                        required
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        placeholder="Password"
+                        onChange={ (e) => setPassword(e.target.value) }
+                        />   
+                
+                    <button type="submit" > SignUp </button>
+                </form>
+                <Link to="/signin"><p>Login</p></Link>
+            </div>
         </div>
     )
 }

@@ -1,25 +1,3 @@
-/* --- HEROE --- */
-
- @media (prefers-reduced-motion: no-preference) {
-    .loading {
-      animation: App-logo-spin infinite 7s linear;
-
-      width: 100vw;
-      height: 17vh;
-      
-      
-
-    }
-} 
-@keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-}
-
 /* --- HERO ---*/
 
 html {
@@ -86,8 +64,20 @@ html {
   height: 50vh;
   width:100%;
   box-sizing: border-box;
-  margin-top: 3.5rem;
+  margin-top: 6rem;
 }
+
+.infoSlider {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.infoSlider p{
+  box-sizing: border-box;
+  padding: 2% 33% 0%;
+}
+
 .slider-container{
   display: flex;
   justify-content: center;
@@ -99,7 +89,7 @@ html {
 }
 .slider-container .imgPet{
   margin: 0 auto;
-   height: 350px; 
+  height: 350px; 
   width: 100%;
   border: none;
   display: block;
@@ -206,9 +196,18 @@ html {
   align-items: flex-end;
 }
 
-@media (max-width:500px) {
+@media (max-width:549px) {
   .hero-title {
-    margin-top: 15%;
+    margin-top: 10%;
+  }
+  .infoSlider p{
+    padding: 2% 10% 0%;
+  }
+}
+
+@media (min-width:550px) {
+  .infoSlider p{
+    padding: 2% 13% 0%;
   }
 }
 
@@ -250,6 +249,9 @@ html {
   .hero-title {
     margin-top: 10%;
   }
+  .infoSlider p{
+    padding: 2% 18% 0%;
+  }
 }
 
 @media (min-width:900px) {
@@ -268,7 +270,7 @@ html {
 
   .hero-button {
     width: 20%;
-    height: 7vh;
+    height: 10vh;
 
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -281,6 +283,9 @@ html {
   .pets{
     display: flex;
     justify-content: center;
+  }
+  .infoSlider p{
+    padding: 2% 23% 0%;
   }
 }
 
@@ -311,5 +316,8 @@ html {
   .pets {
     display: flex;
     justify-content: center;
+  }
+  .infoSlider p{
+    padding: 2% 33% 0%;
   }
 }

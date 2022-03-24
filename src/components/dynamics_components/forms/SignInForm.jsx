@@ -30,28 +30,30 @@ function SignInForm() {
 
     return (
         <div className="containerSignUp">
-            <p>Log in</p>
-            <form onSubmit={login}>
-                <input
-                    required
-                    type="text" 
-                    name="username" 
-                    id="username" 
-                    placeholder="UserName" 
-                    onChange={ (e) => setUsername(e.target.value) }
-                    />
-                <input
-                    required
-                    type="password" 
-                    name="password" 
-                    id="password" 
-                    placeholder="Password"
-                    onChange={ (e) => setPassword(e.target.value) }
-                    />   
-            
-                <button type="submit" > SignIn </button>
-            </form>
-            <Link to="/signup"><p>Register!</p></Link>
+                <p className="title-register" >Login</p>
+                <div>
+                    <form onSubmit={login}>
+                        <input
+                            required
+                            type="text" 
+                            name="username" 
+                            id="username" 
+                            placeholder="UserName" 
+                            onChange={ (e) => setUsername(e.target.value) }
+                            />
+                        <input
+                            required
+                            type="password" 
+                            name="password" 
+                            id="password" 
+                            placeholder="Password"
+                            onChange={ (e) => setPassword(e.target.value) }
+                            />   
+                    
+                        <button type="submit" > SignIn </button>
+                    </form>
+                    <Link to="/signup"><p>Register!</p></Link>
+            </div>
         </div>
     )
 }

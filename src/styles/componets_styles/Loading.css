@@ -1,0 +1,22 @@
+@media (prefers-reduced-motion: no-preference) {
+    .loading {
+      animation: App-logo-spin infinite 7s linear;
+
+      width: 100%;
+      height: 100%;
+    }
+    
+} 
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.img {
+    width: 100%;
+    height: 15vh;
+} 
