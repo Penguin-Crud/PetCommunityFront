@@ -24,12 +24,13 @@
     justify-content: center;
 }
 
-.logo {
-    width: 100%;
+.logo-container:hover {
+    background-color: #706e6e59;
+    border-radius: 5px;
 }
 
-.logo:hover {
-    box-shadow: 0px 4px 2rem 2rem rgba(0, 0, 0, 0.15);
+.logo {
+    width: 100%;
 }
 
 /* .navbar div :hover {             mediaQuery in sizeWeb :hover in options
@@ -80,7 +81,7 @@
 
     box-sizing: border-box;
     padding: 5%;
-    margin-top: 10%;
+    
 }
 
 .logout:hover {
@@ -96,64 +97,15 @@
     font-weight: bold;
 }
 
-.logout:hover::before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: -1.5px;
-    top: -12.5px;
-    border-style: solid;
-    border-width: 0 0 11.5px 11.5px;
-    border-color: transparent transparent #b2141454 transparent !important;
-}
-
-.logout:hover::after {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: -1.5px;
-    top: -12.5px;
-    border-style: solid;
-    border-width:  11.5px 0 0 11.5px;
-    border-color: transparent transparent transparent #b2141454 !important;
-}
-
 /*.dropdown li:hover {
     background-color: #80b21454;
     transition: height 0.6s ease-in-out, background-color 0.6s;
 } */
 
 .dropdown ul li:hover {
-    transform: scale(1.1);
     background: #80b21454;
     border: 1px solid #80b21454;
     border-radius: 0px 0px 5px 5px;
-}
-
-.dropdown ul li:hover::before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: -1.5px;
-    top: -12.5px;
-    border-style: solid;
-    border-width: 0 0 11.5px 11.5px;
-    border-color: transparent transparent #80b21454 transparent;
-}
-
-.dropdown ul li:hover::after {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: -1.5px;
-    top: -12.5px;
-    border-style: solid;
-    border-width:  11.5px 0 0 11.5px;
-    border-color: transparent transparent transparent #80b21454;
 }
 
 .dropdown ul li a{
@@ -223,16 +175,58 @@
         right: 10px;
     }
 
+    .dropdown ul li{
+        margin-top: 6%;
+    }
+
+    .dropdown ul li:hover {
+        transform: scale(1.1);
+    }
+
     .dropdown ul li:hover::before {
         left: -2.5px;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width: 0 0 11.5px 11.5px;
+        border-color: transparent transparent #80b21454 transparent;
     }
     
     .dropdown ul li:hover::after {
         right: -2.5px;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width:  11.5px 0 0 11.5px;
+        border-color: transparent transparent transparent #80b21454;
     }
 
-    .dropdown ul li{
-        padding: 8%;
+    .logout:hover::before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width: 0 0 11.5px 11.5px;
+        border-color: transparent transparent #b2141454 transparent !important;
+    }
+    
+    .logout:hover::after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width:  11.5px 0 0 11.5px;
+        border-color: transparent transparent transparent #b2141454 !important;
     }
 }
 
@@ -257,16 +251,36 @@
         width: 25%;
     }
 
+    .dropdown ul li a{
+        font-size: 1.2rem;
+    }
+
+    .dropdown ul li:hover {
+        transform: scale(1.1);
+    }
+
     .dropdown ul li:hover::before {
         left: -2.5px;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width: 0 0 11.5px 11.5px;
+        border-color: transparent transparent #80b21454 transparent;
     }
     
     .dropdown ul li:hover::after {
         right: -2.5px;
-    }
-
-    .dropdown ul li a{
-        font-size: 1.2rem;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width:  11.5px 0 0 11.5px;
+        border-color: transparent transparent transparent #80b21454;
     }
 }
 
@@ -292,16 +306,36 @@
         right: 20px;
     }
 
+    .dropdown ul li a{
+        font-size: 1.2rem;
+    }
+
+    .dropdown ul li:hover {
+        transform: scale(1.1);
+    }
+
     .dropdown ul li:hover::before {
         left: -2px;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width: 0 0 11.5px 11.5px;
+        border-color: transparent transparent #80b21454 transparent;
     }
     
     .dropdown ul li:hover::after {
         right: -2px;
-    }
-
-    .dropdown ul li a{
-        font-size: 1.2rem;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width:  11.5px 0 0 11.5px;
+        border-color: transparent transparent transparent #80b21454;
     }
 }
 
@@ -334,14 +368,6 @@
         right: 20px;
     }
 
-    .dropdown ul li:hover::before {
-        left: -1.5px;
-    }
-    
-    .dropdown ul li:hover::after {
-        right: -1.5px;
-    }
-
     .dropdown ul li a{
         font-size: 1.5rem;
         color: var(--colorLetra);
@@ -349,6 +375,34 @@
     .logout p{
         font-size: 1.5rem;
         color: var(--colorLetra);
+    }
+
+    .dropdown ul li:hover {
+        transform: scale(1.1);
+    }
+
+    .dropdown ul li:hover::before {
+        left: -1.5px;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width: 0 0 11.5px 11.5px;
+        border-color: transparent transparent #80b21454 transparent;
+    }
+    
+    .dropdown ul li:hover::after {
+        right: -1.5px;
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -12.5px;
+        border-style: solid;
+        border-width:  11.5px 0 0 11.5px;
+        border-color: transparent transparent transparent #80b21454;
     }
 }
 
