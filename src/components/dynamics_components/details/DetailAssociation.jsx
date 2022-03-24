@@ -19,6 +19,8 @@ function DetailAssociation() {
             localStorage.setItem('authUserID',data.id)
             localStorage.setItem('authAdress',data.adress)
             localStorage.setItem('authCapacity',data.capacity)
+            localStorage.setItem('authLogo',data.logo)
+
         })
     },[])
 

@@ -30,7 +30,7 @@ function AssociationEditForm() {
         e.preventDefault()
         
         id = parseInt(id);
-        let updatedUser = {
+        let data = {
             id:id, 
             username:username, 
             adress: adress, 
@@ -45,13 +45,14 @@ function AssociationEditForm() {
         // if (!capacity.trim()) updatedPet.petImg = dataPet.petImg[0].url
         
 
-        console.log(updatedUser)
-        let jsonUserToUpdate = [JSON.stringify(updatedUser)];
-        let stringUserToUpdate = updateUser.toString()
-        console.log(jsonUserToUpdate);
-        console.log(stringUserToUpdate);
+        
+        let jsonUserToUpdate = [JSON.stringify(data)];
+        
+        
         formData.append('user', new Blob(jsonUserToUpdate, {type : 'application/json'}));
         formData.append('image', logo);
+        console.log(formData.get('user'))
+        console.log(formData.get('image'))
         setIsLoading(true)
         updateUser("/associations", formData).then(res =>{
             setIsLoading(false)

@@ -12,19 +12,21 @@ import { dataPetsService } from "../services/PetCommunityServices";
 function Nav() {
 
     let id= localStorage.getItem("authUserID")
-    const [userLogo,setUserLogo] = useState(null)
+    let logoUpdated = useState(localStorage.getItem("authLogo"))
+    const [userLogo,setUserLogo] = useState(localStorage.getItem("authLogo"))
     const navigate = useNavigate()
 
     
     useEffect(()=>{
-        if(id!=null){dataPetsService('/associations', id).then(data=>{
+        dataPetsService('/associations', id).then(data=>{
             localStorage.setItem("authLogo",data.logo)
             localStorage.setItem("authAdress",data.adress)
             localStorage.setItem("authCapacity",data.capacity)
             
-            setUserLogo(localStorage.getItem("logo"))
-        })}
-    },[id])
+            setUserLogo(localStorage.getItem("authLogo"))
+            
+        })
+    },[id,logoUpdated])
     
     const logOut = () => {
         localStorage.clear()
