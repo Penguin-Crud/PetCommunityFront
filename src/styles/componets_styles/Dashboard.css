@@ -100,6 +100,11 @@
     background-color: var(--colorBotones);
     border-radius:5px;
     border: 2px solid var(--colorLetra);
+    transition: all .5s ease;
+}
+
+.info:hover {
+    transform: scale(1.1);
 }
  
 .actionsContent{
@@ -115,8 +120,13 @@
    border-radius: 6px;
    font-family: Arial, Helvetica, sans-serif;
    color: var(--colorLetra);
-      
+   transition: all .5s ease; 
 }
+
+.actionEdit:hover {
+    transform: scale(1.1);
+}
+
 .actionDelete {
     background-color: red;
     border: 2px solid var(--colorLetra);
@@ -124,8 +134,11 @@
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--colorLetra);
-    
-   
+    transition: all .5s ease;
+}
+
+.actionDelete:hover {
+    transform: scale(1.1);
 }
 
 .btnAddPet {
@@ -139,6 +152,12 @@
     border: none;
     box-sizing: border-box;
     padding: 0.8em 1.5em;
+    transition: all .5s ease;
+}
+
+.btnAddPet button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 3px #ffcd2980;
 }
 
 
