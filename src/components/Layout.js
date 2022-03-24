@@ -14,6 +14,7 @@ import DetailPet from './dynamics_components/details/DetailPet';
 import DetailAssociation from './dynamics_components/details/DetailAssociation';
 import SignUpForm from './dynamics_components/forms/SignUpForm';
 import SignInForm from './dynamics_components/forms/SignInForm';
+import AssociationEditForm from './dynamics_components/forms/AssociationEditForm';
 
 function Layout() {
 
@@ -34,6 +35,7 @@ function Layout() {
           <Route path='/editPost/:id' element={<Nav />} />
           <Route path='/detailPet/:id' element={<Nav />} />
           <Route path='/detailAssociation/:id' element={<Nav />} />
+          <Route path='/editAssociation' element={<Nav />} />
           <Route path='/signUp' element={<Nav />} />
           <Route path='/signIn' element={<Nav />} />
         </Routes>
@@ -48,6 +50,7 @@ function Layout() {
             <Route path='/editPost/:id' element={<PetEditFormulario />} />
             <Route path='/detailPet/:id' element={<DetailPet />} />
             <Route path='/detailAssociation/:id' element={<DetailAssociation />} />
+            <Route path='/editAssociation' element={<AssociationEditForm />} />
             <Route path='/signUp' element={<SignUpForm />} />            
             <Route path='/signIn' element={<SignInForm />} />            
         </Routes>
@@ -62,6 +65,7 @@ function Layout() {
           <Route path='/editPost/:id' element={<Footer />} />
           <Route path='/detailPet/:id' element={<Footer />} />
           <Route path='/detailAssociation/:id' element={<Footer />} />
+          <Route path='/editAssociation' element={<Footer />} />
           <Route path='/signUp' element={<Footer />} />
           <Route path='/signIn' element={<Footer />} />
         </Routes>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signUp } from "../../../services/PetCommunityServices";
+import { signIn, signUp } from "../../../services/PetCommunityServices";
 import { Link } from "react-router-dom";
 import "../../../styles/index.css";
 
@@ -21,8 +21,19 @@ function SignUpForm() {
             password: password
         }
         console.log(data)
-        signUp("/signup", data).then(res => navigate("/signin") )
-        navigate("/signin")
+        signUp("/signup", data)
+            .then(res => 
+                signIn("/signin",{username: data.username, password: data.password})
+                    .then(res => {
+                        console.log(res.data)
+                        localStorage.setItem('authToken', res.data.accessToken)
+                        localStorage.setItem('authUsername', res.data.username)
+                        localStorage.setItem('authUserID',res.data.id)
+                        
+                        navigate("/") 
+                })
+        )
+        
     }
 
     return (

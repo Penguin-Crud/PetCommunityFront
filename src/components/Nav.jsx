@@ -1,6 +1,6 @@
 import "../styles/index.css";
 import Searcher from "./dynamics_components/Searcher";
-//import Usuario from "../assets/usuario.png";
+import bars from "../assets/icons/bars-solid.svg"; 
 
 import Logo from "../assets/logo3.png";
 
@@ -50,7 +50,7 @@ function Nav() {
                     id==null? 
                         <div className="dropdown"> 
                             <div className="container-usuario">
-                                <img src={"https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/3/6/3/2/1/53fzpnfuwu.jpg"} className="burger" alt="burger" />
+                                <img src={bars} className="burger" alt="burger" />
                             </div>
                             <ul>
                                 <li>
@@ -69,6 +69,9 @@ function Nav() {
                             <ul>
                                 <li>
                                     <Link to={`/detailAssociation/${id}`}>My Profile</Link>
+                                </li>
+                                <li>
+                                    <Link to={`/editAssociation`}>Edit My Profile</Link>
                                 </li>
                                 <li>
                                     <Link to="/dashboard">Dashboard</Link>
