@@ -120,7 +120,7 @@ html {
 .titleSlider {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--colorNav);
+  color: var(--colorLetra);
 
   margin-bottom: 0.5rem;
   box-sizing: border-box;
@@ -130,7 +130,7 @@ html {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--colorNav);
+  color: var(--colorLetra);
 }
  @media screen and (max-width:497px) {
 
