@@ -2,63 +2,138 @@
   "pets": [
     {
       "id": 4,
-      "name": "Chori",
-      "age": "4 semanas",
+      "name": "Rocky",
+      "age": "2 años",
       "date": "24/04/2020",
       "specie": "Dog",
-      "race": "Chiguagua",
-      "description":"El perro le gusta jugar con jaume y el gato leon ,No toques las pelotas ",
+      "race": "Bullmastiff",
+      "description": "Es un buen perro, de tamaño grande, quiere mucho a los niños y simpatiza con los demas animales, es un buen cuidador de la casa y muy buena compañia para caminar por la montaña, le gusta jugar con huesos grandes y esta listo para tener un nuevo hogar, preferiblemente un lugar espacioso por su tamaño. ",
       "gender": "male",
-      "size": "little",
-      "vaccines": "false",
-      "chip": "false",
-      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "size": "Tall",
+      "vaccines": "true",
+      "chip": "true",
+      "petImg": [
+        {
+          "url": "https://huisdierengids.com/wp-content/uploads/2021/08/bullmastiff.jpg"
+        },{"url":"https://huisdierengids.com/wp-content/uploads/2021/08/bullmastiff.jpg" }
+      ]
     },
     {
       "id": 5,
-      "name": "Zoh",
-      "age": "4 semanas",
+      "name": "Lola",
+      "age": "1 año",
       "date": "24/04/2020",
       "specie": "Dog",
-      "race": "Chiguagua",
-      "description":"mordelon",
-      "gender": "male",
+      "race": "Affenpinscher",
+      "description": "Es una perrita con mucho caracter, es muy buena y se la lleva muy bien con los otros perros,esta esterilizada y se precisa licencia para su adopcion.",
+      "gender": "female",
       "size": "little",
       "vaccines": "true",
       "chip": "false",
-      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "petImg": [
+        {
+          "url": "https://www.micachorro.net/wp-content/uploads/2019/05/Affenpinscher-perro.jpg"
+        },{"url":"https://www.micachorro.net/wp-content/uploads/2019/05/Affenpinscher-perro.jpg"}
+      ]
     },
     {
+      "id":6,
       "name": "Dino",
-      "age": "1",
+      "age": "1 año",
+      "date": "15/3/2022",
       "gender": "female",
-      "picture": "hihi",
       "location": "las bahamas",
       "size": "medium",
       "specie": "dog",
-      "race": "hehe",
-      "description": "jiu",
-      "vaccines": "ss",
-      "chip": "aa",
-      "id": 6,
-      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "race": "Husky Siberiano",
+      "description": "Es un perro muy sano, y ya ha tenido bastante perrera y necesitamos que salga rapido. Actualmente esta en la perrera amigos del perro y puede viajar a cualquier punto del pais.",
+      "vaccines": "true",
+      "chip": "true",
+      "petImg": [
+        {
+          "url": "https://vetwork.co/galaxy/wp-content/uploads/siberian-husky-1.jpg"
+        },{"url":"https://vetwork.co/galaxy/wp-content/uploads/siberian-husky-1.jpg"}
+      ]
     },
     {
+      "id":7,
       "name": "Ruble",
-      "age": "10",
-      "gender": "female",
-      "picture": "ifi",
+      "age": "22 meses",
+      "date": "09/11/2021",
+      "gender": "male",
       "location": "bcn",
       "size": "small",
       "specie": "dog",
-      "race": "chango",
-      "description": "lindo",
-      "vaccines": "si",
-      "chip": "si",
-      "id": 7,
-      "petImg": [{"url":"https://th.bing.com/th/id/OIP.38IFccTnna2Dv_hW8XU6xAHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"}]
+      "race": "Bulldog Ingles",
+      "description": "Cachorro Bulldog ingles muy cariñoso y muy jugueton, tiene todas las vacunas  busca un hogar y si es con niños mucho mejor.",
+      "vaccines": "true",
+      "chip": "false",
+      "petImg": [
+        {
+          "url": "https://estaticos-cdn.prensaiberica.es/clip/e556f634-705d-46fa-ae9b-36b6ab9583c9_16-9-discover-aspect-ratio_default_0.jpg"
+        },{"url":"https://estaticos-cdn.prensaiberica.es/clip/e556f634-705d-46fa-ae9b-36b6ab9583c9_16-9-discover-aspect-ratio_default_0.jpg"}
+      ]
+    },
+    {
+      "id":8,
+      "name": "Michin",
+      "age": "22 meses",
+      "date": "5/3/2022",
+      "gender": "male",
+      "location": "bcn",
+      "size": "medium",
+      "specie": "cat",
+      "race": "Gato Exotico",
+      "description": "Gato exotico quiere ser adoptado, no suelta pelos y es muy buena compañia, hace todo en su cajita de arena y le gusta comer sus wiskas.",
+      "vaccines": "true",
+      "chip": "false",
+      "petImg": [
+        {
+          "url": "https://misanimales.com/wp-content/uploads/2018/10/gato-exotico-atigrado.jpg"
+        },{"url":"https://misanimales.com/wp-content/uploads/2018/10/gato-exotico-atigrado.jpg"}
+      ]
+    },
+    {
+      "id":9,
+      "name": "Ninja",
+      "age": "2 meses",
+      "date": "24/03/2022",
+      "gender": "male",
+      "location": "zamora",
+      "size": "small",
+      "specie": "cat",
+      "race": "Himalayo",
+      "description": "Hermoso gatito de raza himlayo quiere ser adoptado, no suelta pelos y es  muy tierno, preferible que la adopcion sea para alguien que quiera tenerlo por siempre, esta en proceso de aprendizaje por ser un gatito pequeño, Nota:el gatito no tiene vacunas y a un toma leche.",
+      "vaccines": "false",
+      "chip": "false",
+      "petImg": [
+        {
+          "url": "https://t2.ea.ltmcdn.com/es/posts/3/9/6/problemas_en_el_aparato_digestivo_20693_2_600.jpg"
+        },{"url":"https://t2.ea.ltmcdn.com/es/posts/3/9/6/problemas_en_el_aparato_digestivo_20693_2_600.jpg"}
+      ]
+    },
+    {
+      "id":10,
+      "name": "Lila",
+      "age": "4 meses",
+      "date": "19/03/2022",
+      "gender": "female",
+      "location": "valencia",
+      "size": "small",
+      "specie": "cat",
+      "race": "Tailandes",
+      "description": "Hermosa gatita tailandesa color  marron, quiere ser adoptada, no suelta pelos y es  muy tierna, esta muy jovencita, le gusta jugar con bolas de lana, es muy activa y caza ratones, tambien le gustan los niños y se porta bien con los otros animales, es muy protectora.",
+      "vaccines": "false",
+      "chip": "false",
+      "petImg": [
+        {
+          "url": "https://w0.peakpx.com/wallpaper/906/395/HD-wallpaper-thai-cat-light-brown-cat-pets-siamese-cats-cute-animals.jpg"
+        },{"url":"https://w0.peakpx.com/wallpaper/906/395/HD-wallpaper-thai-cat-light-brown-cat-pets-siamese-cats-cute-animals.jpg"}
+      ]
     }
+    
   ],
+
   "associations": [
     {
       "id": 0,
@@ -79,6 +154,34 @@
     {
       "id": 4,
       "logo": "https://ibichos.com/images/logo_cuadrado.png"
+    },
+    {
+      "id": 5,
+      "logo": "https://d1kvlp4er3agpe.cloudfront.net/resources/images/groups/3/1/0/6/0/xlzbt5ixso.jpg"
+    },
+    {
+      "id": 6,
+      "logo": "https://static.guiaongs.org/wp-content/uploads/2015/09/amigos-del-prro-360x336.jpg"
+    },
+    {
+      "id": 7,
+      "logo": "http://ampliandovoces.consejo.org.ar/wp-content/uploads/freshizer/ed8df1cc4c3e8de46a817e215dce9f98_Logo-SFAsis-600-c-90.jpg"
+    },
+    {
+      "id": 8,
+      "logo": "https://entreperrosygatos.protecms.com/static/305/images/logo.png"
+    },
+    {
+      "id": 9,
+      "logo": "https://images-platform.99static.com/hLUNMwNGZfZdNPt9Uvussm0tGK8=/191x185:815x809/500x500/top/smart/99designs-contests-attachments/80/80566/attachment_80566937"
+    },
+    {
+      "id": 10,
+      "logo": "https://otraoportunidaddotorg.files.wordpress.com/2014/07/logo-transparente-png.png"
+    },
+    {
+      "id": 11,
+      "logo": "https://www.huellascallejeras.com/wp-content/uploads/2020/06/logoHuellas3.png"
     }
   ]
 }
