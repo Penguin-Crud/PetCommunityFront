@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { updateUser } from "../../../services/PetCommunityServices";
+import Loading from "../Loading";
 
 
 function AssociationEditForm() {
@@ -11,7 +12,7 @@ function AssociationEditForm() {
     const [username, setUsername] = useState(localStorage.getItem('authUsername'));
     const [adress, setAdress] = useState(localStorage.getItem('authAdress'));
     const [capacity, setCapacity] = useState(localStorage.getItem('authCapacity'));
-    
+    const [isLoading,setIsLoading] = useState(false);
     
     let formData = new FormData();
   
@@ -27,7 +28,7 @@ function AssociationEditForm() {
 
     const editData = (e) => {
         e.preventDefault()
-    
+        
         id = parseInt(id);
         let updatedUser = {
             id:id, 
@@ -51,8 +52,9 @@ function AssociationEditForm() {
         console.log(stringUserToUpdate);
         formData.append('user', new Blob(jsonUserToUpdate, {type : 'application/json'}));
         formData.append('image', logo);
-
+        setIsLoading(true)
         updateUser("/associations", formData).then(res =>{
+            setIsLoading(false)
             cleanInputs(e)
             navigate(`/detailAssociation/${id}`) 
         })
@@ -61,7 +63,8 @@ function AssociationEditForm() {
     return (
         <div> 
         
-            
+          { isLoading? <Loading />
+          :
             <form className="FormPet" onSubmit={ editData }> 
                 <h1 className="titleFormCreate"> Edit Association </h1>
                 <label >Username<input 
@@ -102,7 +105,7 @@ function AssociationEditForm() {
                 <button type="submit">Update</button>
                 </div>
             </form>
-              
+        }     
         </div>
     )
 }
