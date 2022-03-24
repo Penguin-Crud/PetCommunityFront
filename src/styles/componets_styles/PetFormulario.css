@@ -81,3 +81,27 @@ text-align: center;
    margin-left: 5%;
    border-radius:10px;
 }
+
+@media (max-width:575px) {
+    
+}
+
+@media (min-width:576px) {
+    
+}
+
+@media (min-width:768px) {
+    
+}
+
+@media (min-width:992px) {
+    
+}
+
+@media (min-width:1200px) {
+    
+}
+
+@media (min-width:1400px) {
+    
+}
