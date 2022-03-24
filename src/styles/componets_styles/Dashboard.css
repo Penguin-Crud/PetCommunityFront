@@ -117,7 +117,7 @@
    background-color: orange;
    border: 2px solid var(--colorLetra);
    padding: 5px;
-   border-radius: 6px;
+   border-radius: 5px;
    font-family: Arial, Helvetica, sans-serif;
    color: var(--colorLetra);
    transition: all .5s ease; 
