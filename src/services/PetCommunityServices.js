@@ -69,8 +69,6 @@ export async function create(endPoint, formData) {
         .then(res => { console.log(res) })
         .catch(error => { console.log(error) });
 }
-
-
 export async function update(endPoint, data) {
     await axios.put(
         config_crUD.baseUrl + endPoint, 
@@ -78,13 +76,18 @@ export async function update(endPoint, data) {
         config_crUD.headers
     );
 }
-
-
 export function deleteById(endPoint, id) {
     id.toString();
     axios.delete(
         config_crUD.baseUrl + endPoint + "/" + id, 
         config_crUD.headers
+    );
+}
+export async function updateUser(endPoint, data){
+    await axios.put(
+        config_Crud.baseUrl + endPoint, 
+        data, 
+        config_Crud.headers
     );
 }
 
@@ -107,12 +110,4 @@ export async function signIn(endPoint, data) {
         )
         .then( res => { console.log(res); return res })
         .catch(error => { console.log(error); });
-}
-
-export async function updateUser(endPoint, data){
-    await axios.put(
-        config_Crud.baseUrl + endPoint, 
-        data, 
-        config_Crud.headers
-    );
 }
