@@ -35,7 +35,8 @@
     transition: all .5s ease;
 }
 .link_404:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 3px var(--colorFondo);
 }
 .contant_box_404{ 
     margin-top:-50px;

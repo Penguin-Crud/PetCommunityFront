@@ -26,11 +26,19 @@
     justify-content: space-between;
     box-sizing: border-box;
     flex-direction:row;
-    background-color: var(--colorFondo);
+    background: var(--colorFondo2);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: 1.5rem;
     padding: 7%;
-    border-radius: 15px;
-    
+    border-radius: 10px;  
+    transition: all .5s ease;
+}
+
+.animal-container:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    background-color: var(--colorFondo);
+    filter: drop-shadow(0px 4px 4px var(--colorLetra));
 }
 
 .animal-info{ 
