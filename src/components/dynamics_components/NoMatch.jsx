@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/index.css";
+import { Link } from "react-router-dom";
 
 function NoMatch (){
     return(
@@ -15,7 +16,7 @@ function NoMatch (){
                             <div className="contant_box_404">
                                 <h3 className="h2">Looks like you're lost</h3>
                                 <p>The page you are looking for is not avaible!</p>
-                                <a href="/" className="link_404">Home</a>
+                                <Link to="/" className="link_404">Home</Link>
                             </div>
                         </div>
                     </div>
