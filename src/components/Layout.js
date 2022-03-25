@@ -36,8 +36,8 @@ function Layout() {
           <Route path='/detailPet/:id' element={<Nav />} />
           <Route path='/detailAssociation/:id' element={<Nav />} />
           <Route path='/editAssociation' element={<Nav />} />
-          <Route path='/signUp' element={<Nav />} />
-          <Route path='/signIn' element={<Nav />} />
+          <Route path='/signup' element={<Nav />} />
+          <Route path='/signin' element={<Nav />} />
         </Routes>
 
         <Routes>
@@ -51,8 +51,8 @@ function Layout() {
             <Route path='/detailPet/:id' element={<DetailPet />} />
             <Route path='/detailAssociation/:id' element={<DetailAssociation />} />
             <Route path='/editAssociation' element={<AssociationEditForm />} />
-            <Route path='/signUp' element={<SignUpForm />} />            
-            <Route path='/signIn' element={<SignInForm />} />            
+            <Route path='/signup' element={<SignUpForm />} />            
+            <Route path='/signin' element={<SignInForm />} />            
         </Routes>
 
         <Routes>
@@ -66,8 +66,8 @@ function Layout() {
           <Route path='/detailPet/:id' element={<Footer />} />
           <Route path='/detailAssociation/:id' element={<Footer />} />
           <Route path='/editAssociation' element={<Footer />} />
-          <Route path='/signUp' element={<Footer />} />
-          <Route path='/signIn' element={<Footer />} />
+          <Route path='/signup' element={<Footer />} />
+          <Route path='/signin' element={<Footer />} />
         </Routes>
       </BrowserRouter >
     </div>

@@ -1,7 +1,7 @@
 import "../styles/index.css";
 import Searcher from "./dynamics_components/Searcher";
 import bars from "../assets/icons/bars-solid.svg"; 
-
+import logoDefault from "../assets/usuario.png";
 import Logo from "../assets/logo3.png";
 
 import React, { useEffect } from "react";
@@ -49,24 +49,32 @@ function Nav() {
 
             <header className="navbar">
                 {  
-                    id==null? 
+                    id===null? 
                         <div className="dropdown"> 
                             <div className="container-usuario">
                                 <img src={bars} className="burger" alt="burger" />
                             </div>
                             <ul>
                                 <li>
-                                    <Link to="/signIn">  <p>Sign In</p>  </Link>
+                                    <Link to="/signin">  Sign In  </Link>
                                 </li>
                                 <li>
-                                    <Link to="/signUp">  <p>Sign Up</p>  </Link>
+                                    <Link to="/signup">  Sign Up  </Link>
                                 </li>
                             </ul>
                         </div>         
                         :
                         <div className="dropdown"> 
                             <div className="container-usuario">
-                                <img src={userLogo} className="burger" alt="burger" />
+                                {console.log(userLogo)}
+                                {
+                                    !typeof userLogo === "string"? 
+                                        (<img src={logoDefault} className="burger" alt="logoDefault" />)
+                                        :
+                                        (<img src={userLogo} className="burger" alt="userLogo" />)
+                                }
+                                {/* <img src={logoDefault} className="burger" alt="logoDefault" /> */}
+
                             </div>
                             <ul>
                                 <li>
