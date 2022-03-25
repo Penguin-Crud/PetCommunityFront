@@ -282,10 +282,6 @@ html {
     height: 30vh;
   }
 
-  .pets{
-    display: flex;
-    justify-content: center;
-  }
   .infoSlider p{
     padding: 2% 23% 0%;
   }
@@ -315,10 +311,7 @@ html {
   .hero-gradient {
     height: 40vh;
   }
-  .pets {
-    display: flex;
-    justify-content: center;
-  }
+  
   .infoSlider p{
     padding: 2% 33% 0%;
   }
