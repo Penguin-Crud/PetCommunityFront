@@ -16,15 +16,15 @@ class Slider extends React.Component {
  }
 
   componentDidMount(){
-    dataPetsService("/pets", "all").then(rest =>  this.state.data= this.setState({data:rest}));
+    dataPetsService("/pets", "all").then(rest => this.state.data=this.setState({data:rest}));
  }
   
   nextImageHandler = () => {
-    this.setState({index: this.state.index + 1}, () => {
-      if (this.state.index >= (this.state.data.length -1)) {
-        this.setState({index: 0});
-      } 
-    });
+    this.setState({index: this.state.index + 1})
+    if ( this.state.index >= (this.state.data.length -1) ) {
+      this.setState({index: 0})
+    } 
+    // console.log(this.state.index)
   } 
 
   prevImageHandler = () => {
@@ -32,6 +32,7 @@ class Slider extends React.Component {
       return this.setState({index: this.state.data.length -1})
     } 
     this.setState({index: this.state.index - 1})
+    // console.log(this.state.index)
   }
   
 
