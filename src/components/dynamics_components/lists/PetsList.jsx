@@ -3,18 +3,6 @@ import PetCard from "../../cards/PetCard";
 
 function PetsList({ dataPets }) {
     
-    // const [dataExist, setDataExist] = useState(false);
-    // const [dataPets, setDataPets] = useState()
-
-    // useEffect( () =>{
-
-    //     dataPetsService("/pets", "all").then( data => {
-    //         setDataPets(data) 
-    //         setDataExist(true)
-    //     });
-        
-    // }, [] )
-
     return (
         <div className="cardList">
             {

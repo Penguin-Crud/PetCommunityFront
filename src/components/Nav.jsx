@@ -5,7 +5,7 @@ import logoDefault from "../assets/usuario.png";
 import Logo from "../assets/logo3.png";
 
 import React, { useEffect } from "react";
-import {Link, Navigate, useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { useState} from "react";
 import { dataPetsService } from "../services/PetCommunityServices";
 
@@ -35,10 +35,7 @@ function Nav() {
         navigate("/")
     }
 
-
-
     return (
-        
         <nav className="nav">
             <div className="logo-container">
                 <Link to="/"> <img className="logo" src={Logo} alt="logo" /> </Link>
@@ -66,7 +63,7 @@ function Nav() {
                         :
                         <div className="dropdown"> 
                             <div className="container-usuario">
-                                {console.log(userLogo)}
+                                {console.log(typeof userLogo)}
                                 {
                                     !typeof userLogo === "string"? 
                                         (<img src={logoDefault} className="burger" alt="logoDefault" />)
@@ -98,9 +95,7 @@ function Nav() {
                             </ul>
                         </div>         
                 }
-                
             </header>
-        
         </nav>
     )
 }

@@ -162,7 +162,7 @@ function Petformulario() {
                               onClick={ vaccines? () => setVaccines(false) : () => setVaccines(true) }
                          />
                          {/* {console.log(vaccines)} */}
-                    </div>
+                    </div>    
                     <div>
                          <label htmlFor="chip">Chip</label>
                          <input 
