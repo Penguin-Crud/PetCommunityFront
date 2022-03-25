@@ -8,6 +8,8 @@ function Petformulario() {
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
+    const [femaleCheck, setFemaleCheck]=useState(false);
+    const [maleCheck, setMaleCheck]=useState(false);
     const [picture, setPicture] = useState('');
 //     const [location, setLocation] = useState('');
     const [size, setSize] = useState('');
@@ -102,14 +104,29 @@ function Petformulario() {
                     date="date"
                     onChange={ (e) => setDate(e.target.value) }
                />
-               <input 
-                    type="text"
-                    required 
-                    placeholder="Gender" 
-                    defaultValue=""
+              <div> 
+                   <label htmlFor='male'>Male</label>
+                    <input 
+                    type="radio"
                     gender="gender"
-                    onChange={ (e) => setGender(e.target.value) }
-               />
+                    name= "gender"
+                    onClick={ () => setGender("male")}
+                    
+                   />
+               </div>
+
+                <div>
+                <label htmlFor='female'>Female</label>
+                    <input 
+                    type="radio"
+                    gender="gender"
+                    name= "gender"
+                    onClick={ () => setGender("female")}
+                    
+                   />
+                </div>
+               
+
                {/* <input 
                     type="text"
                     required 
