@@ -67,21 +67,40 @@ text-align: center;
 
 .button-file {
    background-color: var(--colorBotones);
-   border-radius: 12px;
+   color: var(--colorLetra);
+
+   border-radius: 10px;
    border: none;
    box-sizing: border-box;
    padding: 0.8em 1.5em;
+
+   font-family: var(--fontFamily);
+   font-size: 1rem;
+   font-weight: bold;
+}
+
+.button-file:hover {
+   cursor: pointer;
+   box-shadow: 0px 0px 5px 3px #ffcd2980;
 }
 
 .FormPet button {
-   justify-content: center;
-   padding: 5px;
-   border-radius: 5px;
-   border: none;
-   font-family: Arial, Helvetica, sans-serif;
-   color: var(--colorLetra);
-   margin-bottom: 30px;
-   background-color: var(--colorBotones); 
+   background-color:var(--colorBotones);
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    padding: 0.8em 1.5em;
+    transition: all .5s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--colorLetra);
+
+}
+
+.FormPet button:hover {
+   cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 3px #ffcd2980;
 }
 
 .AddImg {

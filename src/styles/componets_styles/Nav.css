@@ -58,6 +58,7 @@
 }
 
 .burger:hover {
+    cursor: pointer;
     width: 115%;
 }
 

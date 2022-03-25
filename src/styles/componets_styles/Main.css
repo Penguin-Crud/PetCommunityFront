@@ -98,11 +98,13 @@ html {
 }
 
 .slider-prev{
+  cursor: pointer;
   transform: scaleX(+1);
   filter: invert(93%) sepia(16%) saturate(4724%) hue-rotate(334deg) brightness(105%) contrast(102%); 
 }
 
 .slider-next{
+  cursor: pointer;
   transform: scaleX(-1); 
   filter: invert(93%) sepia(16%) saturate(4724%) hue-rotate(334deg) brightness(105%) contrast(102%); 
 }

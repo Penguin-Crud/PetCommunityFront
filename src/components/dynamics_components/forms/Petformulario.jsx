@@ -186,9 +186,9 @@ function Petformulario() {
                     defaultValue=""
                     picture="picture"
                     onChange={ (e) => setPicture(e.target.files[0]) }
-               /><label htmlFor='input-fileImg' className='button-file'></label>
+               />
+               <label htmlFor='input-fileImg' className='button-file'>Select Image</label>
                <div>
-                 <button className='AddImg'>Add Img</button>
                  <button type="sumbit">Submit</button>
                </div>
                

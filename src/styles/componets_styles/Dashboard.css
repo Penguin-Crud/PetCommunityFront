@@ -122,14 +122,22 @@
 }
 
 .info{
-    background-color: var(--colorBotones);
-    border-radius:5px;
-    border: 2px solid var(--colorLetra);
+    background: none;
+    border: 0;
+
+    font-size: var(--fontSize);
+    font-weight: bold;
+
+    box-sizing: border-box;
+    margin-bottom: 0.1rem;
+
     transition: all .5s ease;
 }
 
 .info:hover {
-    transform: scale(1.1);
+    cursor: pointer;
+    color: var(--colorLetra);
+    transform: scale(1.2);
 }
  
 .actionsContent{
@@ -149,6 +157,7 @@
 }
 
 .actionEdit:hover {
+    cursor: pointer;
     transform: scale(1.1);
 }
 
@@ -163,6 +172,7 @@
 }
 
 .actionDelete:hover {
+    cursor: pointer;
     transform: scale(1.1);
 }
 
@@ -173,14 +183,16 @@
 
 .btnAddPet button {
     background-color:var(--colorBotones);
-    border-radius: 12px;
+    border-radius: 10px;
     border: none;
     box-sizing: border-box;
     padding: 0.8em 1.5em;
     transition: all .5s ease;
+    color: var(--colorLetra);
 }
 
 .btnAddPet button:hover {
+    cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0px 0px 5px 3px #ffcd2980;
 }
@@ -249,7 +261,7 @@
 
     .table-dashboard {
         margin-top: 2%;
-        padding: 0 10% 0;
+        padding: 0 5% 0;
     }
 
 }
@@ -261,7 +273,7 @@
 
     .table-dashboard {
         margin-top: 2%;
-        padding: 0 10% 0;
+        padding: 0 5% 0;
     }
 
     .table-dashboard main{
@@ -287,7 +299,8 @@
 
     .table-dashboard {
         margin-top: 2%;
-        padding: 0 2% 0;
+        margin: 0 0.5rem 0;
+        padding: 0;
     }
     
     .table-dashboard main{
@@ -302,7 +315,11 @@
 }
 
 @media (min-width:1400px) {
-    
+    .table-dashboard {
+        margin-top: 2%;
+        margin: 0 1.5rem 0;
+        padding: 0;
+    }
 }
 
 
