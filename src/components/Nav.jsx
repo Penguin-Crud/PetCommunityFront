@@ -56,10 +56,10 @@ function Nav() {
                             </div>
                             <ul>
                                 <li>
-                                    <Link to="/signIn"> <button> <p>Sign In</p> </button> </Link>
+                                    <Link to="/signIn">  <p>Sign In</p>  </Link>
                                 </li>
                                 <li>
-                                    <Link to="/signUp"> <button> <p>Sign Up</p> </button> </Link>
+                                    <Link to="/signUp">  <p>Sign Up</p>  </Link>
                                 </li>
                             </ul>
                         </div>         
