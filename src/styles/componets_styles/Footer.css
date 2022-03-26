@@ -108,12 +108,6 @@ transform:scale(1.1);
     justify-content: center;
 }
 }
-@media (max-height: 700px){
-  .associations {
-    padding-bottom: 5rem;
-
-}
-}
 @media (min-width: 992px){
   .associations {
     display: flex;

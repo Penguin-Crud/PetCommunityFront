@@ -166,6 +166,20 @@ html {
   border-radius: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+.container-img-data-auxiliar-aso{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img-data-auxiliar-aso img{
+  height: 4rem;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .pets {
   overflow-x: scroll!important;
   width:100vw ;
