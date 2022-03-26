@@ -1,17 +1,9 @@
 import "../../../styles/index.css";
 import PetCard from "../../cards/PetCard";
-import { useState } from "react";
 
 function PetsList({ dataPets }) {
     
-    const [isOnline, setIsOnline] = useState()
-
-    const on = () => {
-        isOnline().then(res => {
-            console.log(res)
-            setIsOnline(res)
-        });
-    }
+    
 
     return (
         <div className="cardList">
@@ -27,9 +19,6 @@ function PetsList({ dataPets }) {
                                 />
                             </div>
                 })
-                
-                
-
             }
         </div>
     )
