@@ -19,12 +19,12 @@ function Pets() {
     }, [] )
 
     return (
-        <section className="Slider">
+        <section className="container-list-pets">
             <h1 className="titleSlider">Pets for adoptation</h1>
                 {
                     dataExist? 
                         <div className="pets">
-                            <PetsList dataPets={dataPets} />
+                            <PetsList dataPets={dataPets} dataExist={dataExist}/>
                         </div>  
                         :
                         <div className="pets-loading">

@@ -1,14 +1,16 @@
 import axios from "axios";
 
 const url = "http://localhost:";
-let port = "3000";  // json-server
-/* let port = "8080"; */
+//let port = "3000";  // json-server
+let port = "808";
 
 const config_Crud = { baseUrl: url + port, headers: {'content-type': 'multipart/form-data'}}
 const config_crUD = { baseUrl: url + port}
 const config_sigIn = { baseUrl: url + port + "/auth", headers: {'Content-Type': 'application/json'} }
 const config_signUp = { baseUrl: url + port + "/auth", headers: {'Content-Type': 'application/json', 'Accept': 'application/json' }, whitCredentials: true}
-const auxiliar_data_pets = [{"id": 0, "petImg":[{url:"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]}]
+const auxiliar_data_pets = [
+    {"id": 0, "petImg":[{url:"https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]},
+]
 const auxiliar_data_association = [{"id": 0, "logo": "https://i.pinimg.com/236x/6b/22/98/6b2298fec93ad8240f87c8228ab87969.jpg"}]
 axios.interceptors.request.use(function (config) {
     const token = localStorage.getItem('authToken');
@@ -21,7 +23,8 @@ export async function isOnline() {
         return await axios.get(url + port + "/pets", { headers: { 'content-type': 'multipart/form-data' } })
         .then(res => { console.warn("Status Back-End: ", res.status)})
     } catch {
-        return console.warn("#Back-End is offline \n or port != 8080. \n #Actual port for Back-End => ",port ,"\n\n Also can you run json-server putting this command: \n\n\t json-server --watch ./data/db.json \n PD: Remember change port in PetCommunityServices.js" )
+        console.warn("#Back-End is offline \n or port != 8080. \n #Actual port for Back-End => ",port ,"\n\n Also can you run json-server putting this command: \n\n\t json-server --watch ./data/db.json \n PD: Remember change port in PetCommunityServices.js" )
+        return false 
     }
 }
 
