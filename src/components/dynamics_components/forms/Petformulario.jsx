@@ -104,6 +104,7 @@ function Petformulario() {
                     date="date"
                     onChange={ (e) => setDate(e.target.value) }
                />
+               <p>{gender}</p>
               <div> 
                    <label htmlFor='male'>Male</label>
                     <input 
