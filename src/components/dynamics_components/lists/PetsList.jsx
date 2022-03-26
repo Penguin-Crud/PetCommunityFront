@@ -1,11 +1,10 @@
 import "../../../styles/index.css";
 import PetCard from "../../cards/PetCard";
-import { isOnline } from "../../../services/PetCommunityServices";
 import { useState } from "react";
 
-function PetsList({ dataPets, dataExist}) {
+function PetsList({ dataPets }) {
     
-    const [isOnline, setIsOnline] = useState(false)
+    const [isOnline, setIsOnline] = useState()
 
     const on = () => {
         isOnline().then(res => {
@@ -17,7 +16,6 @@ function PetsList({ dataPets, dataExist}) {
     return (
         <div className="cardList">
             {
-                isOnline?
                 dataPets.map(pet => {
                     return <div  key={pet.id}>
                                 <PetCard 
@@ -29,10 +27,8 @@ function PetsList({ dataPets, dataExist}) {
                                 />
                             </div>
                 })
-                :
-                <div className="container-img-data-auxiliar"> 
-                    <img src={dataPets[0].petImg[0].url} alt="img data auxiliar" />
-                </div>
+                
+                
 
             }
         </div>

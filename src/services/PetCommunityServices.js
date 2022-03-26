@@ -20,8 +20,10 @@ axios.interceptors.request.use(function (config) {
 
 export async function isOnline() {
     try {
-        return await axios.get(url + port + "/pets", { headers: { 'content-type': 'multipart/form-data' } })
+        await axios.get(url + port + "/pets", { headers: { 'content-type': 'multipart/form-data' } })
         .then(res => { console.warn("Status Back-End: ", res.status)})
+
+        return true
     } catch {
         console.warn("#Back-End is offline \n or port != 8080. \n #Actual port for Back-End => ",port ,"\n\n Also can you run json-server putting this command: \n\n\t json-server --watch ./data/db.json \n PD: Remember change port in PetCommunityServices.js" )
         return false 
