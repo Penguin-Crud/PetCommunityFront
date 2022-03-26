@@ -1,7 +1,7 @@
 .container-dashboard{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 25%;
 }
@@ -202,7 +202,34 @@
     font-weight: bold;
 }
 
-@media (max-width:350px) {
+.btn-signIn {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 0.5em 1.3em;
+
+    background-color: var(--colorBotones);
+    color: var(--colorLetra);
+
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    
+    font-family: var(--fontFamily);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all .5s ease;
+
+    text-decoration: none;
+}
+.btn-signIn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 3px #ffcd2980;
+}
+
+@media (max-width:349px) {
     .animal-container{
         margin-top: 1.5rem;
     }
@@ -223,8 +250,15 @@
         margin-top: 2%;
         padding: 0 10% 0;
     }
+    .btn-signIn {
+        width: 35%;
+    }
 }
-
+@media(min-width:500px) {
+    .btn-signIn {
+        width: 25%;
+    }
+}
 @media (min-width:615px) {
     .btnAddPet {
         margin: 2.5em 0;
@@ -248,6 +282,10 @@
         grid-gap: 10px;
         box-sizing: border-box;
     } 
+    .btn-signIn {
+        width: 20%;
+    }
+
 }
 
 @media (min-width:768px) {
@@ -262,6 +300,9 @@
     .table-dashboard {
         margin-top: 2%;
         padding: 0 5% 0;
+    }
+    .btn-signIn {
+        width: 15%;
     }
 
 }
@@ -289,6 +330,10 @@
     .btnAddPet {
         margin: 3em 0;
     }
+    .btn-signIn {
+        width: 12%;
+    }
+
     
 }
 
@@ -312,6 +357,10 @@
         grid-gap: 10px;
         box-sizing: border-box;
     } 
+    .btn-signIn {
+        width: 10%;
+    }
+
 }
 
 @media (min-width:1400px) {
@@ -320,6 +369,10 @@
         margin: 0 1.5rem 0;
         padding: 0;
     }
+    .btn-signIn {
+        width: 8%;
+    }
+
 }
 
 

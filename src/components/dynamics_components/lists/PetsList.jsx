@@ -2,9 +2,6 @@ import "../../../styles/index.css";
 import PetCard from "../../cards/PetCard";
 
 function PetsList({ dataPets }) {
-    
-    
-
     return (
         <div className="cardList">
             {

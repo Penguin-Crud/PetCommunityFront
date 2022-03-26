@@ -8,22 +8,20 @@ import Loading from "../Loading";
 function Dashboard() {
 
     const [dataExist, setDataExist] = useState(false);
-    const [dataPets, setDataPets] = useState([])
+    const [dataPets, setDataPets] = useState([]);
+    const [token, setToken] = useState(localStorage.getItem('authToken'));
 
 
     useEffect( () =>{
-       /*  setInterval( */
         dataPetsService("/pets", "all").then( data => {
             setDataPets(data) 
             setDataExist(true)
-        })/* ,5000) */;
-        
+        })
     }, [] )
 
     const deletePet = (id) => {
         const arrayFiltrado = dataPets.filter(pet => pet.id !== id )
-            
-        // console.log(arrayFiltrado)
+
         setDataPets(arrayFiltrado)
         deleteById("/pets", id);
     }
@@ -31,9 +29,12 @@ function Dashboard() {
     return (
         <div className="container-dashboard">
             <h1 className="title-dashboard">Dashboard</h1>
-                <div className="table-dashboard">
-                {
-                    dataExist ?   
+            {
+                token ?
+                <div>
+                    <div className="table-dashboard">
+                        {
+                        dataExist ?   
                         <main>
                             {
                                 dataPets.map(pet => {
@@ -57,11 +58,15 @@ function Dashboard() {
                         </main>
                         :
                         <Loading />
-                } 
+                        } 
+                    </div>
+                    <div className="btnAddPet">
+                        <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
+                    </div>
                 </div>
-            <div className="btnAddPet">
-                <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
-            </div>
+                :
+                <Link to="/signin"  className="btn-signIn" >  Sign In  </Link>
+            }
         </div>
     )
 }

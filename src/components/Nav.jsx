@@ -11,7 +11,7 @@ import { dataPetsService } from "../services/PetCommunityServices";
 
 function Nav() {
 
-    let id= localStorage.getItem("authUserID")
+    let id = localStorage.getItem("authUserID")
     let logoUpdated = useState(localStorage.getItem("authLogo"))
     const [userLogo,setUserLogo] = useState(localStorage.getItem("authLogo"))
     const navigate = useNavigate()
@@ -63,13 +63,9 @@ function Nav() {
                         :
                         <div className="dropdown"> 
                             <div className="container-usuario">
-                                {console.log(typeof userLogo)}
-                                {
-                                    !typeof userLogo === "string"? 
-                                        (<img src={logoDefault} className="burger" alt="logoDefault" />)
-                                        :
-                                        (<img src={userLogo} className="burger" alt="userLogo" />)
-                                }
+                                {console.log(userLogo)}
+                                <img src={userLogo} className="burger" alt="userLogo" />
+                                
                                 {/* <img src={logoDefault} className="burger" alt="logoDefault" /> */}
 
                             </div>
