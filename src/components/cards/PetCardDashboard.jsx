@@ -44,7 +44,7 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
 
             <div className="animal-description">
                 <div className="button-container">
-                    <Link to={`/detailPet/${id}`}><button className="info">+ Info</button></Link>
+                    <Link to={`/detailPet/${id}`}><button className="info">+Info</button></Link>
 
                     <div className="actionsContent">
                         <Link to={`/editPost/${id}`}> <button className="actionEdit"><img src={edit} alt="edit"/></button> </Link>                    

@@ -28,107 +28,41 @@ function Dashboard() {
         deleteById("/pets", id);
     }
 
-    /* return (
-    <div className="containerDashboard">
-        <h1 className="titleSlider marginTitle">Dashboard</h1>
-        
-        <div className="tableContainer">
-            <table >
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Date</th>
-                        <th>Species</th>
-                        <th>Race</th>
-                        <th>Gender</th>
-                        <th>Size</th>
-                        <th>Vaccines</th>
-                        <th>Chip</th>
-                        <th className="dashboardActions">
-                            <div className="leftBorder"></div>
-                            Actions
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
+    return (
+        <div className="container-dashboard">
+            <h1 className="title-dashboard">Dashboard</h1>
+                <div className="table-dashboard">
                 {
-                    dataExist? dataPets.map(pet => {
-                        return <PetCardDashboard 
-                                    key={pet.id}
-                                    id={pet.id}
-                                    name={pet.name}
-                                    age={pet.age}
-                                    date={pet.date}
-                                    specie={pet.specie}
-                                    race={pet.race}
-                                    gender={pet.gender}
-                                    size={pet.size}
-                                    vaccines={pet.vaccines}
-                                    chip={pet.chip}
-                                    deletePet={deletePet}
-                               />
-                               
-                    })
-                    :<Loading/>
-                    
-                }
-                </tbody>
-            </table>
+                    dataExist ?   
+                        <main>
+                            {
+                                dataPets.map(pet => {
+                                    return <PetCardDashboard 
+                                                key={pet.id}
+                                                id={pet.id}
+                                                name={pet.name}
+                                                age={pet.age}
+                                                date={pet.date}
+                                                specie={pet.specie}
+                                                race={pet.race}
+                                                gender={pet.gender}
+                                                size={pet.size}
+                                                vaccines={pet.vaccines}
+                                                chip={pet.chip}
+                                                description={pet.description}
+                                                deletePet={deletePet}
+                                            />  
+                                    })      
+                            }
+                        </main>
+                        :
+                        <Loading />
+                } 
+                </div>
+            <div className="btnAddPet">
+                <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
+            </div>
         </div>
-        <div className="btnAddPet">
-            <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
-        </div>
-    </div>
-    
-    
-    )
-}
-
-export default Dashboard; 
- */
-
-
- return (
-    <div className="container-dashboard">
-        <h1 className="title-dashboard">Dashboard</h1>
-        
-        <div className="table-dashboard">
-            
-                
-                <main>
-                {
-                    dataExist ? dataPets.map(pet => {
-                        return <PetCardDashboard 
-                                    key={pet.id}
-                                    id={pet.id}
-                                    name={pet.name}
-                                    age={pet.age}
-                                    date={pet.date}
-                                    specie={pet.specie}
-                                    race={pet.race}
-                                    gender={pet.gender}
-                                    size={pet.size}
-                                    vaccines={pet.vaccines}
-                                    chip={pet.chip}
-                                    description={pet.description}
-                                    deletePet={deletePet}
-                               />
-                               
-                    })
-                    :<Loading/>
-                    
-                }
-                </main>
-           
-        </div>
-        <div className="btnAddPet">
-            <Link to="/createPost"> <button> <p>Add Pet</p> </button> </Link>
-        </div>
-    </div>
-    
-    
     )
 }
 

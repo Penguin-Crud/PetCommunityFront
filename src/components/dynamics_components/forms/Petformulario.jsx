@@ -179,7 +179,7 @@ function Petformulario() {
                               onClick={ vaccines? () => setVaccines(false) : () => setVaccines(true) }
                          />
                          {/* {console.log(vaccines)} */}
-                    </div>
+                    </div>    
                     <div>
                          <label htmlFor="chip">Chip</label>
                          <input 
@@ -203,9 +203,9 @@ function Petformulario() {
                     defaultValue=""
                     picture="picture"
                     onChange={ (e) => setPicture(e.target.files[0]) }
-               /><label htmlFor='input-fileImg' className='button-file'></label>
+               />
+               <label htmlFor='input-fileImg' className='button-file'>Select Image</label>
                <div>
-                 <button className='AddImg'>Add Img</button>
                  <button type="sumbit">Submit</button>
                </div>
                

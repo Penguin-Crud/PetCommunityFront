@@ -173,7 +173,6 @@ function PetEditFormulario() {
                 />
                 
                 <div className="button">
-                <button>Add Img</button>
                 <button type="sumbit">Update</button>
                 </div>
             </form>
