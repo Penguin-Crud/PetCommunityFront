@@ -75,9 +75,9 @@ export async function create(endPoint, formData) {
 }
 export async function update(endPoint, data) {
     await axios.put(
-        config_crUD.baseUrl + endPoint, 
+        config_Crud.baseUrl + endPoint, 
         data, 
-        config_crUD.headers
+        config_Crud.headers
     );
 }
 export function deleteById(endPoint, id) {

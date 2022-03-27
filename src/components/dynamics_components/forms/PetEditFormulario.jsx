@@ -39,21 +39,7 @@ function PetEditFormulario() {
     const cleanInputs = (event) => {
         event.target.reset()
     }
-    let updatedPet1 = {
-        id:id, 
-        name:name, 
-        age:age, 
-        priority:priority,
-        gender:gender, 
-        petImg:[{ url: petImg }], 
-        /*location:location, */
-        size:size, 
-        specie:specie, 
-        race:race, 
-        description:description,
-        vaccines:vaccines, 
-        chip:chip 
-    }
+    
     const editData = (e) => {
         e.preventDefault()
     
@@ -64,7 +50,6 @@ function PetEditFormulario() {
             age:age, 
             priority:priority,
             gender:gender, 
-            petImg:[{ url: petImg }], 
             /*location:location, */
             size:size, 
             specie:specie, 
@@ -79,7 +64,7 @@ function PetEditFormulario() {
         if (!age.trim()) updatedPet.age = dataPet.age
         if (!gender.trim()) updatedPet.gender = dataPet.gender
         if (!priority.trim()) updatedPet.priority = dataPet.priority
-        if (!petImg.trim()) updatedPet.petImg = dataPet.petImg[0].url
+        // if (!petImg.trim()) updatedPet.petImg = dataPet.petImg[0].url
         // if (!location.trim()) updatedPet.location = dataPet.location
         if (!size.trim()) updatedPet.size = dataPet.size
         if (!specie.trim()) updatedPet.specie = dataPet.specie
@@ -87,9 +72,9 @@ function PetEditFormulario() {
         if (!description.trim()) updatedPet.description = dataPet.description
         if (!vaccines.trim()) updatedPet.vaccines = dataPet.vaccines
         if (!chip.trim()) updatedPet.chip = dataPet.chip
-
+        
         console.log(updatedPet)
-        let jsonUpdatedPet = [JSON.stringify(updatedPet)]
+        let jsonUpdatedPet = [JSON.stringify(updatedPet)];
 
         formData.append('pet', new Blob(jsonUpdatedPet, {type : 'application/json'}))
         formData.append('image', petImg)
@@ -107,36 +92,33 @@ function PetEditFormulario() {
             <h1 className="title-register"> Edit Pet </h1>
         {
             dataPetExist? 
-            <form name='formCreate' className="formCreate" onSubmit={ editData }> 
+            <form className="formCreate" onSubmit={ editData }> 
             {/* <p>{console.log(list)}</p> */}
                 <div>
                     <div className='form-top'>
                         <div className='name-age-description-priority'>
                             <input 
-                                type="text"
-                                required 
+                                type="text" 
                                 placeholder="Name"
                                 defaultValue={dataPet.name}
                                 name="name"
                                 onChange={ (e) => setName(e.target.value) }
                             />
                             <input 
-                                type="text"
-                                required 
+                                type="text" 
                                 placeholder="Age" 
                                 defaultValue={dataPet.age}
                                 age="age"
                                 onChange={ (e) => setAge(e.target.value) }
                             />
-                            <select name="priority" id="priority" onChange={ (e) => setPriority(e.target.value) } required>
+                            <select name="priority" id="priority" onChange={ (e) => setPriority(e.target.value) } >
                                 <option value={dataPet.priority} >{dataPet.priority}</option>
                                 <option value="low">Low</option>
                                 <option value="medium">Medium</option>
                                 <option value="high">High</option>
                             </select>
                             <textarea
-                                maxLength={240}
-                                required 
+                                maxLength={240} 
                                 placeholder="Description" 
                                 defaultValue={dataPet.description}
                                 description="description"
@@ -157,8 +139,7 @@ function PetEditFormulario() {
                                 <option value="other">Other</option>
                             </select>
                             <input 
-                                type="text" 
-                                required 
+                                type="text"  
                                 placeholder="Race" 
                                 defaultValue={dataPet.race}
                                 race="race"
@@ -243,7 +224,6 @@ function PetEditFormulario() {
                                 type="file"
                                 // conte
                                 accept="image/*"
-                                required 
                                 placeholder="Picture" 
                                 picture="picture"
                                 onChange={ (e) => setPetImg(e.target.files[0]) }
@@ -252,14 +232,13 @@ function PetEditFormulario() {
                             {
                                 petImg? <p className='message-fileImg'>Image selected.</p> :  <p className='message-fileImg-error'>Image not selected to change it.</p>
                             }
-
                         </div>
                     </div>
 
                     <button type="sumbit">Submit</button>                                        
                 </div>
                 <div className='DogAndCat' >
-                        <img className="imgDogAndCat" src={dataPet.petImg[0].url} alt="dogcat"/>
+                    <img className="imgDogAndCat" src={dataPet.petImg[0].url} alt="dogcat"/>
                 </div>
             </form>
             // <form name='formCreate' className="formCreate-2" onSubmit={ editData }> 
