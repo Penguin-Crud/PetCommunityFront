@@ -88,7 +88,7 @@ export function deleteById(endPoint, id) {
     );
 }
 export async function updateUser(endPoint, data){
-    await axios.put(
+    return await axios.put(
         config_Crud.baseUrl + endPoint, 
         data, 
         config_Crud.headers

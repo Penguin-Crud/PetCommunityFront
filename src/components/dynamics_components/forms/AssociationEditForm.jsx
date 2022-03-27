@@ -15,7 +15,7 @@ function AssociationEditForm() {
     const [isLoading,setIsLoading] = useState(false);
     
     let formData = new FormData();
-  
+    
     const cleanInputs = (event) => {
         event.target.reset()
     }
@@ -31,7 +31,6 @@ function AssociationEditForm() {
             adress: adress, 
             capacity: capacity,
         }
-        console.log(data)
         let jsonUserToUpdate = [JSON.stringify(data)];
         
         
@@ -39,6 +38,8 @@ function AssociationEditForm() {
         formData.append('image', logo);
         setIsLoading(true)
         updateUser("/associations", formData).then(res =>{
+            
+            localStorage.setItem("authLogo",res.data.logo)
             setIsLoading(false)
             cleanInputs(e)
             navigate(`/detailAssociation/${id}`) 
