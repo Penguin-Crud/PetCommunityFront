@@ -39,7 +39,8 @@
    
    width: 40%;
 }
-.name-age-description-priority input, .size-species-race-gender-vachip input {
+.name-age-description-priority input, .name-age-description-priority select, .name-age-description-priority textarea,
+.size-species-race-gender-vachip input, .size-species-race-gender-vachip select {
    box-sizing: border-box;
 
    border: 2px solid var(--colorLetra);
@@ -71,6 +72,12 @@
    width: 40%;
 }
 
+textarea {
+   resize: none;
+ }
+.name-age-description-priority textarea {
+   height: 8rem;
+}
 
 
 #input-fileImg {
@@ -86,13 +93,20 @@
 
    box-sizing: border-box;
    padding: 0.5em 0.5em;
-   margin-top: 1.5rem;
+   margin-top: 0.75rem;
 
    font-family: var(--fontFamily);
    font-size: 1rem;
    font-weight: bold;
 
    width: 100%;
+}
+
+.message-fileImg {
+   color: var(--colorLetra);
+}
+.message-fileImg-error {
+   color: red;
 }
 
 .button-file:hover {
