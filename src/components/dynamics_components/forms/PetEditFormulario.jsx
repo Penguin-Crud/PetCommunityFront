@@ -73,9 +73,11 @@ function PetEditFormulario() {
         if (!vaccines.trim()) updatedPet.vaccines = dataPet.vaccines
         if (!chip.trim()) updatedPet.chip = dataPet.chip
 
-        console.log(updatedPet)
+        
 
-        update("/pets", updatedPet).then(res => navigate("/dashboard") )
+        update("/pets", updatedPet).then(res =>{
+            
+             navigate("/dashboard") })
         
 
         cleanInputs(e)

@@ -3,25 +3,14 @@ import AssociationCard from "../../cards/AssociationCard";
 import { useEffect, useState } from "react";
 import { dataPetsService } from "../../../services/PetCommunityServices";
 import Loading from "../Loading";
+import Global from "../../../Global";
 
-function AssociationsList() {
+function AssociationsList({dataAssociations}) {
 
-    const [dataExist, setDataExist] = useState(false);
-    const [dataAssociations, setDataAssociations] = useState()
-
-    useEffect( () =>{
-
-        dataPetsService("/associations", "all").then( data => {
-            setDataAssociations(data)
-            setDataExist(true)
-        });
-        
-    }, [] )
-
+      
     return (
         <div className="cardListAssociation">
-            {
-                dataExist ? dataAssociations.map(association => {
+           {dataAssociations.map(association => {
                     return <div className="containerBars" key={association.id}>
                                 <div className="bars"></div>
                                 <AssociationCard 
@@ -31,8 +20,6 @@ function AssociationsList() {
                                 <div className="bars"></div>
                            </div>
                 })
-                :
-                <Loading/>
             }
         </div>
     )

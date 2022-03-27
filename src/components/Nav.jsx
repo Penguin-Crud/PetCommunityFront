@@ -1,36 +1,32 @@
 import "../styles/index.css";
 import Searcher from "./dynamics_components/Searcher";
 import bars from "../assets/icons/bars-solid.svg"; 
-import logoDefault from "../assets/usuario.png";
+import logoDefault from "../assets/userDefaultLogo/usuario.png";
 import Logo from "../assets/logo3.png";
 
 import React, { useEffect } from "react";
 import {Link, useNavigate} from "react-router-dom";
-import { useState} from "react";
 import { dataPetsService } from "../services/PetCommunityServices";
 
 function Nav() {
 
     let id= localStorage.getItem("authUserID")
-    let logoUpdated = useState(localStorage.getItem("authLogo"))
-    const [userLogo,setUserLogo] = useState(localStorage.getItem("authLogo"))
+    let token = localStorage.getItem("authToken")
+    let logoUpdated = localStorage.getItem("authLogo")
     const navigate = useNavigate()
 
     
     useEffect(()=>{
-        dataPetsService('/associations', id).then(data=>{
-            localStorage.setItem("authLogo",data.logo)
+        if(token!=null){dataPetsService('/associations', id).then(data=>{
             localStorage.setItem("authAdress",data.adress)
             localStorage.setItem("authCapacity",data.capacity)
             
-            setUserLogo(localStorage.getItem("authLogo"))
-            
-        })
-    },[id,logoUpdated])
+           
+        })}
+    },[token,logoUpdated])
     
     const logOut = () => {
         localStorage.clear()
-        console.log(localStorage.getItem("authUserID"))
         id = null;
         navigate("/")
     }
@@ -46,7 +42,7 @@ function Nav() {
 
             <header className="navbar">
                 {  
-                    id===null? 
+                    token===null? 
                         <div className="dropdown"> 
                             <div className="container-usuario">
                                 <img src={bars} className="burger" alt="burger" />
@@ -63,14 +59,14 @@ function Nav() {
                         :
                         <div className="dropdown"> 
                             <div className="container-usuario">
-                                {console.log(typeof userLogo)}
+                                
                                 {
-                                    !typeof userLogo === "string"? 
-                                        (<img src={logoDefault} className="burger" alt="logoDefault" />)
-                                        :
-                                        (<img src={userLogo} className="burger" alt="userLogo" />)
+                                    logoUpdated==="null"? 
+                                    <img src={logoDefault} className="burger" alt="logoDefault" />
+                                    :
+                                    <img src={logoUpdated} className="burger" alt="userLogo" />
                                 }
-                                {/* <img src={logoDefault} className="burger" alt="logoDefault" /> */}
+                                
 
                             </div>
                             <ul>

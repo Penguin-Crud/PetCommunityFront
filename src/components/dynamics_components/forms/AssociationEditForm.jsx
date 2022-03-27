@@ -15,13 +15,7 @@ function AssociationEditForm() {
     const [isLoading,setIsLoading] = useState(false);
     
     let formData = new FormData();
-  
-    // useEffect( () =>{
-        
-        
-        
-    // }, [] )
-    
+
     const cleanInputs = (event) => {
         event.target.reset()
     }
@@ -35,26 +29,17 @@ function AssociationEditForm() {
             username:username, 
             adress: adress, 
             capacity: capacity,
-            
-            
         }
 
-        
-        // if (!username.trim()) updatedUser.username = dataPet.name
-        // if (!adress.trim()) updatedPet.age = dataPet.age
-        // if (!capacity.trim()) updatedPet.petImg = dataPet.petImg[0].url
-        
-
-        
         let jsonUserToUpdate = [JSON.stringify(data)];
         
         
         formData.append('user', new Blob(jsonUserToUpdate, {type : 'application/json'}));
         formData.append('image', logo);
-        console.log(formData.get('user'))
-        console.log(formData.get('image'))
         setIsLoading(true)
         updateUser("/associations", formData).then(res =>{
+            
+            localStorage.setItem("authLogo",res.data.logo)
             setIsLoading(false)
             cleanInputs(e)
             navigate(`/detailAssociation/${id}`) 
