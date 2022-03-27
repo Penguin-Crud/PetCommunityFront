@@ -83,7 +83,7 @@ function Petformulario() {
           <h1 className="title-register">New Pet</h1>
           <form name='formCreate' className="formCreate" onSubmit={ addData }> 
           {/* <p>{console.log(list)}</p> */}
-               <div>
+               <div className='container-form'>
                     <div className='form-top'>
                          <div className='name-age-description-priority'>
                               <input 

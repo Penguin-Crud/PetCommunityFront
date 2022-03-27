@@ -224,7 +224,6 @@ function PetEditFormulario() {
                                 type="file"
                                 // conte
                                 accept="image/*"
-                                placeholder="Picture" 
                                 picture="picture"
                                 onChange={ (e) => setPetImg(e.target.files[0]) }
                             />
@@ -238,7 +237,7 @@ function PetEditFormulario() {
                     <button type="sumbit">Submit</button>                                        
                 </div>
                 <div className='DogAndCat' >
-                    <img className="imgDogAndCat" src={dataPet.petImg[0].url} alt="dogcat"/>
+                    <img className="imgDogAndCat-2" src={dataPet.petImg[0].url} alt="dogcat"/>
                 </div>
             </form>
             // <form name='formCreate' className="formCreate-2" onSubmit={ editData }> 

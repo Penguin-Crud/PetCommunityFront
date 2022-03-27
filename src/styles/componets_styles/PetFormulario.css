@@ -9,6 +9,13 @@
 ::placeholder { 
    color: var(--colorCard) 
 }
+.container-editUser{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
 .formCreate{
    background-color:var(--colorFondo2);
    
@@ -23,6 +30,7 @@
    align-items: center;
    flex-direction: row;
    
+   width: 60%;
 }
 .formCreate-2{
    background-color:var(--colorFondo2);
@@ -36,6 +44,7 @@
    display: flex;
    flex-direction: column;
    
+   width: 65%;
 }
 .formCreate div {
    box-sizing: border-box;
@@ -57,7 +66,7 @@
    
    width: 40%;
 }
-.name-age-description-priority-2{
+.name-age-description-priority-2, .username-adress-capacity-fileImg{
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -65,7 +74,8 @@
    width: 100%;
 }
 .name-age-description-priority input, .name-age-description-priority select, .name-age-description-priority textarea,
-.size-species-race-gender-vachip input, .size-species-race-gender-vachip select {
+.size-species-race-gender-vachip input, .size-species-race-gender-vachip select,
+.username-adress-capacity-fileImg input {
    box-sizing: border-box;
 
    border: 2px solid var(--colorLetra);
@@ -147,7 +157,7 @@ textarea {
    border: none;
 
    box-sizing: border-box;
-   padding: 0.8em 1.5em;
+   padding: 0.8em 0.8em;
    margin-top: 2rem;
 
    transition: all .5s ease;
@@ -175,6 +185,13 @@ textarea {
 
    border-radius: 10px;
 }
+.imgDogAndCat-2{
+   display: inline-block;
+
+   height: 15rem;   
+
+   border-radius: 10px;
+}
 
 @media (max-width:575px) {
     
@@ -188,12 +205,30 @@ textarea {
     
 }
 
-@media (min-width:992px) {
-    
+@media (max-width:992px) {
+   .formCreate div button{
+      width: 5%;
+   }
 }
 
-@media (min-width:1200px) {
-    
+@media (max-width:1200px) {
+    .formCreate {
+       display: flex;
+       flex-direction: column;
+    }
+    .container-form {
+       width: 80%;
+
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .formCreate div button{
+       width: 20%;
+    }
+    .form-top {
+       width: 100%;
+    }
 }
 
 @media (min-width:1400px) {

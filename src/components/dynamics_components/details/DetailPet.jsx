@@ -25,13 +25,7 @@ import PetCard from "../../cards/PetCard";
                     <div className="pet-details" key={petDetail.id}>
                         <div className="pet-name-and-image">
                             <h2 className="pet-detail-name">Hi, my name is {petDetail.name}</h2>
-                            <PetCard 
-                                name={petDetail.name} 
-                                years={petDetail.age} 
-                                date={petDetail.date} 
-                                imgURL={petDetail.petImg[0].url}
-                                id={petDetail.id}
-                            />
+                            <img src={petDetail.petImg[0].url} alt="imgPetId" />
                         </div>
 
                             <div className="pet-details-more-container"> 
