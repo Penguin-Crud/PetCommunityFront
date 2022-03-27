@@ -27,24 +27,17 @@ function DetailAssociation() {
     return (
         <div className="pet-details-container">
             {isLoading? 
-                <div className="pet-details-and-description">
-                    <div className="pet-details" key={userData.id}>
-                        <div className="pet-name-and-image">
-                            <AssociationCard
-                                imgURL={userData.logo}
-                                id={userData.id}
-                            />
-                        </div>
+                <div className="logo-info">
+                    
+                    <img src={userData.logo} alt="logoUserImg" />
 
-                        <div className="pet-details-more-container"> 
-                            <div className="pet-details-more-texts">
-                                <p>Name: <span>{userData.username}</span></p>
-                                <p>Adress: <span>{userData.adress}</span></p>
-                                <p>Capacity : <span>{userData.capacity}</span></p>
-                                {/* <p>Web : <span>{userData.website}</span></p> */}
-                            </div>
-                        </div>
-                    </div> 
+                    <div >
+                        <p>Name: <span>{userData.username}</span></p>
+                        <p>Adress: <span>{userData.adress}</span></p>
+                        <p>Capacity : <span>{userData.capacity}</span></p>
+                        {/* <p>Web : <span>{userData.website}</span></p> */}
+                    </div>
+                     
                 </div>
             :
                 <Loading/>

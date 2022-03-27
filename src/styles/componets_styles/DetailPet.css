@@ -1,3 +1,27 @@
+.logo-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo-info img {
+    height: 12rem;
+}
+.logo-info div {
+    margin-left: 1.5rem;
+}
+.logo-info div p {
+    font-size: large;
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
 .pet-details-container{
     display: flex;
     justify-content: center;
@@ -10,11 +34,20 @@
      margin: 30px;
 
 }
-.pet-name-and-image h2{
-   white-space: nowrap;
+.pet-name-and-image {
+    height: 15rem;
 }
-.pet.details{
-margin:40px
+.pet-name-and-image h2{
+    white-space: nowrap;
+}
+
+/* .pet.details{
+    margin:40px
+} */
+.pet-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .pet-details h2{
     font-weight: bolder;
@@ -26,7 +59,7 @@ margin:40px
 }
 .pet-details img{
     height: 12rem;
-   
+    
 }
 .pet-details p{
     margin-bottom: 20px;
@@ -51,6 +84,17 @@ margin:40px
     justify-content: center;
     align-items: flex-start;
     margin: 20px;
+}
+
+@media (max-width: 350px) {
+    .logo-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-info div {
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 700px) {
