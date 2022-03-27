@@ -82,7 +82,7 @@ function Petformulario() {
         <div className='container-form-create'> 
           <h1 className="title-register">New Pet</h1>
           <form name='formCreate' className="formCreate" onSubmit={ addData }> 
-          <p>{console.log(list)}</p>
+          {/* <p>{console.log(list)}</p> */}
                <div>
                     <div className='form-top'>
                          <div className='name-age-description-priority'>
@@ -116,8 +116,6 @@ function Petformulario() {
                                    description="description"
                                    onChange={ (e) => setDescription(e.target.value) }
                               />
-
-                              
                          </div>
                          <div className='size-species-race-gender-vachip' >
                               <select  name="size" id="size" onChange={ (e) => setSize(e.target.value) } required>
@@ -222,8 +220,6 @@ function Petformulario() {
                     <img className="imgDogAndCat" src={dogcat} alt="dogcat"/>
                </div>
           </form>
-
-            
         </div>
     )
 }
