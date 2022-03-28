@@ -31,7 +31,9 @@ function SignUpForm() {
                         localStorage.setItem('authUserID',res.data.id)
                         
                         navigate("/") 
-                })
+                    }
+                )
+                // navigate("/signin") 
         )
         
     }

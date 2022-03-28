@@ -48,11 +48,7 @@ import masculino from "../../../assets/masculino.png";
                     </div>
                     <div className="pet-description">
                             <h2 className="pet-description-header">Description</h2> 
-                            <p className="description">Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Iste officia quod<br/>
-                            soluta consequuntur officiis corrupti, pariatur quasi enim.<br/>
-                            Deleniti enim aliquid magni dolore eius laborum natus ullam quam rem unde.
-                            </p>
+                            <p className="description">{petDetail.description}</p>
                     </div>
              </div>
             :
