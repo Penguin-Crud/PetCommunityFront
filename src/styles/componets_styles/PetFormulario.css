@@ -1,5 +1,6 @@
 .container-form-create {
    margin-top: 5rem;
+   padding: 2rem;
    
    display: flex;
    flex-direction: column;
@@ -30,7 +31,7 @@
    align-items: center;
    flex-direction: row;
    
-   width: 60%;
+   
 }
 .formCreate-2{
    background-color:var(--colorFondo2);
@@ -42,9 +43,9 @@
    text-align: center;
 
    display: flex;
-   flex-direction: column;
-   
-   width: 65%;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
 }
 .formCreate div {
    box-sizing: border-box;
@@ -175,7 +176,6 @@ textarea {
 
 .DogAndCat {
    padding: 1rem;
-   padding-left: 0
 }
 
 .imgDogAndCat{
@@ -191,44 +191,127 @@ textarea {
    height: 15rem;   
 
    border-radius: 10px;
+   
 }
 
 @media (max-width:575px) {
-    
+   .formCreate-2{
+      display: flex;
+      flex-direction: column;
+   }
+
+   .formCreate {
+      display: flex;
+      flex-direction: column;
+
+   }
+
+   .form-top {
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      margin: 0;
+      width: 100%;
+   }
+
+   .container-form {
+      width: 100%;
+   }
+
+   .imgDogAndCat-2{
+      width: 90%;
+      height: 100%;    
+   }
+
+   .name-age-description-priority, .size-species-race-gender-vachip {
+      width: 50%;
+   }
+
 }
 
-@media (min-width:576px) {
-    
-}
+@media (max-width:300px) {
+   .formCreate-2{
+      display: flex;
+      flex-direction: column;
+   }
 
-@media (min-width:768px) {
-    
-}
+   .formCreate {
+      display: flex;
+      flex-direction: column;
 
-@media (max-width:992px) {
-   .formCreate div button{
-      width: 5%;
+   }
+
+   .form-top {
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      margin: 0;
+      width: 100%;
+   }
+
+   .container-form {
+      width: 100%;
+   }
+
+   .imgDogAndCat-2{
+      width: 90%;
+      height: 100%;    
+   }
+
+   .name-age-description-priority, .size-species-race-gender-vachip {
+      width: 70%;
    }
 }
 
-@media (max-width:1200px) {
-    .formCreate {
-       display: flex;
-       flex-direction: column;
-    }
-    .container-form {
-       width: 80%;
 
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-    }
-    .formCreate div button{
-       width: 20%;
-    }
-    .form-top {
-       width: 100%;
-    }
+@media (min-width:576px) {
+   .formCreate-2{
+      display: flex;
+      flex-direction: column;
+   }
+
+   .formCreate {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .DogAndCat {
+      width: 80%;;
+   }
+
+   .imgDogAndCat-2{
+      width: 90%;
+      height: 100%;    
+   }
+}
+
+@media (min-width:768px) {
+   .formCreate-2{
+      display: flex;
+      flex-direction: row;
+   }
+   .formCreate {
+      display: flex;
+      flex-direction: row;
+   }
+
+   .DogAndCat {
+      width: 100%;;
+   }
+
+   .imgDogAndCat-2{
+      height: 15rem;   
+   }
+}
+
+@media (max-width:992px) {
+   
+}
+
+@media (max-width:1200px) {
+   
 }
 
 @media (min-width:1400px) {

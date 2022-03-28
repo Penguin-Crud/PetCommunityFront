@@ -89,12 +89,12 @@ function PetEditFormulario() {
 
     return (
         <div className='container-form-create'> 
-            <h1 className="title-register"> Edit Pet </h1>
+        <h1 className="title-register"> Edit Pet </h1>
         {
             dataPetExist? 
-            <form className="formCreate" onSubmit={ editData }> 
+            <form className="formCreate-2" onSubmit={ editData }> 
             {/* <p>{console.log(list)}</p> */}
-                <div>
+                <div className='container-form'>
                     <div className='form-top'>
                         <div className='name-age-description-priority'>
                             <input 
