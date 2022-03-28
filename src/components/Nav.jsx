@@ -59,9 +59,8 @@ function Nav() {
                         :
                         <div className="dropdown"> 
                             <div className="container-usuario">
-                                
                                 {
-                                    logoUpdated==="null"? 
+                                    logoUpdated===null? 
                                     <img src={logoDefault} className="burger" alt="logoDefault" />
                                     :
                                     <img src={logoUpdated} className="burger" alt="userLogo" />

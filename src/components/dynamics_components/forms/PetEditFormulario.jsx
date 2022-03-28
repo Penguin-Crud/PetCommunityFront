@@ -222,7 +222,6 @@ function PetEditFormulario() {
                             <input 
                                 id='input-fileImg'
                                 type="file"
-                                // conte
                                 accept="image/*"
                                 picture="picture"
                                 onChange={ (e) => setPetImg(e.target.files[0]) }
