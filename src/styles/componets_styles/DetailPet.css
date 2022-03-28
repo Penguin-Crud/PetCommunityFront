@@ -17,6 +17,19 @@
     margin-bottom: 1rem;
 }
 
+.pet-and-logo{
+    height: 5rem!important;
+}
+
+.gender-chip-vaccines p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.gender-chip-vaccines p img{
+    height: 1.2rem;
+}
+
 
 
 
@@ -113,10 +126,10 @@
 
 @media (min-width: 701px) {    
     .pet-details-container{
-       justify-content: space-around
+       justify-content: space-around;
     }
     .pet-details-more-texts{
-        width:200px;
+        width: 90%;
     }
     .pet-details{
         display: flex;
@@ -127,6 +140,7 @@
     }   
     .pet-details-more-container{
        margin: 0;
+       margin-left: 1rem;
        width:250px;
     }
      /* .pet-details img{

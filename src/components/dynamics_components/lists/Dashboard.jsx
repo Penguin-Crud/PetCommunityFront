@@ -43,7 +43,7 @@ function Dashboard() {
                                                 id={pet.id}
                                                 name={pet.name}
                                                 age={pet.age}
-                                                date={pet.date}
+                                                priority={pet.priority}
                                                 specie={pet.specie}
                                                 race={pet.race}
                                                 gender={pet.gender}

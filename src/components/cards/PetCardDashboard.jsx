@@ -7,7 +7,7 @@ import edit from "../../assets/img/edit.png";
 import femenino from "../../assets/femenino.png";
 import masculino from "../../assets/masculino.png";
 
-function PetCardDashboard({id, name, age, date, specie, race, gender, size, vaccines, chip, description, deletePet}) {
+function PetCardDashboard({id, name, age, priority, specie, race, gender, size, vaccines, chip, description, deletePet}) {
 
     return (
         <div className="animal-container">
@@ -21,7 +21,7 @@ function PetCardDashboard({id, name, age, date, specie, race, gender, size, vacc
                         <p>Age:</p><p className="value">{age}</p>
                     </div>
                     <div>
-                        <p>Date:</p><p className="value">{date}</p>
+                        <p>Priority:</p><p className="value">{priority}</p>
                     </div>
                     <div>
                         <p>Specie:</p><p className="value">{specie}</p>

@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import { dataPetsService } from "../../../services/PetCommunityServices";
 import "../../../styles/index.css";
 import Loading from "../Loading";
-import PetCard from "../../cards/PetCard";
+import aceptar from "../../../assets/aceptar.png";
+import cancelar from "../../../assets/cancelar.png"; 
+import femenino from "../../../assets/femenino.png";
+import masculino from "../../../assets/masculino.png";
 
  function DetailPet() {
     let { id } = useParams();
@@ -27,18 +30,21 @@ import PetCard from "../../cards/PetCard";
                             <h2 className="pet-detail-name">Hi, my name is {petDetail.name}</h2>
                             <img src={petDetail.petImg[0].url} alt="imgPetId" />
                         </div>
-
+                        {console.log(petDetail.chip)}
                             <div className="pet-details-more-container"> 
                                 <h2 className="pet-details-more">More details</h2> 
                                 <div className="pet-details-more-texts">
                                     <p>Race: <span>{petDetail.race}</span></p>
-                                    <p>Chip: <span>{petDetail.chip}</span></p>
-                                    <p>Specie : <span>{petDetail.specie}</span></p>
-                                    <p>Gender : <span>{petDetail.gender}</span></p>
                                     <p>Size: <span>{petDetail.size}</span></p>
-                                    <p>Vaccines : <span>{petDetail.vaccines}</span></p>
+                                    <p>Specie : <span>{petDetail.specie}</span></p>
+                                    <div className="gender-chip-vaccines">
+                                        <p>Gender:{petDetail.gender === "male" ? <img src={masculino} alt="Male" />:<img src={femenino} alt="Female" />}</p>
+                                        <p>Chip:{petDetail.chip ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                                        <p>Vaccinated:{petDetail.vaccines ? <img src={aceptar} alt="button true"/>:<img src={cancelar} alt="button false"/> }</p>
+                                    </div>   
                                 </div>
                             </div>
+                                <img className="pet-and-logo" src={petDetail.userRespDTO.logo} alt="logoAso" />
                     </div>
                     <div className="pet-description">
                             <h2 className="pet-description-header">Description</h2> 
