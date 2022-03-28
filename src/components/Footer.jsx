@@ -13,7 +13,6 @@ function Footer() {
     const [dataAssociations, setDataAssociations] = useState();
     
     useEffect( () =>{
-        console.log("se actualiza el footer")
         dataPetsService("/associations", "all").then( data => {
 
             setDataAssociations(data)
